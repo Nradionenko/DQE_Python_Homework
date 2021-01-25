@@ -27,11 +27,11 @@ for value in random_list:
 try:
     even_avg = even_sum / even_cnt
     print (f"Average even number: {even_avg}")
-except ZeroDivisionError: # to cover cases when even_cnt will be 0 and division will through an exception
+except ZeroDivisionError: # to cover cases when even_cnt will be 0 and division will throw an exception
     print ("Can not calculate average even number as there are no even values on the list")
 try:
     odd_avg = odd_sum / odd_cnt
     print (f"Average odd number: {odd_avg}")
-except ZeroDivisionError: # to cover cases when odd_cnt will be 0 and division will through an exception
+except ZeroDivisionError: # to cover cases when odd_cnt will be 0 and division will throw an exception
     print ("Can not calculate average odd number as there are no odd values on the list")
 
