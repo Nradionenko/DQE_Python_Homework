@@ -17,7 +17,7 @@ original_str = '''homEwork:
   last iz TO calculate nuMber OF Whitespace characteRS in this Tex. caREFULL, not only Spaces, but ALL whitespaces. I got 87.
   '''
 
-sentences = original_str.split('.') # create a list consisting of sentences from original string
+sentences = re.split(r'[.?!]', original_str) # create a list consisting of sentences from original string
 last_words = ' '.join([sentences[i].strip().split()[-1] for i in range(len(sentences)-1)]) # create list of last elements (=words) of each sentence and convert this list to string separated by spaces
 normalized_str = '' # declare empty string: we'll add normalized text from original string here
 
