@@ -31,7 +31,7 @@ def set_to_capital(m):
 
 # normalize text
 def normalize(strng):
-    pattern = re.compile(r"(^|[?!.]\s+|\s{2,})(\S+)")  # first word or first word preceded by ending char + whitespaces OR >= 2 whitespaces (to capture new paragraph)
+    pattern = re.compile(r"(^|[?!.]\s+|\n\s+)(\S+)")  # first word in string OR word preceded by ending char and whitespaces OR word preceded by newline and whitespace (to capture new paragraph)
     normalized = re.sub(pattern, set_to_capital, strng.lower())  # set text to lower first and then capitalize first words
     return normalized
 

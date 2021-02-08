@@ -29,7 +29,7 @@ except AttributeError:
 temp_str2 = re.sub(rf'(?<!\S)(\biz\b)(?!\S)', "is", temp_str1, flags = re.I)  # replace "iz" with "is" when its not surrounded by any non-whitespace characters
 
 # capitalize
-first_words_pattern = re.compile(r"(^|[?!.]\s+|\s{2,})(\S+)")  # find words preceded by ?!. and whitespaces OR by >= whitespaces (=paragraph)
+first_words_pattern = re.compile(r"(^|[?!.]\s+|\n\s+)(\S+)")  # find words preceded by ?!. and whitespaces OR by newline and whitespace(s) (=paragraph)
 normalized_str = re.sub(first_words_pattern, lambda x: x.group(1) + x.group(2).capitalize(), temp_str2.lower())  # first lower the string with fixed spelling; replace first words with their capitalized form + preceding characters
 
 # count whitespaces in normalized string
