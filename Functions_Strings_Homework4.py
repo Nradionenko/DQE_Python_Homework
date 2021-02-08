@@ -3,15 +3,19 @@ import re
 
 # make sentence from the last words
 def collect_last_words(strng):
-    last_elements = ' '.join(re.findall(r'\w+(?=\.!?)', strng)) + '.'  # find all words in text preceded by ending characters (.?!) join them into sentence
+    last_elements = ' '.join(re.findall(r'\w+(?=[.?!])', strng)) + '.'  # find all words in text followed by ending characters (.?!) and join them into sentence
     return last_elements
 
 
 # add last words sentence to the text. Identify where to position new sentence by 'after words' parameter
 def add_new_sentence(strng, after_words, new_words):
-    position = re.search(after_words, strng.lower()).end() + 1  # search string position where new sentence should start
-    new_string = strng[:position] + ' ' + new_words + strng[position:]  # split string into "before" and "after" position and insert new sentence between them
-    return new_string
+    try:
+        position = re.search(after_words, strng.lower()).end() + 1  # search string position where new sentence should start
+        new_string = strng[:position] + ' ' + new_words + strng[position:]  # split string into "before" and "after" position and insert new sentence between them
+        return new_string
+    except AttributeError:  # if 'after words' can't be found in the string, print an error message
+        print("ERROR ENCOUNTERED: Can't identify the place where to insert new sentence. New sentence not inserted. \n\n\n")
+        return strng
 
 
 # fix spelling: replace "iz" with "is" whe is is a separate word not surrounded by any non-whitespace characters
@@ -22,13 +26,13 @@ def fix_spelling(strng, check_str, replace_str):
 
 # capitalize first words after given pattern:
 def set_to_capital(m):
-    return m.group(1) + m.group(2).capitalize()
+    return m.group(1) + m.group(2).capitalize()  # where group 1 is going to be whitespaces before first word and group 2 - first word in each sentence or new paragraph
 
 
 # normalize text
 def normalize(strng):
-    pattern = re.compile(r"([?!.:]\s+)(\S+)")  # first word or first word preceded by ending char + whitespaces
-    normalized = re.sub(pattern, set_to_capital, strng.capitalize())  # set text to capitalize first (to handle Homework) and then replace first words with capitalized
+    pattern = re.compile(r"(^|[?!.]\s+|\s{2,})(\S+)")  # first word or first word preceded by ending char + whitespaces OR >= 2 whitespaces (to capture new paragraph)
+    normalized = re.sub(pattern, set_to_capital, strng.lower())  # set text to lower first and then capitalize first words
     return normalized
 
 
