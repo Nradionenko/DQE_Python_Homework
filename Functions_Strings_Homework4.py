@@ -20,41 +20,25 @@ def fix_spelling(strng, check_str, replace_str):
     return fixed_str
 
 
-# split text into sentences and sentences into 'words - nonwords' parts
-def split_string(strng):
-    sentences = re.split(r'[.?!]', strng) # split text into sentences
-    matches = [re.compile(r'(?<=\s)\w+').search(sentences[i]).start() for i in range(len(sentences)-1)]  # find first word preceded by space in each sentence
-    sub_sentences =[[sentences[i][:matches[j]], sentences[i][matches[j]:]] for i in range(len(sentences)-1) for j in range(len(matches)) if i == j]  # slice into words part - non words part
-    flat_list = [sub_list for list in sub_sentences for sub_list in list]  # generate list of all sub_parts (=flatten list of lists generated in previous line)
-    return flat_list
+# capitalize first words after given pattern:
+def set_to_capital(m):
+    return m.group(1) + m.group(2).capitalize()
 
 
-# capitalize each sub_sentence and add them to the new string
-def capitalize(list_of_strings):
-    updated_str = ''
-    for i in list_of_strings:
-        new_sub_string = i.capitalize()
-        if new_sub_string[-1].isspace() is False:
-            new_sub_string = new_sub_string + '.'
-        updated_str += new_sub_string
-    return updated_str
+# normalize text
+def normalize(strng):
+    pattern = re.compile(r"([?!.:]\s+)(\S+)")  # first word or first word preceded by ending char + whitespaces
+    normalized = re.sub(pattern, set_to_capital, strng.capitalize())  # set text to capitalize first (to handle Homework) and then replace first words with capitalized
+    return normalized
 
-
-# just to try to use decorators:)
-def separate_mycount_from_text(func):
-    def wrapper(*args):
-        print("\n  --- \n")
-        func(*args)
-    return wrapper
 
 # count whitespaces
-@separate_mycount_from_text
 def count_whitespaces (strng):
     cnt = 0
     for i in strng:
         if i.isspace():
             cnt += 1
-    print(f"  I got {cnt} whitespaces in the updated string.")
+    print(f"\n\n\n  I got {cnt} whitespaces in the updated string.")
 
 
 original_str = '''homEwork:
@@ -77,7 +61,6 @@ if __name__ == '__main__':
     last_words = collect_last_words(original_str)
     string_with_new_sentence = add_new_sentence(original_str, 'add it to the end of this paragraph', last_words)
     fixed_spelling = fix_spelling(string_with_new_sentence, "iz", "is")
-    list_of_fixed_sentences = split_string(fixed_spelling)
-    final_string = capitalize(list_of_fixed_sentences)
+    final_string = normalize(fixed_spelling)
     print(final_string)
     count_whitespaces(final_string)
