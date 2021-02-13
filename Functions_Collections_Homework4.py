@@ -46,6 +46,6 @@ def create_new_dict_and_rename(my_dict):
 
 
 if __name__ == '__main__':
-    rand_lst = rand_list(0,100, 2, 10)
+    rand_lst = rand_list(0, 100, 2, 10)
     temp_dict = values_to_list(rand_lst)
     create_new_dict_and_rename(temp_dict)
