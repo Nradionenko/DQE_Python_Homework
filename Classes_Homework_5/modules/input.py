@@ -10,14 +10,20 @@ class Selection:
         section = pyip.inputMenu([label1, label2, label3], numbered=True)
         return section
 
-    def next_steps(self, msg1):
+
+class Proceed:
+    def __init__(self, msg1, msg2):
+        self.choice = msg1
+        self.final_msg = msg2
+
+    def next_steps(self):
         """Ask user whether she/he wants to proceed after section is added"""
-        decision = pyip.inputYesNo(msg1 + '\n')
+        decision = pyip.inputYesNo(self.choice + '\n')
         return decision
 
-    def goodbye(self, msg2):
+    def goodbye(self):
         """Say goodbye to user if he/she doesn't want to proceed"""
-        print(msg2)
+        print(self.final_msg)
 
 
 class TextInput:
