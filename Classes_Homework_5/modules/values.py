@@ -4,7 +4,7 @@ from modules.dates import Dates
 
 # instantiate classes
 cnf = Config()
-d = Dates(cnf.get_values("FORMATS", "date_format"), cnf.get_values("FORMATS", "date_time_format"))
+d = Dates()
 t = TextInput(cnf.get_values("ERRORS", "long_text"), cnf.get_values("RESTRICTIONS", "max_size"))
 di = DateInput(cnf.get_values("ERRORS", "past_date"), cnf.get_values("FORMATS", "date_format"), d.get_current_date())
 msg1, msg2, msg3 = cnf.get_values("MESSAGES", "fitness1"), cnf.get_values("MESSAGES", "fitness2"), cnf.get_values("MESSAGES", "fitness3")
@@ -31,7 +31,8 @@ class Values:
         """Collect input data for news section, format date and put all attributes together"""
         city = t.ask_for_text(cnf.get_values("INPUTS", "city_msg"))
         news_text = t.ask_for_text(cnf.get_values("INPUTS", "news_msg"))
-        news_date = d.format_date_time(d.get_current_date())
+        date_format = cnf.get_values("FORMATS", "date_time_format")
+        news_date = d.format_date(d.get_current_date(), date_format)
         news = news_text + '\n' + city + ', ' + news_date
         return news
 
@@ -42,10 +43,11 @@ class Values:
         """
         ad_text = t.ask_for_text(cnf.get_values("INPUTS", "ad_msg"))
         expiry_date = di.ask_for_date(cnf.get_values("INPUTS", "ad_date"))
-        formatted_exp_date = d.format_date(expiry_date)
+        date_format = cnf.get_values("FORMATS", "date_format")
+        formatted = d.format_date(expiry_date, date_format)
         delta = d.days_delta(expiry_date)
         message_start, message_end = cnf.get_values("MESSAGES", "message_start"), cnf.get_values("MESSAGES", "message_end")
-        ad = ad_text + '\n' + message_start + ' ' + formatted_exp_date + ', ' + str(delta) + ' ' + message_end
+        ad = ad_text + '\n' + message_start + ' ' + formatted + ', ' + str(delta) + ' ' + message_end
         return ad
 
     @decorate_section

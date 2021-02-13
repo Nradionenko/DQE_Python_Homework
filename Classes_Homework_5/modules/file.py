@@ -6,14 +6,14 @@ class Files:
         self.target_file = target_file
 
     def get_path(self):
-        """Generates path to the target file (file name is configurable).
+        """Generate path to the target file (file name is configurable).
         Will write file to current working directory"""
         target_path = os.path.join(os.getcwd())+'\\'+self.target_file
         return target_path
 
     def write_file(self, text):
-        """Opens target file.
-        If there are already records - add new section aftecr 2 newlines,
+        """Open target file.
+        If there are already records - add new section after 2 newlines,
         if no - add at the beginning of the file
         """
         path = self.get_path()
