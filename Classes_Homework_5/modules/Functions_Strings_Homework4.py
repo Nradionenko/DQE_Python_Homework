@@ -8,7 +8,7 @@ def make_new_sentence(strng, split_pattern, n):
     try:
         sentences = re.split(split_pattern, strng)
         temp_words = [sentences[i].split()[n] for i in range(len(sentences)-1)]
-        words = [re.sub('\W', "", word) for word in temp_words]
+        words = [re.sub(r'\W', "", word) for word in temp_words]
         new_sentence  = ' '.join(words) + '.'
         return new_sentence
     except IndexError:
@@ -41,14 +41,34 @@ def fix_spelling(strng, check_str, replace_str):
     return fixed_str
 
 
-def capitalize(strng, pattern):
-    """Split string by pattern (in our case - ending chars + space or /n/n+space).
-    Capitalize each element in split list and join back together into string.
-    """
-    temp_lst= re.split(pattern, strng)
-    capitalized_lst = [i.capitalize() for i in temp_lst]
-    final_str = ''.join(capitalized_lst)
-    return final_str
+def capitalize_all(lst):
+    lst_cap = [i.capitalize() for i in lst]
+    result = ''.join(lst_cap)
+    return result
+
+
+def ignore_titles(lst, pattern):
+    temp_lst = [re.split(pattern, i) for i in lst]
+    for i in range(len(temp_lst)):  # check each word: if first - capitalize, if already title - don't do anything, else - lower
+        for j in range(len(temp_lst[i])):
+            if j == 0 and temp_lst[i][j].isalnum():
+                temp_lst[i][j] = temp_lst[i][j].capitalize()
+            elif temp_lst[i][j].title() != temp_lst[i][j] and temp_lst[i][j].upper() != temp_lst[i][j]:
+                temp_lst[i][j] = temp_lst[i][j].lower()
+    result = ''.join([''.join(i) for i in temp_lst]) # join back together into text
+    return result
+
+
+def capitalize_custom(big_lst, proper_lst, pattern):
+    lst = [re.split(pattern, i) for i in big_lst]
+    for i in range(len(lst)):  # check each word: if first - capitalize, if already title - don't do anything, else - lower
+        for j in range(len(lst[i])):
+            if j == 0 or lst[i][j].lower() in [k.lower() for k in proper_lst]:
+                lst[i][j] = lst[i][j].capitalize()
+            else:
+                lst[i][j] = lst[i][j].lower()
+    result = ''.join([''.join(i) for i in lst]) # join back together into text
+    return result
 
 
 def count_whitespaces (strng):
@@ -74,15 +94,19 @@ original_str = '''homEwork:
 
 
   last iz TO calculate nuMber OF Whitespace characteRS in this Tex. caREFULL, not only Spaces, but ALL whitespaces. I got 87.'''
+
+
 sentence_pattern = '[?!.]'
 paragraph_pattern = '\n\n '
+words_patterns = '(\W|\s)'
 capitalize_pattern = '([?!.]\s|\s{2,}|\n)'  # brackets allow to split and keep split delimiters at the same time. This pattern reads as: ending characters+whitespace OR at least 2 whitespaces (for paragraphs)
 
 
 if __name__ == '__main__':
     last_words = make_new_sentence(original_str, sentence_pattern, -1)
     string_with_new_sentence = add_new_sentence(original_str, paragraph_pattern, 3, last_words)
-    fixed_spelling = fix_spelling(string_with_new_sentence, "iz", "is")
-    final_string = capitalize(fixed_spelling, capitalize_pattern)
+    fixed_text = fix_spelling(string_with_new_sentence, "iz", "is")
+    fixed_sentences = re.split(capitalize_pattern, fixed_text)
+    final_string = capitalize_all(fixed_sentences)
     print(final_string)
     count_whitespaces(final_string)

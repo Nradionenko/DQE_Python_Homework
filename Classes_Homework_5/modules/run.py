@@ -5,7 +5,7 @@ from modules.values import Values
 
 cnf = Config()
 s = Selection()
-f = Files(cnf.get_values("PATHS", "target_file"))
+f = Files()
 
 label1, label2, label3 = cnf.get_values("LABELS", "news_label"), cnf.get_values("LABELS", "ad_label"), cnf.get_values("LABELS", "recipe_label")
 decor, decor_length = cnf.get_values("RESTRICTIONS", "n"), cnf.get_values("RESTRICTIONS", "count_n")
@@ -33,5 +33,6 @@ class Execute:
         Write to the file.
         File name is configurable
         """
+        file_name = cnf.get_values("PATHS", "target_file")
         text_for_file = self.prepare_for_file()
-        f.write_file(text_for_file)
+        f.write_file(text_for_file, file_name)

@@ -6,7 +6,7 @@ from modules.dates import Dates
 cnf = Config()
 d = Dates()
 t = TextInput(cnf.get_values("ERRORS", "long_text"), cnf.get_values("RESTRICTIONS", "max_size"))
-di = DateInput(cnf.get_values("ERRORS", "past_date"), cnf.get_values("FORMATS", "date_format"), d.get_current_date())
+di = DateInput(cnf.get_values("ERRORS", "past_date"), cnf.get_values("PATTERNS", "date_format"), d.get_current_date())
 msg1, msg2, msg3 = cnf.get_values("MESSAGES", "fitness1"), cnf.get_values("MESSAGES", "fitness2"), cnf.get_values("MESSAGES", "fitness3")
 ii = IntInput(cnf.get_values("RESTRICTIONS", "cal_min"), cnf.get_values("RESTRICTIONS", "cal_max"), msg1, msg2, msg3)
 
@@ -31,7 +31,7 @@ class Values:
         """Collect input data for news section, format date and put all attributes together"""
         city = t.ask_for_text(cnf.get_values("INPUTS", "city_msg"))
         news_text = t.ask_for_text(cnf.get_values("INPUTS", "news_msg"))
-        date_format = cnf.get_values("FORMATS", "date_time_format")
+        date_format = cnf.get_values("PATTERNS", "date_time_text")
         news_date = d.format_date(d.get_current_date(), date_format)
         news = news_text + '\n' + city + ', ' + news_date
         return news
@@ -43,7 +43,7 @@ class Values:
         """
         ad_text = t.ask_for_text(cnf.get_values("INPUTS", "ad_msg"))
         expiry_date = di.ask_for_date(cnf.get_values("INPUTS", "ad_date"))
-        date_format = cnf.get_values("FORMATS", "date_format")
+        date_format = cnf.get_values("PATTERNS", "date_format")
         formatted = d.format_date(expiry_date, date_format)
         delta = d.days_delta(expiry_date)
         message_start, message_end = cnf.get_values("MESSAGES", "message_start"), cnf.get_values("MESSAGES", "message_end")

@@ -19,5 +19,5 @@ def main():
         p.goodbye()
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     main()
