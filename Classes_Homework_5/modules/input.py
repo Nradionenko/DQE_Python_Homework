@@ -1,5 +1,8 @@
 import pyinputplus as pyip
 import re
+from exec_utils.configloader import Config
+
+cnf = Config()
 
 
 class Selection:
@@ -7,7 +10,7 @@ class Selection:
         """Initial input of section selection (news, ad or recipe).
         All sections are configurable in configs.ini.
         """
-        section = pyip.inputMenu([label1, label2, label3], numbered=True)
+        section = pyip.inputMenu(prompt=cnf.get_values("INPUTS", "section")+"\n", choices=[label1, label2, label3], numbered=True)
         return section
 
 

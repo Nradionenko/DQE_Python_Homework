@@ -46,8 +46,8 @@ class Values:
         date_format = cnf.get_values("PATTERNS", "date_format")
         formatted = d.format_date(expiry_date, date_format)
         delta = d.days_delta(expiry_date)
-        message_start, message_end = cnf.get_values("MESSAGES", "message_start"), cnf.get_values("MESSAGES", "message_end")
-        ad = ad_text + '\n' + message_start + ' ' + formatted + ', ' + str(delta) + ' ' + message_end
+        ad_summary = cnf.get_values("MESSAGES", "ad_summary")
+        ad = ad_text + '\n' + ad_summary % (formatted, str(delta))
         return ad
 
     @decorate_section

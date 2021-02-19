@@ -48,10 +48,11 @@ def capitalize_all(lst):
 
 
 def ignore_titles(lst, pattern):
-    temp_lst = [re.split(pattern, i) for i in lst]
-    for i in range(len(temp_lst)):  # check each word: if first - capitalize, if already title - don't do anything, else - lower
+    """check each word: if first - capitalize, if already title - don't do anything, else - lower"""
+    temp_lst = [re.split(pattern, i) for i in lst]  # list of lists: words within sentences within text
+    for i in range(len(temp_lst)):
         for j in range(len(temp_lst[i])):
-            if j == 0 and temp_lst[i][j].isalnum():
+            if j == 0 and temp_lst[i][j].isalnum() and temp_lst[i][j].upper() != temp_lst[i][j]:
                 temp_lst[i][j] = temp_lst[i][j].capitalize()
             elif temp_lst[i][j].title() != temp_lst[i][j] and temp_lst[i][j].upper() != temp_lst[i][j]:
                 temp_lst[i][j] = temp_lst[i][j].lower()
@@ -60,8 +61,9 @@ def ignore_titles(lst, pattern):
 
 
 def capitalize_custom(big_lst, proper_lst, pattern):
-    lst = [re.split(pattern, i) for i in big_lst]
-    for i in range(len(lst)):  # check each word: if first - capitalize, if already title - don't do anything, else - lower
+    """Let user provide list of proper names, they will be capitalized irrespective of their position in the sentence"""
+    lst = [re.split(pattern, i) for i in big_lst]  # list of lists: words within sentences within text
+    for i in range(len(lst)):
         for j in range(len(lst[i])):
             if j == 0 or lst[i][j].lower() in [k.lower() for k in proper_lst]:
                 lst[i][j] = lst[i][j].capitalize()

@@ -4,7 +4,7 @@ from os.path import dirname, join
 class Files:
     def get_path(self, file_name):
         """Generate path to the target file (file name is configurable).
-        Will write file to the parent directory of this module
+        Will write file to the grand-parent directory of this module
         """
         folder = dirname(dirname(__file__).replace('/', '\\'))
         file_path = join(folder, file_name)
