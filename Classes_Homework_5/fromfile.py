@@ -31,7 +31,12 @@ class WriteFromFile:
         """Read file(s), catch errors, return file path and text"""
         with fileinput.input(files=source, openhook=fileinput.hook_encoded("utf-8")) as fp:
             try:
-                text = [line.strip() for line in fp]
+                text = []
+                for line in fp:
+                    if fp.isfirstline() and fp.lineno() > 1:
+                        text.append('\n'+line.strip())
+                    else:
+                        text.append(line.strip())
                 if not text:
                     print(cnf.get_values("ERRORS", "empty")+"\n")
                     return None, None
