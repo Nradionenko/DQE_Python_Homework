@@ -121,3 +121,8 @@ An ‘out station connection’ field should be created identifying if there is 
 If flight’s departure airport is identified as ‘out station' (req_ 016) and con from does not equal null
 Or if flight’s arrival airport is identified as ‘out station’ (req_ 016) and con to does not equal null
 Then “y”.
+
+Private ad -------------------
+Some new ad
+Valid until: 05/05/2021, 72 day(s) left
+------------------------------

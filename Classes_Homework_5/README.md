@@ -6,7 +6,7 @@ Homework5: News app. Run entire package or __main__.py file
 5. No specific text input validation is implemented except for input length.
 UPDATE: Running main.py you can select whether you want to input manually or from file. If manually - the above described steps will be used, if from file - module from hometask6 is used, but in this case you can't pass multiple files at a time
 
-Homework6: Modules. Run fromfile.py module
+Homework6: Modules. Run fromfile.py module OR main.py and select "Write from file" on the first step
 The following logic is implemented:
 - user can pass path to source file(s) (to read from) in cmd as an argument, i.e. python fromfile.py C:/Users/my_source_file.txt
 - if no file path is passed, default path is used, which is path to 'source.txt', located in the same directory as hometask6.py. File name is configured in exec_utils/configs.ini
@@ -16,3 +16,10 @@ The following logic is implemented:
 - text from source file(s) is normalized according to normalization strategy chosen, and are written to the target file (configured in configs.ini)
 - source is cloned to the same directory, as running module, with name = source_name + _clone
 - source file is deleted.
+
+Homework7: CSV. Run 'counts.py' module OR main.py (in the latter case you'll have to run the entire flow)
+- You can configure target csv file names in congigs.ini
+- By default, csv files will be written to cwd
+- In 'words count' all alphanumeric characters separated by non-alphanumeric are considered words, i.e. 20/02/2021 will be treated as 3 words. If this needs to be changed, please let me know.
+- In 'letters count' only alphabetic characters are counted. Digits and special characters are ignored as they don't have upper case anyway.
+- Both lists are sorted descending.
