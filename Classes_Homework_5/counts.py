@@ -1,7 +1,7 @@
 from collections import Counter, defaultdict
 import csv
 from exec_utils.configloader import Config
-from re import split, findall
+from re import findall
 from modules.file import Files
 
 cnf = Config()
