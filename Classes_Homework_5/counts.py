@@ -1,7 +1,7 @@
-from collections import Counter, defaultdict
+from collections import Counter
 import csv
 from exec_utils.configloader import Config
-from re import split, findall
+from re import findall
 from modules.file import Files
 
 cnf = Config()
@@ -10,7 +10,7 @@ f = Files()
 
 class Counts:
     def __init__(self, count_in_file, words_csv, letters_csv):
-        self.source = count_in_file
+        self.source = count_in_file  # use this file as source for counts
         self.words_csv = words_csv
         self.letters_csv = letters_csv
 
@@ -35,27 +35,27 @@ class Counts:
 
     def letters(self):
         """Take string and create list of all letters (lower everything) and list of upper letters"""
-        chars = [i for i in self.get_text() if i.isalpha()]
-        all_letters = [char.lower() for char in chars if char.isalpha()]
-        upper_letters = [char for char in chars if char.isupper() and char.isalpha()]
-        return all_letters, upper_letters
+        letters = [i for i in self.get_text() if i.isalpha()]
+        all_lower = [char.lower() for char in letters if char.isalpha()]
+        upper_letters = [char for char in letters if char.isupper() and char.isalpha()]
+        return all_lower, upper_letters
 
     def letters_counts(self):
         """Count letters occurrence in list: return count of any occurrence, upper occurrence and total letters in list."""
-        all_letters, upper_letters = self.letters()
-        count_all, count_upper = Counter(all_letters), Counter(upper_letters)
-        total = sum(count_all.values())
-        return count_all, count_upper, total
+        all_lower, upper_letters = self.letters()
+        count_lower, count_upper = Counter(all_lower), Counter(upper_letters)
+        total = sum(count_lower.values())
+        return count_lower, count_upper, total
 
     def dicts_by_letter_counts(self):
         """"Create list of dictionaries, where keys: letter, total count, upper count and % of all letters. Headers configurable."""
         count_all, count_upper, total = self.letters_counts()
-        letter, tot, upper, perc = cnf.get_values("HEADERS", "letter"), cnf.get_values("HEADERS", "total"), cnf.get_values("HEADERS", "upper"), cnf.get_values("HEADERS", "perc")
+        letter, all, upper, perc = cnf.get_values("HEADERS", "letter"), cnf.get_values("HEADERS", "total"), cnf.get_values("HEADERS", "upper"), cnf.get_values("HEADERS", "perc")
         my_list = []
-        for char in count_all.keys():
-            if char.upper() not in count_upper.keys():
+        for char in count_all.keys():  # for every letter in text
+            if char.upper() not in count_upper.keys():  # if upper version of this letter doesn't exist
                 my_list.append({letter: char,
-                                tot: count_all[char],
+                                all: count_all[char],
                                 upper: 0,
                                 perc: str(round(count_all[char]*100/total,2))+'%'
                                 })
@@ -63,7 +63,7 @@ class Counts:
                 for upper_char in count_upper.keys():
                     if char.upper() == upper_char:
                         my_list.append({letter: char,
-                                        tot: count_all[char],
+                                        all: count_all[char],
                                         upper: count_upper[upper_char],
                                         perc: str(round(count_all[char]*100/total,2))+'%'
                                         })
@@ -75,17 +75,17 @@ class Counts:
         words_dict = self.words_count()
         list_of_letter_dicts = self.dicts_by_letter_counts()
         words_file_path, letters_file_path = f.get_path(self.words_csv), f.get_path(self.letters_csv)
-        with open(words_file_path, 'w+', newline='', encoding="utf-8") as csv1, \
-                open(letters_file_path,'w+', newline='', encoding="utf-8") as csv2:
-            writer1 = csv.writer(csv1, delimiter='-')
+        with open(words_file_path, 'w+', newline='', encoding="utf-8") as words_csv, \
+                open(letters_file_path,'w+', newline='', encoding="utf-8") as letters_csv:
+            words_writer = csv.writer(words_csv, delimiter='-')
             for word in words_dict:
-                writer1.writerow(word)
-            writer2 = csv.DictWriter(csv2, delimiter=',', fieldnames=list_of_letter_dicts[0].keys())  # column headers = keys from first dict in list
-            writer2.writeheader()
+                words_writer.writerow(word)
+            letters_writer = csv.DictWriter(letters_csv, delimiter=',', fieldnames=list_of_letter_dicts[0].keys())  # column headers = keys from first dict in list
+            letters_writer.writeheader()
             for dict in list_of_letter_dicts:
-                writer2.writerow(dict)
+                letters_writer.writerow(dict)
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     c = Counts(cnf.get_values("PATHS", "target_file"), cnf.get_values("PATHS", "csv_words"), cnf.get_values("PATHS", "csv_letters"))
     c.write_csv()

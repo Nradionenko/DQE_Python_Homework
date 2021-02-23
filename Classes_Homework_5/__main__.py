@@ -35,7 +35,7 @@ def select_input():
 
 
 def main():
-    """Get new sections to target news file. Run counts from this file by words and letters and write to csvs"""
+    """End-to-end flow: from input selection to writing new section to news file + writing counts to csvs."""
     select_input()
     cnt.write_csv()
 

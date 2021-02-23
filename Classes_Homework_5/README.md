@@ -19,7 +19,7 @@ The following logic is implemented:
 
 Homework7: CSV. Run 'counts.py' module OR main.py (in the latter case you'll have to run the entire flow)
 - You can configure target csv file names in congigs.ini
-- By default, csv files will be written to cwd
-- In 'words count' all alphanumeric characters separated by non-alphanumeric are considered words, i.e. 20/02/2021 will be treated as 3 words. If this needs to be changed, please let me know.
+- By default, csv files will be written to the same parent directory as counts.py.
+- In 'words count' all alphanumeric characters separated by non-alphanumeric (except apostrophe and underscore, so "it's" is 1 words, as well as "my_file") are considered words, i.e. 20/02/2021 will be treated as 3 words. If this needs to be changed, please let me know.
 - In 'letters count' only alphabetic characters are counted. Digits and special characters are ignored as they don't have upper case anyway.
 - Both lists are sorted descending.
