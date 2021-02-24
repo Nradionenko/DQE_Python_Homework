@@ -7,8 +7,11 @@ cnf = Config()
 s = Selection()
 f = Files()
 
-label1, label2, label3 = cnf.get_values("LABELS", "news_label"), cnf.get_values("LABELS", "ad_label"), cnf.get_values("LABELS", "recipe_label")
-decor, decor_length = cnf.get_values("RESTRICTIONS", "n"), cnf.get_values("RESTRICTIONS", "count_n")
+label1, label2, label3 = cnf.get_values("LABELS", "news_label"), \
+                         cnf.get_values("LABELS", "ad_label"), \
+                         cnf.get_values("LABELS", "recipe_label")
+decor, decor_length = cnf.get_values("RESTRICTIONS", "n"), \
+                      cnf.get_values("RESTRICTIONS", "count_n")
 
 
 class Execute:

@@ -1,7 +1,8 @@
-from collections import Counter
 import csv
-from exec_utils.configloader import Config
 from re import findall
+from collections import Counter
+
+from exec_utils.configloader import Config
 from modules.file import Files
 
 cnf = Config()
@@ -36,8 +37,8 @@ class Counts:
     def letters(self):
         """Take string and create list of all letters (lower everything) and list of upper letters"""
         letters = [i for i in self.get_text() if i.isalpha()]
-        all_lower = [char.lower() for char in letters if char.isalpha()]
-        upper_letters = [char for char in letters if char.isupper() and char.isalpha()]
+        all_lower = list(map(lambda char: char.lower(), letters))
+        upper_letters = list(filter(lambda char: char.isupper(), letters))
         return all_lower, upper_letters
 
     def letters_counts(self):
@@ -50,7 +51,10 @@ class Counts:
     def dicts_by_letter_counts(self):
         """"Create list of dictionaries, where keys: letter, total count, upper count and % of all letters. Headers configurable."""
         count_all, count_upper, total = self.letters_counts()
-        letter, all, upper, perc = cnf.get_values("HEADERS", "letter"), cnf.get_values("HEADERS", "total"), cnf.get_values("HEADERS", "upper"), cnf.get_values("HEADERS", "perc")
+        letter = cnf.get_values("HEADERS", "letter")
+        all = cnf.get_values("HEADERS", "total")
+        upper = cnf.get_values("HEADERS", "upper")
+        perc = cnf.get_values("HEADERS", "perc")
         my_list = []
         for char in count_all.keys():  # for every letter in text
             if char.upper() not in count_upper.keys():  # if upper version of this letter doesn't exist
@@ -75,7 +79,7 @@ class Counts:
         words_dict = self.words_count()
         list_of_letter_dicts = self.dicts_by_letter_counts()
         words_file_path, letters_file_path = f.get_path(self.words_csv), f.get_path(self.letters_csv)
-        with open(words_file_path, 'w+', newline='', encoding="utf-8") as words_csv, \
+        with open(words_file_path, 'w+', newline='', encoding="utf-8") as words_csv,\
                 open(letters_file_path,'w+', newline='', encoding="utf-8") as letters_csv:
             words_writer = csv.writer(words_csv, delimiter='-')
             for word in words_dict:

@@ -1,4 +1,5 @@
 from pyinputplus import inputMenu
+
 from exec_utils.configloader import Config
 from modules.input import Proceed
 from modules.run import Execute

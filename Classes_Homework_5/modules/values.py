@@ -5,10 +5,17 @@ from modules.dates import Dates
 # instantiate classes
 cnf = Config()
 d = Dates()
-t = TextInput(cnf.get_values("ERRORS", "long_text"), cnf.get_values("RESTRICTIONS", "max_size"))
-di = DateInput(cnf.get_values("ERRORS", "past_date"), cnf.get_values("PATTERNS", "date_format"), d.get_current_date())
-msg1, msg2, msg3 = cnf.get_values("MESSAGES", "fitness1"), cnf.get_values("MESSAGES", "fitness2"), cnf.get_values("MESSAGES", "fitness3")
-ii = IntInput(cnf.get_values("RESTRICTIONS", "cal_min"), cnf.get_values("RESTRICTIONS", "cal_max"), msg1, msg2, msg3)
+t = TextInput(cnf.get_values("ERRORS", "long_text"),
+              cnf.get_values("RESTRICTIONS", "max_size"))
+di = DateInput(cnf.get_values("ERRORS", "past_date"),
+               cnf.get_values("PATTERNS", "date_format"),
+               d.get_current_date())
+msg1, msg2, msg3 = cnf.get_values("MESSAGES", "fitness1"), \
+                   cnf.get_values("MESSAGES", "fitness2"), \
+                   cnf.get_values("MESSAGES", "fitness3")
+ii = IntInput(cnf.get_values("RESTRICTIONS", "cal_min"),
+              cnf.get_values("RESTRICTIONS", "cal_max"),
+              msg1, msg2, msg3)
 
 
 class Values:
@@ -20,6 +27,7 @@ class Values:
     def decorate_section(func):
         """Decorator to add section name + '---' before and after each section"""
         def wrapper(*args):
+            # i.e., section = 'News', n = '-', count_n = 30. args[0] = self
             before = args[0].section + ' ' + args[0].n * (args[0].count_n - len(args[0].section)-1)
             after = args[0].n * args[0].count_n
             res = before + '\n' + func(*args) + '\n' + after
@@ -60,4 +68,3 @@ class Values:
         calories_measure = cnf.get_values("MESSAGES", "calories_measure")
         recipe = recipe_text+'\n'+str(recipe_calories)+' '+calories_measure+'\n'+fitness_message
         return recipe
-

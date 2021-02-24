@@ -1,8 +1,11 @@
-import sys, fileinput
+import sys
+import fileinput
 from os import path, remove
 from re import split
 from shutil import copy
+
 import pyinputplus as pyip
+
 import modules.Functions_Strings_Homework4 as s
 from modules.file import Files
 from exec_utils.configloader import Config
@@ -67,24 +70,29 @@ class WriteFromFile:
         Option 2: don't touch anything that is capitalized or upper in source text, assuming these are proper names
         Option 3: ask user to provide list of words which will be capitalized irrespective of their position in sentence
         """
-        choice1, choice2, choice3 = cnf.get_values("LABELS", "capital_all"), cnf.get_values("LABELS", "keep_titles"), cnf.get_values("LABELS", "keep_custom")
-        strategy = pyip.inputMenu(prompt=cnf.get_values("INPUTS", "normalize_strategy")+"\n", choices=[choice1, choice2, choice3], numbered=True)
+        choice1 = cnf.get_values("LABELS", "capital_all")
+        choice2 = cnf.get_values("LABELS", "keep_titles")
+        choice3 = cnf.get_values("LABELS", "keep_custom")
+        strategy = pyip.inputMenu(prompt=cnf.get_values("INPUTS", "normalize_strategy")+"\n",
+                                  choices=[choice1, choice2, choice3],
+                                  numbered=True
+                                  )
         return strategy
 
     def normalize(self, text):
         """Normalize text based on selected strategy"""
         strategy = self.choose_strategy()
-        patt1, patt2, patt3 = cnf.get_values("PATTERNS", "split_text"), cnf.get_values("PATTERNS", "split_sentence"), cnf.get_values("PATTERNS", "split_input")
-        sentences = split(patt1, text)
+        patt1 = cnf.get_values("PATTERNS", "split_text")
+        patt2 = cnf.get_values("PATTERNS", "split_input")
         if strategy == cnf.get_values("LABELS", "capital_all"):
-            fixed_text = s.capitalize_all(sentences)
+            my_text = text.lower()
         elif strategy == cnf.get_values("LABELS", "keep_titles"):
-            fixed_text = s.ignore_titles(sentences, patt2)
+            my_text = s.keep_titles(text)
         elif strategy == cnf.get_values("LABELS", "keep_custom"):
-            user_names = pyip.inputStr(cnf.get_values("INPUTS", "proper_names")+"\n")
-            titles = split(patt3, user_names)
-            fixed_text = s.capitalize_custom(sentences, titles, patt2)
-        return fixed_text
+            user_propers = pyip.inputStr(cnf.get_values("INPUTS", "proper_names")+"\n")
+            titles = split(patt2, user_propers)
+            my_text = s.keep_custom(text, titles)
+        return s.capital_first(my_text, patt1)
 
     def clone(self, file):
         """Clone file to the same directory it exists in with '_clone' added to the name"""

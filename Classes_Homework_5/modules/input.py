@@ -1,5 +1,7 @@
-import pyinputplus as pyip
 import re
+
+import pyinputplus as pyip
+
 from exec_utils.configloader import Config
 
 cnf = Config()
@@ -10,7 +12,9 @@ class Selection:
         """Initial input of section selection (news, ad or recipe).
         All sections are configurable in configs.ini.
         """
-        section = pyip.inputMenu(prompt=cnf.get_values("INPUTS", "section")+"\n", choices=[label1, label2, label3], numbered=True)
+        section = pyip.inputMenu(prompt=cnf.get_values("INPUTS", "section")+"\n",
+                                 choices=[label1, label2, label3],
+                                 numbered=True)
         return section
 
 
@@ -70,7 +74,8 @@ class DateInput:
         proper_date = False
         while not proper_date:
             try:
-                user_input_date = pyip.inputDate(self.readable_format(input_msg)+'\n', formats=[self.format])
+                user_input_date = pyip.inputDate(self.readable_format(input_msg)+'\n',
+                                                 formats=[self.format])
                 self.raise_if_past(user_input_date)
                 proper_date = True
                 return user_input_date
@@ -82,7 +87,9 @@ class DateInput:
         """This function translates 'technical' date/datetime format into human-readable one.
         This is to make app more flexible: we configure date format once and then re-use it for user message.
         """
-        rep = {"%d": "dd", "%m": "mm", "%B": "Month", "%b": "Mon", "%y": "yy", "%Y": "yyyy", "%H": "HH24", "%M": "MI"}
+        rep = {"%d": "dd", "%m": "mm", "%B": "Month", "%b": "Mon",
+               "%y": "yy", "%Y": "yyyy", "%H": "HH24", "%M": "MI"
+               }
         pattern = re.compile("|".join(rep.keys()))
         text = pattern.sub(lambda m: rep[re.escape(m.group(0))], msg)
         return text
@@ -94,7 +101,8 @@ class DateInput:
 
 
 class IntInput:
-    def __init__(self, min_value, max_value, msg1, msg2, msg3):
+    def __init__(self, min_value, max_value,
+                 msg1, msg2, msg3):
         self.min = int(min_value)
         self.max = int(max_value)
         self.fitness_tip_1 = msg1
