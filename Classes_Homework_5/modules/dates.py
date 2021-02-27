@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, date
 
 
 class Dates:
@@ -10,7 +10,10 @@ class Dates:
 
     def format_date(self, some_date, date_format):
         """Formats date in datetime to required date format. Format is configurable"""
-        formatted = datetime.strftime(some_date, date_format)
+        if type(some_date) is str:  # for date from file
+            formatted = datetime.strptime(some_date, date_format).date()
+        else:  # for date from input
+            formatted = datetime.strftime(some_date, date_format)
         return formatted
 
     def days_delta(self, my_date):

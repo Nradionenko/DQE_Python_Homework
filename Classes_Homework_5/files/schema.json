@@ -1,0 +1,197 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "News": [
+                {
+                    "city": "Kyiv",
+                    "text": "Something important happened"
+                },
+                {
+                    "city": "Lviv",
+                    "text": "Some bla bla"
+                }
+            ],
+            "Ad": [
+                {
+                    "text": "Something for sale",
+                    "date": "04/04/2021"
+                }
+            ],
+            "Recipe": [
+                {
+                    "text": "Croissants",
+                    "calories": 800
+                }
+            ]
+        }
+    ],
+    "properties": {
+        "News": {
+            "$id": "#/properties/News",
+            "type": "array",
+            "title": "The News schema",
+            "description": "News section, one item = one news",
+            "additionalItems": false,
+            "minItems": 1,
+            "items": {
+                "$id": "#/properties/News/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/News/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "city": "Moscow",
+                                "text": "Bla bla bla"
+                            }
+                        ],
+                        "required": [
+                            "city",
+                            "text"
+                        ],
+                        "properties": {
+                            "city": {
+                                "$id": "#/properties/News/items/anyOf/0/properties/city",
+                                "type": "string",
+                                "title": "The city schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Moscow"
+                                ]
+                            },
+                            "text": {
+                                "$id": "#/properties/News/items/anyOf/0/properties/text",
+                                "type": "string",
+                                "title": "The text schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Bla bla bla"
+                                ]
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        },
+        "Ad": {
+            "$id": "#/properties/Ad",
+            "type": "array",
+            "title": "The Ad schema",
+            "description": "An explanation about the purpose of this instance.",
+            "minItems": 1,
+            "additionalItems": false,
+            "items": {
+                "$id": "#/properties/Ad/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/Ad/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "text": "Something for sale",
+                                "date": "04/04/2021"
+                            }
+                        ],
+                        "required": [
+                            "text",
+                            "date"
+                        ],
+                        "properties": {
+                            "text": {
+                                "$id": "#/properties/Ad/items/anyOf/0/properties/text",
+                                "type": "string",
+                                "title": "The text schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Something for sale"
+                                ]
+                            },
+                            "date": {
+                                "$id": "#/properties/Ad/items/anyOf/0/properties/date",
+                                "type": "string",
+                                "title": "The date schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "04/04/2021"
+                                ]
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        },
+        "Recipe": {
+            "$id": "#/properties/Recipe",
+            "type": "array",
+            "title": "The Recipe schema",
+            "description": "An explanation about the purpose of this instance.",
+            "minItems": 1,
+            "additionalItems": false,
+            "items": {
+                "$id": "#/properties/Recipe/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/Recipe/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "text": "Croissants",
+                                "calories": 800
+                            }
+                        ],
+                        "required": [
+                            "text",
+                            "calories"
+                        ],
+                        "properties": {
+                            "text": {
+                                "$id": "#/properties/Recipe/items/anyOf/0/properties/text",
+                                "type": "string",
+                                "title": "The text schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Croissants"
+                                ]
+                            },
+                            "calories": {
+                                "$id": "#/properties/Recipe/items/anyOf/0/properties/calories",
+                                "type": "integer",
+                                "title": "The calories schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    800
+                                ]
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": false,
+    "minProperties": 1
+}

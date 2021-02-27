@@ -1,4 +1,0 @@
-An ‘Out Station Connection’ field should be created identifying if there is a connection at the Out Station. The formula used to identify this is as follows:
-If Flight’s departure airport is identified as ‘Out Station' (REQ_ 016) and Con From does not equal NULL
-OR If Flight’s arrival airport is identified as ‘Out Station’ (REQ_ 016) and Con To does not equal NULL
-then “Y”.

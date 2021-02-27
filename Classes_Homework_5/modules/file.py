@@ -1,16 +1,17 @@
 from os.path import dirname, join
+from exec_utils.configloader import Config
 
+cnf = Config()
 
 class Files:
     def get_path(self, file_name):
-        """Generate path to the target file (file name is configurable).
-        Will write file to the grand-parent directory of this module
-        """
-        folder = dirname(dirname(__file__).replace('/', '\\'))
-        file_path = join(folder, file_name)
+        """Generate path to /files directory. 'files' folder name is configurable"""
+        parent_folder = dirname(dirname(__file__).replace('/', '\\'))  # parent packege path
+        new_folder = cnf.get_values("PATHS", "files_folder")
+        file_path = join(parent_folder, new_folder, file_name)
         return file_path
 
-    def write_file(self, text, file_name):
+    def append_file(self, text, file_name):
         """Open target file.
         If there are already records - add new section after 2 newlines,
         if no - add at the beginning of the file
@@ -22,3 +23,4 @@ class Files:
             if len(data) > 0:
                 target_file.write("\n\n")
             target_file.write(text)
+

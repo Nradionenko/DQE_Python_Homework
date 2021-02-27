@@ -101,31 +101,13 @@ class DateInput:
 
 
 class IntInput:
-    def __init__(self, min_value, max_value,
-                 msg1, msg2, msg3):
+    def __init__(self, min_value):
         self.min = int(min_value)
-        self.max = int(max_value)
-        self.fitness_tip_1 = msg1
-        self.fitness_tip_2 = msg2
-        self.fitness_tip_3 = msg3
 
     def ask_for_int(self, input_msg):
         """Asks for user input of type int (for random section, which is Recipe in my case and int = calories).
         Min acceptable value is configurable.
         """
         calories = pyip.inputInt(input_msg+'\n', min=self.min)
-        fitness_tip = self.get_fitness_message(calories)
-        return calories, fitness_tip
+        return calories
 
-    def get_fitness_message(self, user_num):
-        """Generates app message for random section (recipes) based on values
-        provided (based on calories of the recipe).
-        Min, max values as well as messages are configurable.
-        """
-        if user_num == self.min:
-            summary = self.fitness_tip_1
-        elif user_num < self.max:
-            summary = self.fitness_tip_2
-        else:
-            summary = self.fitness_tip_3
-        return summary

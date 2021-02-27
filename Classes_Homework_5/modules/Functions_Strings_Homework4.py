@@ -61,13 +61,6 @@ def keep_titles(text):
     return ''.join(titles)
 
 
-def keep_custom(text, propers):
-    """Let user provide list of proper names, they will be capitalized irrespective of their position in the sentence. Lower all others."""
-    words = to_words(text)
-    custom_titles = list(map(lambda x: x.lower() if x.lower() not in propers else x.capitalize(), words))
-    return ''.join(custom_titles)
-
-
 def count_whitespaces (strng):
     cnt = 0
     for i in strng:

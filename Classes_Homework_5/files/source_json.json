@@ -1,0 +1,27 @@
+{
+"News":
+[
+{
+"city": "Moscow",
+"text": "Bla bla bla"
+},
+{
+"city": "Lviv",
+"text": "Some bla bla"
+}
+],
+"Ad":
+[
+{
+"text": "Something for sale",
+"date": "04/04/2021"
+}
+],
+"Recipe":
+[
+{
+"text": "Croissants",
+"calories": 0
+}
+]
+}

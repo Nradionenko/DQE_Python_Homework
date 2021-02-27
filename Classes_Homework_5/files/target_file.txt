@@ -1,0 +1,1061 @@
+News -------------------------
+Рекордное количества снега
+Москва, 17/02/2021 16.19
+------------------------------
+
+Private ad -------------------
+Car for sale, Madrid
+Valid until: 17/03/2021, 28 day(s) left
+------------------------------
+
+Recipe -----------------------
+Greek salad: cucumbers, tomatoes, bell pepper, olive oil.
+250 Kcal
+Fitness tip: nice, light healthy food!
+------------------------------
+
+In general, it is best if empty values (“,,”) are provided if and only if the value of a field is unknown. The value can be unknown due to an error in a 3rd party system, or due to an operator forgetting to enter it, due to the system just not sending this value for whatever reason, etc. Note that in the case that the value is known and is 0, then 0 should be explicitly written in the csv file, even when it is known that “it is always 0”. For example:
+•	If an airline never flies first class, then pax_f should always contain 0 and not an empty string (because the airline knows they never fly first class, hence there are always 0 first class passengers onboard);
+•	If the pax split by gender pax_male / Pax_female / Pax_children / Pax_infant is available from some stations but not from others, then sometimes e.g. pax_male should contain regular number, and sometimes an empty value (“,,”). The latter case should happen only when the pax_male value is indeed unknown, i.e. the pax record arrives from a station that does not provide splitting of pax figures by gender (i.e. this split is unknown for this station).
+
+
+News -------------------------
+Too hot today!
+Malaga, 17/02/2021 18.35
+------------------------------
+
+Private ad -------------------
+Dancing classes
+Valid until: 04/04/2021, 46 day(s) left
+------------------------------
+
+
+19 лютого котирування гривні до долара на закритті міжбанку встановились на рівні 27,85 - 27,87 гривні.
+
+Про це повідомляє finance.ua.
+
+На 16:59 середні курси валют на міжбанку були наступними:
+
+Долар Сша - 27,85 - 27,87 гривні;
+
+Євро – 33,76 - 33,78 гривні.
+
+На готівковому ринку котирування гривні до долара становлять 27,78 - 27,97 гривні. Євро купують по 33,45 гривні, продають по 33,83 гривні.
+
+На "чорному" ринку долар торгується по 27,89 - 27,94 гривні, євро - 33,66 - 33,75 гривні.
+
+19 лютого котирування гривні до долара на закритті міжбанку встановились на рівні 27,85 - 27,87 гривні.
+
+Про це повідомляє Finance.ua.
+
+На 16:59 середні курси валют на міжбанку були наступними:
+
+Долар США - 27,85 - 27,87 гривні;
+
+Євро – 33,76 - 33,78 гривні.
+
+На готівковому ринку котирування гривні до долара становлять 27,78 - 27,97 гривні. Євро купують по 33,45 гривні, продають по 33,83 гривні.
+
+На "чорному" ринку долар торгується по 27,89 - 27,94 гривні, євро - 33,66 - 33,75 гривні.
+flight_suffix,,flight_num,flight_date,brd_pt,off_pt,leg_seq_num,male_pax_flown,female_pax_flown,child_pax_flown,infant_pax_flown,pax_adult_booked,pax_c_booked_business_cls,pax_f_booked_first_cls,pax_y_booked_econ_cls,available_seats_for_sale,pad_c_flown_bus_cls,pad_f_flown_first_cls,pad_y_flown_econ_cls,pax_adult_flown,pax_c_flown,pax_f_flown,pax_y_flown,cargo_flown_wt_kg,mail_flown_wt_k,process_date
+EI,0104,20201004,JFK ,DUB ,1,37,32,3,2,99,7,0,92,317,0,0,2,69,7,0,67,3898,266,12-11-2020
+EI,0104,20201005,JFK ,DUB ,1,19,22,6,1,71,3,0,68,317,0,0,1,41,3,0,45,1375,0,12-11-2020
+EI,0104,20201006,JFK ,DUB ,1,24,21,7,1,73,1,0,72,317,0,0,1,45,1,0,52,3385,259,12-11-2020
+EI,0104,20201007,JFK ,DUB ,1,20,23,0,0,60,5,0,55,317,0,0,0,43,5,0,38,5328,102,12-11-2020
+EI,0104,20201008,JFK ,DUB ,1,31,38,5,1,89,6,0,83,317,0,0,1,69,6,0,69,9827,0,12-11-2020
+EI,0104,20201009,JFK ,DUB ,1,36,36,4,0,90,7,0,83,317,0,0,0,72,7,0,69,7686,0,12-11-2020
+EI,0104,20201010,JFK ,DUB ,1,24,21,3,0,76,15,0,61,317,0,0,0,45,7,0,41,3607,835,12-11-2020
+
+Flight_suffix,,flight_num,flight_date,brd_pt,off_pt,leg_seq_num,male_pax_flown,female_pax_flown,child_pax_flown,infant_pax_flown,pax_adult_booked,pax_c_booked_business_cls,pax_f_booked_first_cls,pax_y_booked_econ_cls,available_seats_for_sale,pad_c_flown_bus_cls,pad_f_flown_first_cls,pad_y_flown_econ_cls,pax_adult_flown,pax_c_flown,pax_f_flown,pax_y_flown,cargo_flown_wt_kg,mail_flown_wt_k,process_date
+ei,0104,20201004,jfk ,dub ,1,37,32,3,2,99,7,0,92,317,0,0,2,69,7,0,67,3898,266,12-11-2020
+ei,0104,20201005,jfk ,dub ,1,19,22,6,1,71,3,0,68,317,0,0,1,41,3,0,45,1375,0,12-11-2020
+ei,0104,20201006,jfk ,dub ,1,24,21,7,1,73,1,0,72,317,0,0,1,45,1,0,52,3385,259,12-11-2020
+ei,0104,20201007,jfk ,dub ,1,20,23,0,0,60,5,0,55,317,0,0,0,43,5,0,38,5328,102,12-11-2020
+usa, madrid, london
+
+Usa, madrid, london
+
+Usa, madrid, london
+
+Usa, madrid, london
+
+Sdfsdf
+nadiia
+
+Dans le monde, 29 États ont le français comme langue officielle. C'est une des six langues officielles ainsi qu'une des deux langues de travail de l'Organisation des Nations unies. Le français est langue officielle ou de travail de nombreuses organisations gouvernementales internationales parmi lesquelles l'Union Postale Universelle ou les trois autorités mondiales de régulation du système métrique, il est langue officielle ou de travail de nombreuses organisations gouvernementales régionales telles que l'Union africaine ou l’Union européenne et est aussi langue officielle ou de travail pour de nombreuses organisations internationales non-gouvernementales comme le Comité international olympique ou le Mouvement international de la Croix-Rouge et du Croissant-Rouge.
+
+L'histoire du français et des francophones est celle de la rencontre et de l'échange entre de nombreux peuples. Le français est une variété de la langue d'oïl, un groupe de langues romanes parlées originellement dans la partie septentrionale du domaine gallo-roman sur le territoire des actuelles Belgique et France et qui résultent de l'évolution, sous l'influence de langues germaniques, du latin populaire parlé en Gaule. En 1539, par l’ordonnance de Villers-Cotterêts, le français, langue maternelle des dynasties capétiennes, devient une langue juridique et administrative en France.
+Надя, оля, віка
+саша, вася, олег
+
+News -------------------------
+1 mln tourists this year
+Copenhagen, 19/02/2021 20.01
+------------------------------
+
+Private ad -------------------
+Bike for sale
+Valid until: 03/03/2021, 12 day(s) left
+------------------------------
+
+News -------------------------
+Ikea shop opened
+Kyiv, 19/02/2021 20.39
+------------------------------
+
+Dans le monde, 29 états ont le français comme langue officielle. C'est une des six langues officielles ainsi qu'une des deux langues de travail de l'organisation des nations unies. Le français est langue officielle ou de travail de nombreuses organisations gouvernementales internationales parmi lesquelles l'union postale universelle ou les trois autorités mondiales de régulation du système métrique, il est langue officielle ou de travail de nombreuses organisations gouvernementales régionales telles que l'union africaine ou l’union européenne et est aussi langue officielle ou de travail pour de nombreuses organisations internationales non-gouvernementales comme le comité international olympique ou le mouvement international de la croix-rouge et du croissant-rouge.
+
+L'histoire du français et des francophones est celle de la rencontre et de l'échange entre de nombreux peuples. Le français est une variété de la langue d'oïl, un groupe de langues romanes parlées originellement dans la partie septentrionale du domaine gallo-roman sur le territoire des actuelles belgique et france et qui résultent de l'évolution, sous l'influence de langues germaniques, du latin populaire parlé en gaule. En 1539, par l’ordonnance de villers-cotterêts, le français, langue maternelle des dynasties capétiennes, devient une langue juridique et administrative en france.
+
+News -------------------------
+sdf
+sdf, 19/02/2021 20.46
+------------------------------
+
+An ‘out station connection’ field should be created identifying if there is a connection at the out station. The formula used to identify this is as follows:
+if flight’s departure airport is identified as ‘out station' (req_ 016) and con from does not equal null
+or if flight’s arrival airport is identified as ‘out station’ (req_ 016) and con to does not equal null
+then “y”.
+
+An ‘out station connection’ field should be created identifying if there is a connection at the out station. The formula used to identify this is as follows:
+If flight’s departure airport is identified as ‘out station' (req_ 016) and con from does not equal null
+Or if flight’s arrival airport is identified as ‘out station’ (req_ 016) and con to does not equal null
+Then “y”.
+
+Private ad -------------------
+Some new ad
+Valid until: 05/05/2021, 72 day(s) left
+------------------------------
+
+News -------------------------
+Bla bla bla
+Moscow, 26/02/2021 19.15
+------------------------------
+
+News -------------------------
+Some bla bla
+Lviv, 26/02/2021 19.15
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 2021-04-04, 37 day(s) left
+------------------------------
+
+Recipe -----------------------
+Croissants
+800 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Bla Bla Bla
+Moscow, 26/02/2021 19.16
+------------------------------
+
+News -------------------------
+Some Bla Bla
+Lviv, 26/02/2021 19.16
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 2021-04-04, 37 day(s) left
+------------------------------
+
+Recipe -----------------------
+Croissants
+800 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+New mayor elected
+New yourk, 26/02/2021 19.57
+------------------------------
+
+Ad ---------------------------
+House for Sale
+Valid until: 2021-05-04, 67 day(s) left
+------------------------------
+
+Ad ---------------------------
+Car for Sale
+Valid until: 2021-05-04, 67 day(s) left
+------------------------------
+
+Recipe -----------------------
+Salad
+0 kcal
+Fitness tip: 0 calories, really? Is it water? Take 2l of this daily)
+------------------------------
+
+Recipe -----------------------
+Milkshake
+1000 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Bla bla bla
+Moscow, 26/02/2021 20.23
+------------------------------
+
+News -------------------------
+Some bla bla
+Lviv, 26/02/2021 20.23
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 2021-04-04, 37 day(s) left
+------------------------------
+
+Recipe -----------------------
+Croissants
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Bla bla bla
+Moscow, 26/02/2021 20.23
+------------------------------
+
+News -------------------------
+Some bla bla
+Lviv, 26/02/2021 20.23
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 2021-04-04, 37 day(s) left
+------------------------------
+
+Recipe -----------------------
+Croissants
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Bla bla bla
+Moscow, 27/02/2021 12.07
+------------------------------
+
+News -------------------------
+Some bla bla
+Lviv, 27/02/2021 12.07
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 2021-04-04, 36 day(s) left
+------------------------------
+
+Recipe -----------------------
+Croissants
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+Recipe -----------------------
+Croissants
+800 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+
+recipE -----------------------
+croissants
+7000 kcal
+Fitness Tip: OH, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+
+Recipe -----------------------Croissants7000 kcalFitness tip: oh, that's a lot of calories! Don't forget to work out!------------------------------
+
+
+
+Recipe -----------------------
+Croissants
+7000 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+
+Recipe -----------------------
+Croissants
+7000 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+
+Recipe -----------------------
+Croissants
+7000 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+Recipe -----------------------
+Croissants
+7000 kcal
+Fitness tip: oh, that's a Lot of calories! Don't forget to work out!
+------------------------------
+
+Recipe -----------------------
+Croissants
+7000 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+Recipe -----------------------
+Croissants
+7000 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+Recipe -----------------------
+Croissants
+7000 kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+Homework5: News app. Run entire package or __main__.py file
+1. Pyinputplus module needs to be installed to run this app: https://pypi.org/project/pyinputplus/
+2. Target file name, as well as all messages and a lot of other stuff is configured in configs.ini file. The file needs to be kept in the same directory as configloader module.
+3. Target file will be stored in /classes_homework_5 file is.
+4. To execute the script one can run the classes_homework_5 directory in cmd: __main__.py should be picked up by default.
+5. No specific text input validation is implemented except for input length.
+Update: Running main.py you can select whether you want to input manually or from file. If manually - the above described steps will be used, if from file - module from hometask6 is used, but in this case you can't pass multiple files at a time
+
+Homework6: Modules. Run fromfile.py module
+The following logic is implemented:
+- user can pass path to source file(s) (to read from) in cmd as an argument, i.e. python fromfile.py C:/Users/my_source_file.txt
+- if no file path is passed, default path is used, which is path to 'source.txt', located in the same directory as hometask6.py. File name is configured in exec_utils/configs.ini
+- file path is then verified: if exists, if is file, if file is not empty, if can be decoded
+- if any of the above criteria is not met, user is asked to input path again. The same checks are performed against his input.
+- when valid path is provided, user is asked to decide what normalization strategy to apply: ignore any potential proper names, leave anything that looks like title or upper as is or provide list of proper names that need to be capitalized irrespective of position in sentence
+- text from source file(s) is normalized according to normalization strategy chosen, and are written to the target file (configured in configs.ini)
+- source is cloned to the same directory, as running module, with name = source_name + _clone
+- source file is deleted.
+Select 'A1' as tax_code,'Costa Rica' as country_name,'Baggage Inspection Fee' as fee_desc from dual union all
+Select 'A7' as tax_code,'Bolivia' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'aa' as tax_code,'Dominican Republic' as country_name,'Airport Departure Tax Intl' as fee_desc from dual union all
+Select 'ab' as tax_code,'-' as country_name,'Haiti Airport Departure Tax International' as fee_desc from dual union all
+Select 'ae' as tax_code,'uae' as country_name,'Passenger Service Charge Intl' as fee_desc from dual union all
+Select 'ah' as tax_code,'Panama' as country_name,'Airport Security Fee Departures' as fee_desc from dual union all
+Select 'aj' as tax_code,'Venezuela' as country_name,'Airport Exit Tax International' as fee_desc from dual union all
+Select 'ak' as tax_code,'Venezuela' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'ar' as tax_code,'Argentina' as country_name,'Ticket Tax' as fee_desc from dual union all
+Select 'at' as tax_code,'Austria' as country_name, fee_desc as	'Passenger Security Charge' as fee_desc from dual union all
+Select 'au' as tax_code,'Australia' as country_name,'Passenger Movement Charge' as fee_desc from dual union all
+Select 'ax' as tax_code,'Vietnam' as country_name, fee_desc as	'Passenger Service Charge Domestic' as fee_desc from dual union all
+Select 'ay' as tax_code,'United States' as country_name,'"Sept 11" Security Fee' as fee_desc from dual union all
+Select 'B1' as tax_code,'Costa Rica' as country_name, fee_desc as	'Boarding Tax' as fee_desc from dual union all
+Select 'B6' as tax_code,'Nepal' as country_name,'Airport Development Fee'	as fee_desc from dual union all
+Select 'bb' as tax_code,'Barbados' as country_name,'Value Added Tax' as fee_desc from dual union all
+Select 'be' as tax_code,'Belgium' as country_name,'Passenger Service and Security Charge' as fee_desc from dual union all
+Select 'bl' as tax_code,'Bermuda' as country_name,'Aviation Security Fee' as fee_desc from dual union all
+Select 'bm' as tax_code,'Bermuda' as country_name,'Passenger Tax' as fee_desc from dual union all
+Select 'bo' as tax_code,'Bolivia' as country_name,'Sales Tax' as fee_desc from dual union all
+Select 'bp' as tax_code,'South Korea' as country_name,'International Psc Departure Tax And Global Disease Eradication Fund' as fee_desc from dual union all
+Select 'br' as tax_code,'Brazil' as country_name,'Embarkation Fee International' as fee_desc from dual union all
+Select 'bu' as tax_code,'Belize' as country_name,'Airport Development Fee' as fee_desc from dual union all
+Select 'C2' as tax_code,'Venezuela' as country_name,'Biosecurity Service Fee Arrivals' as fee_desc from dual union all
+Select 'C4' as tax_code,'Vietnam' as country_name, fee_desc as	'Passenger And Baggage Security Screening Service Charge' as fee_desc from dual union all
+Select 'C7' as tax_code,'Myanmar' as country_name, fee_desc as	'Advance Passenger Information User Charge International Arrivals' as fee_desc from dual union all
+Select 'C9' as tax_code,'Bahamas' as country_name, fee_desc as	'Value Added Tax' as fee_desc from dual union all
+Select 'ca' as tax_code,'Canada' as country_name,'Air Travelers Security Charge' as fee_desc from dual union all
+Select 'ce' as tax_code,'New Zealand' as country_name,'Aviation Security Screening Levy Domestic' as fee_desc from dual union all
+Select 'ch' as tax_code,'Switzerland' as country_name,'Airport Passenger Security And Noise Charge' as fee_desc from dual union all
+Select 'cj' as tax_code,'Netherlands' as country_name,'Security Service Charge' as fee_desc from dual union all
+Select 'cn' as tax_code,'China' as country_name,'Airport Fee (varies per airport)' as fee_desc from dual union all
+Select 'co' as tax_code,'Colombia' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'cr' as tax_code,'Costa Rica' as country_name,'Transportation Tax' as fee_desc from dual union all
+Select 'cu' as tax_code,'Cuba' as country_name,'Passenger Services Airport Tax' as fee_desc from dual union all
+Select 'cz' as tax_code,'Czech Republic' as country_name,'Embarkation Tax' as fee_desc from dual union all
+Select 'D5' as tax_code,'Indonesia' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'dc' as tax_code,'Romania' as country_name,'Security Charge' as fee_desc from dual union all
+Select 'D9' as tax_code,'Jordan' as country_name,'Cute User Fee (ie Common User Terminal Equipment)' as fee_desc from dual union all
+Select 'dd' as tax_code,'Trinidad and Tobago' as country_name,'Concourse Fee International' as fee_desc from dual union all
+Select 'de' as tax_code,'Germany' as country_name,'Airport Security Charge (varies per airport)' as fee_desc from dual union all
+Select 'di' as tax_code,'Barbados' as country_name,'Airport Facilitation Fee International' as fee_desc from dual union all
+Select 'dy' as tax_code,'Peru' as country_name,'Tourism Arrival Tax' as fee_desc from dual union all
+Select 'E2' as tax_code,'Ecuador' as country_name,'Infrastructure Tax Arrivals' as fee_desc from dual union all
+Select 'E3' as tax_code,'Saudi Arabia' as country_name,'Security Charges Intl Departure/Arrival' as fee_desc from dual union all
+Select 'E6' as tax_code,'Bermuda' as country_name,'Air Terminal Improvement Fee' as fee_desc from dual union all
+Select 'E7' as tax_code,'Thailand' as country_name,'Advance Passenger Processing User Charge' as fee_desc from dual union all
+Select 'ea' as tax_code,'Bahamas' as country_name,'Passenger Departure Tax' as fee_desc from dual union all
+Select 'ec' as tax_code,'Ecuador' as country_name,'Government Transportation Tax' as fee_desc from dual union all
+Select 'ed' as tax_code,'Ecuador' as country_name,'Tourism Fee International' as fee_desc from dual union all
+Select 'eg' as tax_code,'Egypt' as country_name,'Solidarity Tax (formerly/aka Transportation Tax)' as fee_desc from dual union all
+Select 'ek' as tax_code,'Jamaica' as country_name,'Passenger Service and Security Fee' as fee_desc from dual union all
+Select 'el' as tax_code,'Jamaica' as country_name,'Airport Improvement Fee' as fee_desc from dual union all
+Select 'en' as tax_code,'Bermuda' as country_name,'Passenger Facility Charge' as fee_desc from dual union all
+Select 'eq' as tax_code,'Egypt' as country_name,'Service Charge' as fee_desc from dual union all
+Select 'eu' as tax_code,'Venezuela' as country_name,'Inac Civil Aviation Services Improvement Fee' as fee_desc from dual union all
+Select 'ev' as tax_code,'South Africa' as country_name,'Passenger Safety Charge' as fee_desc from dual union all
+Select 'ex' as tax_code,'Italy' as country_name,'Security Bag Charge' as fee_desc from dual union all
+Select 'ey' as tax_code,'Fiji' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'ez' as tax_code,'Fiji' as country_name,'Airport Security Charge' as fee_desc from dual union all
+Select 'F1' as tax_code,'New Zealand' as country_name,'Border Clearance Levy Intl Arrival' as fee_desc from dual union all
+Select 'F3' as tax_code,'Panama' as country_name,'Airport Development Fee' as fee_desc from dual union all
+Select 'F6' as tax_code,'uae' as country_name,'Passenger Facilities Charge' as fee_desc from dual union all
+Select 'F7' as tax_code,'Egypt' as country_name,'Quarantine Fees' as fee_desc from dual union all
+Select 'fa' as tax_code,'Fiji' as country_name,'Airport Development Charge' as fee_desc from dual union all
+Select 'fc' as tax_code,'Nicaragua' as country_name,'Terminal Fee Intl' as fee_desc from dual union all
+Select 'fd' as tax_code,'Nicaragua' as country_name,'Tourism Fee Intl' as fee_desc from dual union all
+Select 'fe' as tax_code,'Hungary' as country_name,'Security Charge' as fee_desc from dual union all
+Select 'fn' as tax_code,'Italy' as country_name,'vat on other ticket fees' as fee_desc from dual union all
+Select 'fp' as tax_code,'Haiti' as country_name,'Security Control Fee' as fee_desc from dual union all
+Select 'fr' as tax_code,'France' as country_name,'Civil Aviation Tax and Airport Tax' as fee_desc from dual union all
+Select 'fs' as tax_code,'Costa Rica' as country_name,'-' as fee_desc from dual union all
+Select 'fu' as tax_code,'Belize' as country_name,'Conservation Tax' as fee_desc from dual union all
+Select 'fv' as tax_code,'Belize' as country_name,'Passenger Service Fee' as fee_desc from dual union all
+Select 'fw' as tax_code,'Belize' as country_name,'Security Fee International' as fee_desc from dual union all
+Select 'fx' as tax_code,'Uzbekistan' as country_name,'Security Tax' as fee_desc from dual union all
+Select 'fz' as tax_code,'Panama' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'G1' as tax_code,'Malaysia' as country_name,'Departure Levy' as fee_desc from dual union all
+Select 'G2' as tax_code,'Norway' as country_name,'Airport Passenger Tax' as fee_desc from dual union all
+Select 'G3' as tax_code,'Hong Kong' as country_name,'Airport Construction Fee' as fee_desc from dual union all
+Select 'G4' as tax_code,'Qatar' as country_name,'Passenger Facility Charge' as fee_desc from dual union all
+Select 'G8' as tax_code,'Thailand' as country_name,'Intl Arrival Fee' as fee_desc from dual union all
+Select 'gb' as tax_code,'United Kingdom' as country_name,'Air Passenger Duty varies depending on distance flown and class of service вј13 вђ“ вј172 as of 2019' as fee_desc from dual union all
+Select 'gj' as tax_code,'Bahamas' as country_name,'Airport Facility Fee Departure' as fee_desc from dual union all
+Select 'gk' as tax_code,'Bahamas' as country_name,'Security Fee' as fee_desc from dual union all
+Select 'gr' as tax_code,'Greece' as country_name,'Airport Development Charge' as fee_desc from dual union all
+Select 'gz' as tax_code,'Kuwait' as country_name,'Airport Service Charge International' as fee_desc from dual union all
+Select 'H8' as tax_code,'Malaysia' as country_name,'Regulatory Charge Domestic And International' as fee_desc from dual union all
+Select 'hb' as tax_code,'Italy' as country_name,'Council City Tax' as fee_desc from dual union all
+Select 'hg' as tax_code,'Jamaica' as country_name,'Tourism Enhancement Fee Intl' as fee_desc from dual union all
+Select 'hi' as tax_code,'Haiti' as country_name,'Immigration Processing Fee Arrival' as fee_desc from dual union all
+Select 'hj' as tax_code,'Japan' as country_name,'Passenger Facility Charge, Domestic Departures' as fee_desc from dual union all
+Select 'hk' as tax_code,'Hong Kong' as country_name,'Passenger Departure Tax' as fee_desc from dual union all
+Select 'hl' as tax_code,'Kyrgyzstan' as country_name,'Airport Development Charge International' as fee_desc from dual union all
+Select 'hq' as tax_code,'Jordan' as country_name,'Embarkation Tax International' as fee_desc from dual union all
+Select 'hu' as tax_code,'Hungary' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'hw' as tax_code,'Peru' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'I5' as tax_code,'Hong Kong' as country_name,'Passenger Security Charge' as fee_desc from dual union all
+Select 'I6' as tax_code,'Iran as country_name,'Passenger Safety Oversight Services Fees' as fee_desc from dual union all
+Select 'ia' as tax_code,'New Zealand' as country_name,'Passenger Security Charge Intl' as fee_desc from dual union all
+Select 'id' as tax_code,'Indonesia' as country_name,'Value Added Tax Passengers Domestic' as fee_desc from dual union all
+Select 'ik' as tax_code,'Costa Rica' as country_name,'Security Fee International Arriving/Departing' as fee_desc from dual union all
+Select 'il' as tax_code,'Israel' as country_name,'Departure Passenger Airport Tax International' as fee_desc from dual union all
+Select 'in' as tax_code,'India' as country_name,'User Development Fee Departures' as fee_desc from dual union all
+Select 'io' as tax_code,'Saudi Arabia' as country_name,'Airport Building Charge For Arrivals' as fee_desc from dual union all
+Select 'iq' as tax_code,'Iraq' as country_name,'Departure Tax' as fee_desc from dual union all
+Select 'ir' as tax_code,'Iran' as country_name,'Airport Tax International' as fee_desc from dual union all
+Select 'is' as tax_code,'Iceland' as country_name,'Airport Service Charge' as fee_desc from dual union all
+Select 'it' as tax_code,'Italy' as country_name,'Embarkation Tax' as fee_desc from dual union all
+Select 'iz' as tax_code,'France' as country_name,'Passenger Solidarity Tax varies depending on destination and class of service в‚¬1.13 вђ“ в‚¬45.07 as of 2019' as fee_desc from dual union all
+Select 'jc' as tax_code,'Vietnam' as country_name,'Passenger Service Charge International' as fee_desc from dual union all
+Select 'jd' as tax_code,'Spain' as country_name,'Departure Charge' as fee_desc from dual union all
+Select 'jg' as tax_code,'Barbados' as country_name,'Passenger Service Charge International' as fee_desc from dual union all
+Select 'jh' as tax_code,'Barbados' as country_name,'Security Fee International' as fee_desc from dual union all
+Select 'jk' as tax_code,'Egypt' as country_name,'Departure Fee' as fee_desc from dual union all
+Select 'jp' as tax_code,'Japan' as country_name,'Consumption Tax' as fee_desc from dual union all
+Select 'js' as tax_code,'Colombia' as country_name,'Tourism Tax' as fee_desc from dual union all
+Select 'jt' as tax_code,'Jamaica' as country_name,'Passenger Facility Charge' as fee_desc from dual union all
+Select 'K3' as tax_code,'India' as country_name,'Goods And Service Tax Interim Domestic' as fee_desc from dual union all
+Select 'K7' as tax_code,'Saudi Arabia' as country_name,'Value Added Tax' as fee_desc from dual union all
+Select 'kj' as tax_code,'Jordan' as country_name,'Civil Aviation Fee' as fee_desc from dual union all
+Select 'kk' as tax_code,'New Zealand' as country_name,'Passenger Service Charge Intl Arrivals' as fee_desc from dual union all
+Select 'ko' as tax_code,'Haiti' as country_name,'Territorial Development Tax' as fee_desc from dual union all
+Select 'kp' as tax_code,'North Korea' as country_name,'Passenger Service Charge International' as fee_desc from dual union all
+Select 'L2' as tax_code,'Kuwait' as country_name,'Transfer Fee' as fee_desc from dual union all
+Select 'L7' as tax_code,'Singapore' as country_name,'Airport Development Levy' as fee_desc from dual union all
+Select 'L8' as tax_code,'Dominican Republic' as country_name,'Tourism Tax' as fee_desc from dual union all
+Select 'li' as tax_code,'Philippines' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'lj' as tax_code,'Sweden' as country_name,'Aviation Tax' as fee_desc from dual union all
+Select 'lk' as tax_code,'Sri Lanka' as country_name,'Embarkation Tax' as fee_desc from dual union all
+Select 'M3' as tax_code,'Barbados' as country_name,'Airport Service Charge' as fee_desc from dual union all
+Select 'M6' as tax_code,'Turkey' as country_name,'International Flights Security Charge' as fee_desc from dual union all
+Select 'ma' as tax_code,'Morocco' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'mj' as tax_code,'Italy' as country_name,'Passenger Service Charge on Departures' as fee_desc from dual union all
+Select 'mm' as tax_code,'Myanmar' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'mo' as tax_code,'Macau' as country_name,'Airport Security Tax' as fee_desc from dual union all
+Select 'mx' as tax_code,'Mexico' as country_name,'Transportation Tax iva Domestic' as fee_desc from dual union all
+Select 'my' as tax_code,'Malaysia' as country_name,'Passenger Service And Security Charge' as fee_desc from dual union all
+Select 'N8' as tax_code,'Costa Rica' as country_name,'Sales Tax' as fee_desc from dual union all
+Select 'N9' as tax_code,'Pakistan' as country_name,'stamptax' as fee_desc from dual union all
+Select 'nc' as tax_code,'New Caledonia' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'nd' as tax_code,'Poland' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'nh' as tax_code,'Jordan' as country_name,'Passenger Terminal Use Fee' as fee_desc from dual union all
+Select 'ni' as tax_code,'Nicaragua' as country_name,'Sales Hacienda Tax' as fee_desc from dual union all
+Select 'np' as tax_code,'Nepal' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'nq' as tax_code,'Nepal' as country_name,'Tourism Service Fee' as fee_desc from dual union all
+Select 'nr' as tax_code,'Nauru' as country_name,'Departure Fee вђ“ newly created Aug 1, 2020' as fee_desc from dual union all
+Select 'nw' as tax_code,'Costa Rica' as country_name,'Tourism Arrival Tax' as fee_desc from dual union all
+Select 'nz' as tax_code,'New Zealand' as country_name,'Goods and Services Tax' as fee_desc from dual union all
+Select 'O2' as tax_code,'Egypt' as country_name,'Departure Service Fee' as fee_desc from dual union all
+Select 'O4' as tax_code,'France' as country_name,'Solidarity Tax Surplus' as fee_desc from dual union all
+Select 'O5' as tax_code,'Argentina' as country_name,'Inclusive and Solidarity Tax Pais' as fee_desc from dual union all
+Select 'O9' as tax_code,'Egypt' as country_name,'Cute Cupps Fee' as fee_desc from dual union all
+Select 'ob' as tax_code,'Airline' as country_name,'Booking Fee and Surcharges' as fee_desc from dual union all
+Select 'og' as tax_code,'Spain' as country_name,'Aviation Safety and Security Fee' as fee_desc from dual union all
+Select 'oi' as tax_code,'Japan' as country_name,'Passenger Security Service Charge' as fee_desc from dual union all
+Select 'op' as tax_code,'Singapore' as country_name,'Aviation Lev' as fee_desc from dual union all
+Select 'or' as tax_code,'Ecuador' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'oy' as tax_code,'Germany' as country_name,'Air Transport Tax' as fee_desc from dual union all
+Select 'pb' as tax_code,'Pakistan' as country_name,'Advance Tax International' as fee_desc from dual union all
+Select 'pf' as tax_code,'French Polynesia' as country_name,'Local Departure Tax' as fee_desc from dual union all
+Select 'ph' as tax_code,'Philippines' as country_name,'Travel Tax' as fee_desc from dual union all
+Select 'po' as tax_code,'Bahamas' as country_name,'Passenger Processing Fee' as fee_desc from dual union all
+Select 'pt' as tax_code,'Portugal' as country_name,'Security Tax' as fee_desc from dual union all
+Select 'px' as tax_code,'Nicaragua' as country_name,'Airport Security Charge' as fee_desc from dual union all
+Select 'pz' as tax_code,'Qatar' as country_name,'Passenger Service Charge Arrivals' as fee_desc from dual union all
+Select 'qa' as tax_code,'Qatar' as country_name,'Airport Fee Intl' as fee_desc from dual union all
+Select 'qb' as tax_code,'Ecuador' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'qc' as tax_code,'Australia' as country_name,'Used to be Cairns Airport Authority Fee' as fee_desc from dual union all
+Select 'qd' as tax_code,'Austria' as country_name,'Air Transport Levy Domestic' as fee_desc from dual union all
+Select 'qh' as tax_code,'Egypt' as country_name,'Embarkation Tax' as fee_desc from dual union all
+Select 'qi' as tax_code,'Ecuador' as country_name,'Airport Auxiliary Facilities Tax' as fee_desc from dual union all
+Select 'qk' as tax_code,'Jamaica' as country_name,'Airline Passenger Levy' as fee_desc from dual union all
+Select 'qo' as tax_code,'Argentina' as country_name,'Custom And Immigration Services Tax International' as fee_desc from dual union all
+Select 'qp' as tax_code,'Turkmenistan' as country_name,'Passenger Safety And Airport Development Charge' as fee_desc from dual union all
+Select 'qr' as tax_code,'Australia' as country_name,'Passenger Service Charge Domestic Departure/Arrival' as fee_desc from dual union all
+Select 'qv' as tax_code,'Spain' as country_name,'Security Tax' as fee_desc from dual union all
+Select 'qw' as tax_code,'France' as country_name,'Passenger Service Charge Domestic' as fee_desc from dual union all
+Select 'qx' as tax_code,'France' as country_name,'Passenger Service Charge Intl' as fee_desc from dual union all
+Select 'ra' as tax_code,'Germany' as country_name,'Passenger Service Charge for Intl Departures' as fee_desc from dual union all
+Select 'rc' as tax_code,'Canada' as country_name,'Harmonized Sales Tax' as fee_desc from dual union all
+Select 'rg' as tax_code,'Pakistan' as country_name,'Federal Excise Duty Red' as fee_desc from dual union all
+Select 'ri' as tax_code,'Russia' as country_name,'Terminal Use Charge (Departure or Arrival)' as fee_desc from dual union all
+Select 'rn' as tax_code,'Netherlands' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'ro' as tax_code,'Romania' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'sg' as tax_code,'Singapore' as country_name,'Passenger Service And Security Fee' as fee_desc from dual union all
+Select 'sp' as tax_code,'Pakistan' as country_name,'Embarkation Fee' as fee_desc from dual union all
+Select 'sq' as tax_code,'Canada' as country_name,'Airport Improvement Fee' as fee_desc from dual union all
+Select 'sw' as tax_code,'Japan' as country_name,'Passenger Service Facilities Charge Intl' as fee_desc from dual union all
+Select 'tk' as tax_code,'Japan' as country_name,'International Tourist Tax' as fee_desc from dual union all
+Select 'tm' as tax_code,'Turkmenistan' as country_name,'Passenger Airport Tax Departures' as fee_desc from dual union all
+Select 'tp' as tax_code,'uae' as country_name,'Passenger Security and Safety Fee' as fee_desc from dual union all
+Select 'tq' as tax_code,'Argentina' as country_name,'Security Tax Domestic And International' as fee_desc from dual union all
+Select 'tr' as tax_code,'Turkey' as country_name,'Airport Service Charge International' as fee_desc from dual union all
+Select 'ts' as tax_code,'Thailand' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'tu' as tax_code,'Kenya' as country_name,'Passenger Airport Service Charge Intl' as fee_desc from dual union all
+Select 'tw' as tax_code,'Taiwan' as country_name,'Airport Service Charge International' as fee_desc from dual union all
+Select 'ty' as tax_code,'Dominican Republic' as country_name,'Aerocom Fee Arrivals' as fee_desc from dual union all
+Select 'ua' as tax_code,'Ukraine' as country_name,'Security Charge' as fee_desc from dual union all
+Select 'ub' as tax_code,'United Kingdom' as country_name,'Passenger Service Charge Departures' as fee_desc from dual union all
+Select 'uc' as tax_code,'Jamaica' as country_name,'Passenger Aviation Service Charge Arrivals' as fee_desc from dual union all
+Select 'ud' as tax_code,'Ukraine' as country_name,'State Charge' as fee_desc from dual union all
+Select 'uh' as tax_code,'Russia' as country_name,'Security Charge International' as fee_desc from dual union all
+Select 'uj' as tax_code,'Kazakhstan' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'uk' as tax_code,'Mexico' as country_name,'Tourism Tax Derecho No Inmigrante6' as fee_desc from dual union all
+Select 'um' as tax_code,'South Africa' as country_name, fee_desc as	asc Charge	 As fee_desc from dual union all
+Select 'uo' as tax_code,'Australia' as country_name,'Goods And Services Tax' as fee_desc from dual union all
+Select 'up' as tax_code,'Ireland' as country_name,'Passenger Charge' as fee_desc from dual union all
+Select 'uq' as tax_code,'Ireland' as country_name,'Inspection Pre-clearance Charge' as fee_desc from dual union all
+Select 'us' as tax_code,'United States' as country_name,'International Arrival/Departure Tax (currently $18.60 each way as of 2019) or 7.5% (as of 2019) us Domestic Transportation Tax' as fee_desc from dual union all
+Select 'ux' as tax_code,'Dominican Republic' as country_name,'Airport Authority Fee Arrivals' as fee_desc from dual union all
+Select 'uz' as tax_code,'Uzbekistan' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'vb' as tax_code,'Dominican Republic' as country_name,'Airport Infrastructure Fee Arrival' as fee_desc from dual union all
+Select 'vq' as tax_code,'Turkey' as country_name,'Airport Service Charge Domestic' as fee_desc from dual union all
+Select 'vt' as tax_code,'Italy' as country_name,'Security Charge' as fee_desc from dual union all
+Select 'vv' as tax_code,'Netherlands' as country_name,'Noise Isolation Charge' as fee_desc from dual union all
+Select 'wc' as tax_code,'South Africa' as country_name,'Passenger Tax' as fee_desc from dual union all
+Select 'wd' as tax_code,'Jamaica' as country_name,'Travel Tax Intl' as fee_desc from dual union all
+Select 'wg' as tax_code,'Australia' as country_name,'Safety and Security Charge Departure' as fee_desc from dual union all
+Select 'wn' as tax_code,'Macao' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'wo' as tax_code,'India' as country_name,'Passenger Service Fee' as fee_desc from dual union all
+Select 'wp' as tax_code,'Greece' as country_name,'Passenger Terminal Facilities Charge' as fee_desc from dual union all
+Select 'wq' as tax_code,'Greece' as country_name,'Passenger Security Charge' as fee_desc from dual union all
+Select 'wt' as tax_code,'Ecuador' as country_name,'Security Fee' as fee_desc from dual union all
+Select 'wx' as tax_code,'New Zealand' as country_name,'Passenger Levy Domestic' as fee_desc from dual union all
+Select 'wy' as tax_code,'Australia' as country_name,'Passenger Service Charge Departure/Arrival Intl' as fee_desc from dual union all
+Select 'xa' as tax_code,'United States' as country_name,'aphis (Animal and Plant Health Inspection Service) Fee (currently $3.96 as of 2019)' as fee_desc from dual union all
+Select 'xd' as tax_code,'Mexico' as country_name,'Airport Departure Tax Tua Intl' as fee_desc from dual union all
+Select 'xf' as tax_code,'United States' as country_name,'Passenger Facility Charge (up to $4.50 per applicable airport as of 2019)' as fee_desc from dual union all
+Select 'xg' as tax_code,'Canada' as country_name,'Goods and Services Tax' as fee_desc from dual union all
+Select 'xk' as tax_code,'Egypt' as country_name,'Development Fee' as fee_desc from dual union all
+Select 'xl' as tax_code,'Egypt' as country_name,'Stamp Tax' as fee_desc from dual union all
+Select 'xo' as tax_code,'Mexico' as country_name,'Transportation Tax iva International' as fee_desc from dual union all
+Select 'xr' as tax_code,'Argentina' as country_name,'Airport Tax International' as fee_desc from dual union all
+Select 'xt' as tax_code,'none' as country_name,'Extra tax total, details shown elsewhere' as fee_desc from dual union all
+Select 'xv' as tax_code,'Mexico' as country_name,'Airport Departure Tax Tua Domestic' as fee_desc from dual union all
+Select 'xw' as tax_code,'Poland' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'xy' as tax_code,'United States' as country_name,'Immigration Fee (currently $7 as of 2020)' as fee_desc from dual union all
+Select 'ya' as tax_code,'Sweden' as country_name,'Passenger Charge' as fee_desc from dual union all
+Select 'yc' as tax_code,'United States' as country_name,'Customs Fee (currently $5.87 as of 2020)' as fee_desc from dual union all
+Select 'yd' as tax_code' as tax_code,'Pakistan' as country_name,'Infrastructure Development Charge' as fee_desc from dual union all
+Select 'yk' as tax_code,'Ukraine' as country_name,'Airport Passenger Charge' as fee_desc from dual union all
+Select 'ym' as tax_code,'India' as country_name,'Development Fee' as fee_desc from dual union all
+Select 'yp' as tax_code,'Portugal' as country_name,'Madeira Funchal Porto Santo Passenger Service Charge' as fee_desc from dual union all
+Select 'yq' as tax_code,'Airline' as country_name,'Extra fee (instead of simply charging a higher fare)' as fee_desc from dual union all
+Select 'yr' as tax_code,'Airline' as country_name,'Extra fee (instead of simply charging a higher fare)' as fee_desc from dual union all
+Select 'yw' as tax_code,'Bolivia' as country_name,'Exit Tax' as fee_desc from dual union all
+Select 'yx' as tax_code,'Kuwait' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'za' as tax_code,'South Africa' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'zn' as tax_code,'Norway' as country_name,'Passenger Charge' as fee_desc from dual union all
+Select 'zo' as tax_code,'Denmark' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'zp' as tax_code,'United States' as country_name,'Segment Tax, goes to faa' as fee_desc from dual union all
+Select 'zq' as tax_code,'Chile' as country_name,'Airport Facility Charge International' as fee_desc from dual union all
+Select 'zr' as tax_code,'uae' as country_name,'Intl Advanced Passenger Info Fee Arrivals' as fee_desc from dual union all
+Select 'zu' as tax_code,'Iceland' as country_name,'Passenger Fee Keflavik' as fee_desc from dual union all
+Select 'zy' as tax_code,'Austria' as country_name,'Passenger Service Charge' from dual;
+
+Homework5: News app. Run entire package or __main__.py file
+1. Pyinputplus module needs to be installed to run this app: https://pypi.org/project/pyinputplus/
+2. Target file name, as well as all messages and a lot of other stuff is configured in configs.ini file. The file needs to be kept in the same directory as configloader module.
+3. Target file will be stored in /classes_homework_5 file is.
+4. To execute the script one can run the classes_homework_5 directory in cmd: __main__.py should be picked up by default.
+5. No specific text input validation is implemented except for input length.
+Update: Running main.py you can select whether you want to input manually or from file. If manually - the above described steps will be used, if from file - module from hometask6 is used, but in this case you can't pass multiple files at a time
+
+Homework6: Modules. Run fromfile.py module
+The following logic is implemented:
+- user can pass path to source file(s) (to read from) in cmd as an argument, i.e. python fromfile.py C:/Users/my_source_file.txt
+- if no file path is passed, default path is used, which is path to 'source.txt', located in the same directory as hometask6.py. File name is configured in exec_utils/configs.ini
+- file path is then verified: if exists, if is file, if file is not empty, if can be decoded
+- if any of the above criteria is not met, user is asked to input path again. The same checks are performed against his input.
+- when valid path is provided, user is asked to decide what normalization strategy to apply: ignore any potential proper names, leave anything that looks like title or upper as is or provide list of proper names that need to be capitalized irrespective of position in sentence
+- text from source file(s) is normalized according to normalization strategy chosen, and are written to the target file (configured in configs.ini)
+- source is cloned to the same directory, as running module, with name = source_name + _clone
+- source file is deleted.
+Select 'A1' as tax_code,'Costa Rica' as country_name,'Baggage Inspection Fee' as fee_desc from dual union all
+Select 'A7' as tax_code,'Bolivia' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'aa' as tax_code,'Dominican Republic' as country_name,'Airport Departure Tax Intl' as fee_desc from dual union all
+Select 'ab' as tax_code,'-' as country_name,'Haiti Airport Departure Tax International' as fee_desc from dual union all
+Select 'ae' as tax_code,'uae' as country_name,'Passenger Service Charge Intl' as fee_desc from dual union all
+Select 'ah' as tax_code,'Panama' as country_name,'Airport Security Fee Departures' as fee_desc from dual union all
+Select 'aj' as tax_code,'Venezuela' as country_name,'Airport Exit Tax International' as fee_desc from dual union all
+Select 'ak' as tax_code,'Venezuela' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'ar' as tax_code,'Argentina' as country_name,'Ticket Tax' as fee_desc from dual union all
+Select 'at' as tax_code,'Austria' as country_name, fee_desc as	'Passenger Security Charge' as fee_desc from dual union all
+Select 'au' as tax_code,'Australia' as country_name,'Passenger Movement Charge' as fee_desc from dual union all
+Select 'ax' as tax_code,'Vietnam' as country_name, fee_desc as	'Passenger Service Charge Domestic' as fee_desc from dual union all
+Select 'ay' as tax_code,'United States' as country_name,'"Sept 11" Security Fee' as fee_desc from dual union all
+Select 'B1' as tax_code,'Costa Rica' as country_name, fee_desc as	'Boarding Tax' as fee_desc from dual union all
+Select 'B6' as tax_code,'Nepal' as country_name,'Airport Development Fee'	as fee_desc from dual union all
+Select 'bb' as tax_code,'Barbados' as country_name,'Value Added Tax' as fee_desc from dual union all
+Select 'be' as tax_code,'Belgium' as country_name,'Passenger Service and Security Charge' as fee_desc from dual union all
+Select 'bl' as tax_code,'Bermuda' as country_name,'Aviation Security Fee' as fee_desc from dual union all
+Select 'bm' as tax_code,'Bermuda' as country_name,'Passenger Tax' as fee_desc from dual union all
+Select 'bo' as tax_code,'Bolivia' as country_name,'Sales Tax' as fee_desc from dual union all
+Select 'bp' as tax_code,'South Korea' as country_name,'International Psc Departure Tax And Global Disease Eradication Fund' as fee_desc from dual union all
+Select 'br' as tax_code,'Brazil' as country_name,'Embarkation Fee International' as fee_desc from dual union all
+Select 'bu' as tax_code,'Belize' as country_name,'Airport Development Fee' as fee_desc from dual union all
+Select 'C2' as tax_code,'Venezuela' as country_name,'Biosecurity Service Fee Arrivals' as fee_desc from dual union all
+Select 'C4' as tax_code,'Vietnam' as country_name, fee_desc as	'Passenger And Baggage Security Screening Service Charge' as fee_desc from dual union all
+Select 'C7' as tax_code,'Myanmar' as country_name, fee_desc as	'Advance Passenger Information User Charge International Arrivals' as fee_desc from dual union all
+Select 'C9' as tax_code,'Bahamas' as country_name, fee_desc as	'Value Added Tax' as fee_desc from dual union all
+Select 'ca' as tax_code,'Canada' as country_name,'Air Travelers Security Charge' as fee_desc from dual union all
+Select 'ce' as tax_code,'New Zealand' as country_name,'Aviation Security Screening Levy Domestic' as fee_desc from dual union all
+Select 'ch' as tax_code,'Switzerland' as country_name,'Airport Passenger Security And Noise Charge' as fee_desc from dual union all
+Select 'cj' as tax_code,'Netherlands' as country_name,'Security Service Charge' as fee_desc from dual union all
+Select 'cn' as tax_code,'China' as country_name,'Airport Fee (varies per airport)' as fee_desc from dual union all
+Select 'co' as tax_code,'Colombia' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'cr' as tax_code,'Costa Rica' as country_name,'Transportation Tax' as fee_desc from dual union all
+Select 'cu' as tax_code,'Cuba' as country_name,'Passenger Services Airport Tax' as fee_desc from dual union all
+Select 'cz' as tax_code,'Czech Republic' as country_name,'Embarkation Tax' as fee_desc from dual union all
+Select 'D5' as tax_code,'Indonesia' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'dc' as tax_code,'Romania' as country_name,'Security Charge' as fee_desc from dual union all
+Select 'D9' as tax_code,'Jordan' as country_name,'Cute User Fee (ie Common User Terminal Equipment)' as fee_desc from dual union all
+Select 'dd' as tax_code,'Trinidad and Tobago' as country_name,'Concourse Fee International' as fee_desc from dual union all
+Select 'de' as tax_code,'Germany' as country_name,'Airport Security Charge (varies per airport)' as fee_desc from dual union all
+Select 'di' as tax_code,'Barbados' as country_name,'Airport Facilitation Fee International' as fee_desc from dual union all
+Select 'dy' as tax_code,'Peru' as country_name,'Tourism Arrival Tax' as fee_desc from dual union all
+Select 'E2' as tax_code,'Ecuador' as country_name,'Infrastructure Tax Arrivals' as fee_desc from dual union all
+Select 'E3' as tax_code,'Saudi Arabia' as country_name,'Security Charges Intl Departure/Arrival' as fee_desc from dual union all
+Select 'E6' as tax_code,'Bermuda' as country_name,'Air Terminal Improvement Fee' as fee_desc from dual union all
+Select 'E7' as tax_code,'Thailand' as country_name,'Advance Passenger Processing User Charge' as fee_desc from dual union all
+Select 'ea' as tax_code,'Bahamas' as country_name,'Passenger Departure Tax' as fee_desc from dual union all
+Select 'ec' as tax_code,'Ecuador' as country_name,'Government Transportation Tax' as fee_desc from dual union all
+Select 'ed' as tax_code,'Ecuador' as country_name,'Tourism Fee International' as fee_desc from dual union all
+Select 'eg' as tax_code,'Egypt' as country_name,'Solidarity Tax (formerly/aka Transportation Tax)' as fee_desc from dual union all
+Select 'ek' as tax_code,'Jamaica' as country_name,'Passenger Service and Security Fee' as fee_desc from dual union all
+Select 'el' as tax_code,'Jamaica' as country_name,'Airport Improvement Fee' as fee_desc from dual union all
+Select 'en' as tax_code,'Bermuda' as country_name,'Passenger Facility Charge' as fee_desc from dual union all
+Select 'eq' as tax_code,'Egypt' as country_name,'Service Charge' as fee_desc from dual union all
+Select 'eu' as tax_code,'Venezuela' as country_name,'Inac Civil Aviation Services Improvement Fee' as fee_desc from dual union all
+Select 'ev' as tax_code,'South Africa' as country_name,'Passenger Safety Charge' as fee_desc from dual union all
+Select 'ex' as tax_code,'Italy' as country_name,'Security Bag Charge' as fee_desc from dual union all
+Select 'ey' as tax_code,'Fiji' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'ez' as tax_code,'Fiji' as country_name,'Airport Security Charge' as fee_desc from dual union all
+Select 'F1' as tax_code,'New Zealand' as country_name,'Border Clearance Levy Intl Arrival' as fee_desc from dual union all
+Select 'F3' as tax_code,'Panama' as country_name,'Airport Development Fee' as fee_desc from dual union all
+Select 'F6' as tax_code,'uae' as country_name,'Passenger Facilities Charge' as fee_desc from dual union all
+Select 'F7' as tax_code,'Egypt' as country_name,'Quarantine Fees' as fee_desc from dual union all
+Select 'fa' as tax_code,'Fiji' as country_name,'Airport Development Charge' as fee_desc from dual union all
+Select 'fc' as tax_code,'Nicaragua' as country_name,'Terminal Fee Intl' as fee_desc from dual union all
+Select 'fd' as tax_code,'Nicaragua' as country_name,'Tourism Fee Intl' as fee_desc from dual union all
+Select 'fe' as tax_code,'Hungary' as country_name,'Security Charge' as fee_desc from dual union all
+Select 'fn' as tax_code,'Italy' as country_name,'vat on other ticket fees' as fee_desc from dual union all
+Select 'fp' as tax_code,'Haiti' as country_name,'Security Control Fee' as fee_desc from dual union all
+Select 'fr' as tax_code,'France' as country_name,'Civil Aviation Tax and Airport Tax' as fee_desc from dual union all
+Select 'fs' as tax_code,'Costa Rica' as country_name,'-' as fee_desc from dual union all
+Select 'fu' as tax_code,'Belize' as country_name,'Conservation Tax' as fee_desc from dual union all
+Select 'fv' as tax_code,'Belize' as country_name,'Passenger Service Fee' as fee_desc from dual union all
+Select 'fw' as tax_code,'Belize' as country_name,'Security Fee International' as fee_desc from dual union all
+Select 'fx' as tax_code,'Uzbekistan' as country_name,'Security Tax' as fee_desc from dual union all
+Select 'fz' as tax_code,'Panama' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'G1' as tax_code,'Malaysia' as country_name,'Departure Levy' as fee_desc from dual union all
+Select 'G2' as tax_code,'Norway' as country_name,'Airport Passenger Tax' as fee_desc from dual union all
+Select 'G3' as tax_code,'Hong Kong' as country_name,'Airport Construction Fee' as fee_desc from dual union all
+Select 'G4' as tax_code,'Qatar' as country_name,'Passenger Facility Charge' as fee_desc from dual union all
+Select 'G8' as tax_code,'Thailand' as country_name,'Intl Arrival Fee' as fee_desc from dual union all
+Select 'gb' as tax_code,'United Kingdom' as country_name,'Air Passenger Duty varies depending on distance flown and class of service вј13 вђ“ вј172 as of 2019' as fee_desc from dual union all
+Select 'gj' as tax_code,'Bahamas' as country_name,'Airport Facility Fee Departure' as fee_desc from dual union all
+Select 'gk' as tax_code,'Bahamas' as country_name,'Security Fee' as fee_desc from dual union all
+Select 'gr' as tax_code,'Greece' as country_name,'Airport Development Charge' as fee_desc from dual union all
+Select 'gz' as tax_code,'Kuwait' as country_name,'Airport Service Charge International' as fee_desc from dual union all
+Select 'H8' as tax_code,'Malaysia' as country_name,'Regulatory Charge Domestic And International' as fee_desc from dual union all
+Select 'hb' as tax_code,'Italy' as country_name,'Council City Tax' as fee_desc from dual union all
+Select 'hg' as tax_code,'Jamaica' as country_name,'Tourism Enhancement Fee Intl' as fee_desc from dual union all
+Select 'hi' as tax_code,'Haiti' as country_name,'Immigration Processing Fee Arrival' as fee_desc from dual union all
+Select 'hj' as tax_code,'Japan' as country_name,'Passenger Facility Charge, Domestic Departures' as fee_desc from dual union all
+Select 'hk' as tax_code,'Hong Kong' as country_name,'Passenger Departure Tax' as fee_desc from dual union all
+Select 'hl' as tax_code,'Kyrgyzstan' as country_name,'Airport Development Charge International' as fee_desc from dual union all
+Select 'hq' as tax_code,'Jordan' as country_name,'Embarkation Tax International' as fee_desc from dual union all
+Select 'hu' as tax_code,'Hungary' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'hw' as tax_code,'Peru' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'I5' as tax_code,'Hong Kong' as country_name,'Passenger Security Charge' as fee_desc from dual union all
+Select 'I6' as tax_code,'Iran as country_name,'Passenger Safety Oversight Services Fees' as fee_desc from dual union all
+Select 'ia' as tax_code,'New Zealand' as country_name,'Passenger Security Charge Intl' as fee_desc from dual union all
+Select 'id' as tax_code,'Indonesia' as country_name,'Value Added Tax Passengers Domestic' as fee_desc from dual union all
+Select 'ik' as tax_code,'Costa Rica' as country_name,'Security Fee International Arriving/Departing' as fee_desc from dual union all
+Select 'il' as tax_code,'Israel' as country_name,'Departure Passenger Airport Tax International' as fee_desc from dual union all
+Select 'in' as tax_code,'India' as country_name,'User Development Fee Departures' as fee_desc from dual union all
+Select 'io' as tax_code,'Saudi Arabia' as country_name,'Airport Building Charge For Arrivals' as fee_desc from dual union all
+Select 'iq' as tax_code,'Iraq' as country_name,'Departure Tax' as fee_desc from dual union all
+Select 'ir' as tax_code,'Iran' as country_name,'Airport Tax International' as fee_desc from dual union all
+Select 'is' as tax_code,'Iceland' as country_name,'Airport Service Charge' as fee_desc from dual union all
+Select 'it' as tax_code,'Italy' as country_name,'Embarkation Tax' as fee_desc from dual union all
+Select 'iz' as tax_code,'France' as country_name,'Passenger Solidarity Tax varies depending on destination and class of service в‚¬1.13 вђ“ в‚¬45.07 as of 2019' as fee_desc from dual union all
+Select 'jc' as tax_code,'Vietnam' as country_name,'Passenger Service Charge International' as fee_desc from dual union all
+Select 'jd' as tax_code,'Spain' as country_name,'Departure Charge' as fee_desc from dual union all
+Select 'jg' as tax_code,'Barbados' as country_name,'Passenger Service Charge International' as fee_desc from dual union all
+Select 'jh' as tax_code,'Barbados' as country_name,'Security Fee International' as fee_desc from dual union all
+Select 'jk' as tax_code,'Egypt' as country_name,'Departure Fee' as fee_desc from dual union all
+Select 'jp' as tax_code,'Japan' as country_name,'Consumption Tax' as fee_desc from dual union all
+Select 'js' as tax_code,'Colombia' as country_name,'Tourism Tax' as fee_desc from dual union all
+Select 'jt' as tax_code,'Jamaica' as country_name,'Passenger Facility Charge' as fee_desc from dual union all
+Select 'K3' as tax_code,'India' as country_name,'Goods And Service Tax Interim Domestic' as fee_desc from dual union all
+Select 'K7' as tax_code,'Saudi Arabia' as country_name,'Value Added Tax' as fee_desc from dual union all
+Select 'kj' as tax_code,'Jordan' as country_name,'Civil Aviation Fee' as fee_desc from dual union all
+Select 'kk' as tax_code,'New Zealand' as country_name,'Passenger Service Charge Intl Arrivals' as fee_desc from dual union all
+Select 'ko' as tax_code,'Haiti' as country_name,'Territorial Development Tax' as fee_desc from dual union all
+Select 'kp' as tax_code,'North Korea' as country_name,'Passenger Service Charge International' as fee_desc from dual union all
+Select 'L2' as tax_code,'Kuwait' as country_name,'Transfer Fee' as fee_desc from dual union all
+Select 'L7' as tax_code,'Singapore' as country_name,'Airport Development Levy' as fee_desc from dual union all
+Select 'L8' as tax_code,'Dominican Republic' as country_name,'Tourism Tax' as fee_desc from dual union all
+Select 'li' as tax_code,'Philippines' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'lj' as tax_code,'Sweden' as country_name,'Aviation Tax' as fee_desc from dual union all
+Select 'lk' as tax_code,'Sri Lanka' as country_name,'Embarkation Tax' as fee_desc from dual union all
+Select 'M3' as tax_code,'Barbados' as country_name,'Airport Service Charge' as fee_desc from dual union all
+Select 'M6' as tax_code,'Turkey' as country_name,'International Flights Security Charge' as fee_desc from dual union all
+Select 'ma' as tax_code,'Morocco' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'mj' as tax_code,'Italy' as country_name,'Passenger Service Charge on Departures' as fee_desc from dual union all
+Select 'mm' as tax_code,'Myanmar' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'mo' as tax_code,'Macau' as country_name,'Airport Security Tax' as fee_desc from dual union all
+Select 'mx' as tax_code,'Mexico' as country_name,'Transportation Tax iva Domestic' as fee_desc from dual union all
+Select 'my' as tax_code,'Malaysia' as country_name,'Passenger Service And Security Charge' as fee_desc from dual union all
+Select 'N8' as tax_code,'Costa Rica' as country_name,'Sales Tax' as fee_desc from dual union all
+Select 'N9' as tax_code,'Pakistan' as country_name,'stamptax' as fee_desc from dual union all
+Select 'nc' as tax_code,'New Caledonia' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'nd' as tax_code,'Poland' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'nh' as tax_code,'Jordan' as country_name,'Passenger Terminal Use Fee' as fee_desc from dual union all
+Select 'ni' as tax_code,'Nicaragua' as country_name,'Sales Hacienda Tax' as fee_desc from dual union all
+Select 'np' as tax_code,'Nepal' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'nq' as tax_code,'Nepal' as country_name,'Tourism Service Fee' as fee_desc from dual union all
+Select 'nr' as tax_code,'Nauru' as country_name,'Departure Fee вђ“ newly created Aug 1, 2020' as fee_desc from dual union all
+Select 'nw' as tax_code,'Costa Rica' as country_name,'Tourism Arrival Tax' as fee_desc from dual union all
+Select 'nz' as tax_code,'New Zealand' as country_name,'Goods and Services Tax' as fee_desc from dual union all
+Select 'O2' as tax_code,'Egypt' as country_name,'Departure Service Fee' as fee_desc from dual union all
+Select 'O4' as tax_code,'France' as country_name,'Solidarity Tax Surplus' as fee_desc from dual union all
+Select 'O5' as tax_code,'Argentina' as country_name,'Inclusive and Solidarity Tax Pais' as fee_desc from dual union all
+Select 'O9' as tax_code,'Egypt' as country_name,'Cute Cupps Fee' as fee_desc from dual union all
+Select 'ob' as tax_code,'Airline' as country_name,'Booking Fee and Surcharges' as fee_desc from dual union all
+Select 'og' as tax_code,'Spain' as country_name,'Aviation Safety and Security Fee' as fee_desc from dual union all
+Select 'oi' as tax_code,'Japan' as country_name,'Passenger Security Service Charge' as fee_desc from dual union all
+Select 'op' as tax_code,'Singapore' as country_name,'Aviation Lev' as fee_desc from dual union all
+Select 'or' as tax_code,'Ecuador' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'oy' as tax_code,'Germany' as country_name,'Air Transport Tax' as fee_desc from dual union all
+Select 'pb' as tax_code,'Pakistan' as country_name,'Advance Tax International' as fee_desc from dual union all
+Select 'pf' as tax_code,'French Polynesia' as country_name,'Local Departure Tax' as fee_desc from dual union all
+Select 'ph' as tax_code,'Philippines' as country_name,'Travel Tax' as fee_desc from dual union all
+Select 'po' as tax_code,'Bahamas' as country_name,'Passenger Processing Fee' as fee_desc from dual union all
+Select 'pt' as tax_code,'Portugal' as country_name,'Security Tax' as fee_desc from dual union all
+Select 'px' as tax_code,'Nicaragua' as country_name,'Airport Security Charge' as fee_desc from dual union all
+Select 'pz' as tax_code,'Qatar' as country_name,'Passenger Service Charge Arrivals' as fee_desc from dual union all
+Select 'qa' as tax_code,'Qatar' as country_name,'Airport Fee Intl' as fee_desc from dual union all
+Select 'qb' as tax_code,'Ecuador' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'qc' as tax_code,'Australia' as country_name,'Used to be Cairns Airport Authority Fee' as fee_desc from dual union all
+Select 'qd' as tax_code,'Austria' as country_name,'Air Transport Levy Domestic' as fee_desc from dual union all
+Select 'qh' as tax_code,'Egypt' as country_name,'Embarkation Tax' as fee_desc from dual union all
+Select 'qi' as tax_code,'Ecuador' as country_name,'Airport Auxiliary Facilities Tax' as fee_desc from dual union all
+Select 'qk' as tax_code,'Jamaica' as country_name,'Airline Passenger Levy' as fee_desc from dual union all
+Select 'qo' as tax_code,'Argentina' as country_name,'Custom And Immigration Services Tax International' as fee_desc from dual union all
+Select 'qp' as tax_code,'Turkmenistan' as country_name,'Passenger Safety And Airport Development Charge' as fee_desc from dual union all
+Select 'qr' as tax_code,'Australia' as country_name,'Passenger Service Charge Domestic Departure/Arrival' as fee_desc from dual union all
+Select 'qv' as tax_code,'Spain' as country_name,'Security Tax' as fee_desc from dual union all
+Select 'qw' as tax_code,'France' as country_name,'Passenger Service Charge Domestic' as fee_desc from dual union all
+Select 'qx' as tax_code,'France' as country_name,'Passenger Service Charge Intl' as fee_desc from dual union all
+Select 'ra' as tax_code,'Germany' as country_name,'Passenger Service Charge for Intl Departures' as fee_desc from dual union all
+Select 'rc' as tax_code,'Canada' as country_name,'Harmonized Sales Tax' as fee_desc from dual union all
+Select 'rg' as tax_code,'Pakistan' as country_name,'Federal Excise Duty Red' as fee_desc from dual union all
+Select 'ri' as tax_code,'Russia' as country_name,'Terminal Use Charge (Departure or Arrival)' as fee_desc from dual union all
+Select 'rn' as tax_code,'Netherlands' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'ro' as tax_code,'Romania' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'sg' as tax_code,'Singapore' as country_name,'Passenger Service And Security Fee' as fee_desc from dual union all
+Select 'sp' as tax_code,'Pakistan' as country_name,'Embarkation Fee' as fee_desc from dual union all
+Select 'sq' as tax_code,'Canada' as country_name,'Airport Improvement Fee' as fee_desc from dual union all
+Select 'sw' as tax_code,'Japan' as country_name,'Passenger Service Facilities Charge Intl' as fee_desc from dual union all
+Select 'tk' as tax_code,'Japan' as country_name,'International Tourist Tax' as fee_desc from dual union all
+Select 'tm' as tax_code,'Turkmenistan' as country_name,'Passenger Airport Tax Departures' as fee_desc from dual union all
+Select 'tp' as tax_code,'uae' as country_name,'Passenger Security and Safety Fee' as fee_desc from dual union all
+Select 'tq' as tax_code,'Argentina' as country_name,'Security Tax Domestic And International' as fee_desc from dual union all
+Select 'tr' as tax_code,'Turkey' as country_name,'Airport Service Charge International' as fee_desc from dual union all
+Select 'ts' as tax_code,'Thailand' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'tu' as tax_code,'Kenya' as country_name,'Passenger Airport Service Charge Intl' as fee_desc from dual union all
+Select 'tw' as tax_code,'Taiwan' as country_name,'Airport Service Charge International' as fee_desc from dual union all
+Select 'ty' as tax_code,'Dominican Republic' as country_name,'Aerocom Fee Arrivals' as fee_desc from dual union all
+Select 'ua' as tax_code,'Ukraine' as country_name,'Security Charge' as fee_desc from dual union all
+Select 'ub' as tax_code,'United Kingdom' as country_name,'Passenger Service Charge Departures' as fee_desc from dual union all
+Select 'uc' as tax_code,'Jamaica' as country_name,'Passenger Aviation Service Charge Arrivals' as fee_desc from dual union all
+Select 'ud' as tax_code,'Ukraine' as country_name,'State Charge' as fee_desc from dual union all
+Select 'uh' as tax_code,'Russia' as country_name,'Security Charge International' as fee_desc from dual union all
+Select 'uj' as tax_code,'Kazakhstan' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'uk' as tax_code,'Mexico' as country_name,'Tourism Tax Derecho No Inmigrante6' as fee_desc from dual union all
+Select 'um' as tax_code,'South Africa' as country_name, fee_desc as	asc Charge	 As fee_desc from dual union all
+Select 'uo' as tax_code,'Australia' as country_name,'Goods And Services Tax' as fee_desc from dual union all
+Select 'up' as tax_code,'Ireland' as country_name,'Passenger Charge' as fee_desc from dual union all
+Select 'uq' as tax_code,'Ireland' as country_name,'Inspection Pre-clearance Charge' as fee_desc from dual union all
+Select 'us' as tax_code,'United States' as country_name,'International Arrival/Departure Tax (currently $18.60 each way as of 2019) or 7.5% (as of 2019) us Domestic Transportation Tax' as fee_desc from dual union all
+Select 'ux' as tax_code,'Dominican Republic' as country_name,'Airport Authority Fee Arrivals' as fee_desc from dual union all
+Select 'uz' as tax_code,'Uzbekistan' as country_name,'Airport Departure Tax' as fee_desc from dual union all
+Select 'vb' as tax_code,'Dominican Republic' as country_name,'Airport Infrastructure Fee Arrival' as fee_desc from dual union all
+Select 'vq' as tax_code,'Turkey' as country_name,'Airport Service Charge Domestic' as fee_desc from dual union all
+Select 'vt' as tax_code,'Italy' as country_name,'Security Charge' as fee_desc from dual union all
+Select 'vv' as tax_code,'Netherlands' as country_name,'Noise Isolation Charge' as fee_desc from dual union all
+Select 'wc' as tax_code,'South Africa' as country_name,'Passenger Tax' as fee_desc from dual union all
+Select 'wd' as tax_code,'Jamaica' as country_name,'Travel Tax Intl' as fee_desc from dual union all
+Select 'wg' as tax_code,'Australia' as country_name,'Safety and Security Charge Departure' as fee_desc from dual union all
+Select 'wn' as tax_code,'Macao' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'wo' as tax_code,'India' as country_name,'Passenger Service Fee' as fee_desc from dual union all
+Select 'wp' as tax_code,'Greece' as country_name,'Passenger Terminal Facilities Charge' as fee_desc from dual union all
+Select 'wq' as tax_code,'Greece' as country_name,'Passenger Security Charge' as fee_desc from dual union all
+Select 'wt' as tax_code,'Ecuador' as country_name,'Security Fee' as fee_desc from dual union all
+Select 'wx' as tax_code,'New Zealand' as country_name,'Passenger Levy Domestic' as fee_desc from dual union all
+Select 'wy' as tax_code,'Australia' as country_name,'Passenger Service Charge Departure/Arrival Intl' as fee_desc from dual union all
+Select 'xa' as tax_code,'United States' as country_name,'aphis (Animal and Plant Health Inspection Service) Fee (currently $3.96 as of 2019)' as fee_desc from dual union all
+Select 'xd' as tax_code,'Mexico' as country_name,'Airport Departure Tax Tua Intl' as fee_desc from dual union all
+Select 'xf' as tax_code,'United States' as country_name,'Passenger Facility Charge (up to $4.50 per applicable airport as of 2019)' as fee_desc from dual union all
+Select 'xg' as tax_code,'Canada' as country_name,'Goods and Services Tax' as fee_desc from dual union all
+Select 'xk' as tax_code,'Egypt' as country_name,'Development Fee' as fee_desc from dual union all
+Select 'xl' as tax_code,'Egypt' as country_name,'Stamp Tax' as fee_desc from dual union all
+Select 'xo' as tax_code,'Mexico' as country_name,'Transportation Tax iva International' as fee_desc from dual union all
+Select 'xr' as tax_code,'Argentina' as country_name,'Airport Tax International' as fee_desc from dual union all
+Select 'xt' as tax_code,'none' as country_name,'Extra tax total, details shown elsewhere' as fee_desc from dual union all
+Select 'xv' as tax_code,'Mexico' as country_name,'Airport Departure Tax Tua Domestic' as fee_desc from dual union all
+Select 'xw' as tax_code,'Poland' as country_name,'Airport Tax' as fee_desc from dual union all
+Select 'xy' as tax_code,'United States' as country_name,'Immigration Fee (currently $7 as of 2020)' as fee_desc from dual union all
+Select 'ya' as tax_code,'Sweden' as country_name,'Passenger Charge' as fee_desc from dual union all
+Select 'yc' as tax_code,'United States' as country_name,'Customs Fee (currently $5.87 as of 2020)' as fee_desc from dual union all
+Select 'yd' as tax_code' as tax_code,'Pakistan' as country_name,'Infrastructure Development Charge' as fee_desc from dual union all
+Select 'yk' as tax_code,'Ukraine' as country_name,'Airport Passenger Charge' as fee_desc from dual union all
+Select 'ym' as tax_code,'India' as country_name,'Development Fee' as fee_desc from dual union all
+Select 'yp' as tax_code,'Portugal' as country_name,'Madeira Funchal Porto Santo Passenger Service Charge' as fee_desc from dual union all
+Select 'yq' as tax_code,'Airline' as country_name,'Extra fee (instead of simply charging a higher fare)' as fee_desc from dual union all
+Select 'yr' as tax_code,'Airline' as country_name,'Extra fee (instead of simply charging a higher fare)' as fee_desc from dual union all
+Select 'yw' as tax_code,'Bolivia' as country_name,'Exit Tax' as fee_desc from dual union all
+Select 'yx' as tax_code,'Kuwait' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'za' as tax_code,'South Africa' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'zn' as tax_code,'Norway' as country_name,'Passenger Charge' as fee_desc from dual union all
+Select 'zo' as tax_code,'Denmark' as country_name,'Passenger Service Charge' as fee_desc from dual union all
+Select 'zp' as tax_code,'United States' as country_name,'Segment Tax, goes to faa' as fee_desc from dual union all
+Select 'zq' as tax_code,'Chile' as country_name,'Airport Facility Charge International' as fee_desc from dual union all
+Select 'zr' as tax_code,'uae' as country_name,'Intl Advanced Passenger Info Fee Arrivals' as fee_desc from dual union all
+Select 'zu' as tax_code,'Iceland' as country_name,'Passenger Fee Keflavik' as fee_desc from dual union all
+Select 'zy' as tax_code,'Austria' as country_name,'Passenger Service Charge' from dual;
+
+Flight_suffix,flight_num,flight_date,brd_pt,off_pt,leg_seq_num,male_pax_flown,female_pax_flown,child_pax_flown,infant_pax_flown,pax_adult_booked,pax_c_booked_business_cls,pax_f_booked_first_cls,pax_y_booked_econ_cls,available_seats_for_sale,pad_c_flown_bus_cls,pad_f_flown_first_cls,pad_y_flown_econ_cls,pax_adult_flown,pax_c_flown,pax_f_flown,pax_y_flown,cargo_flown_wt_kg,mail_flown_wt_k,process_date
+Ei,0104,20201001,jfk ,dub ,1,52,42,4,3,115,5,0,110,317,0,0,3,94,5,0,96,7113,397,13-10-2020
+Ei,0105,20201001,dub ,jfk ,1,31,29,1,1,109,10,0,99,317,0,0,1,60,11,0,51,4677,1949,13-10-2020
+Ei,0122,20201001,ord ,dub ,1,26,15,0,0,61,3,0,58,317,0,0,0,41,2,0,39,8414,0,13-10-2020
+Ei,0123,20201001,dub ,ord ,1,15,16,2,0,40,3,0,37,317,0,0,0,31,3,0,30,13372,0,13-10-2020
+Ei,0136,20201001,bos ,dub ,1,0,0,0,0,85,4,0,81,184,0,0,0,0,4,0,63,0,0,13-10-2020
+Ei,0137,20201001,dub ,bos ,1,23,18,3,2,62,3,0,59,184,0,0,2,41,3,0,43,597,0,13-10-2020
+Ei,0154,20201001,dub ,lhr ,1,49,38,3,0,122,3,0,119,184,0,0,0,87,2,0,88,92,0,13-10-2020
+Ei,0155,20201001,lhr ,dub ,1,32,25,0,2,85,1,0,84,184,0,0,2,57,0,0,59,199,1287,13-10-2020
+Ei,0164,20201001,dub ,lhr ,1,52,31,0,0,107,2,0,105,172,0,0,0,83,2,0,81,1384,0,13-10-2020
+Ei,0165,20201001,lhr ,dub ,1,58,36,2,4,114,2,0,112,172,0,0,4,94,1,0,99,110,0,13-10-2020
+Ei,0178,20201001,dub ,lhr ,1,42,40,1,2,107,0,0,107,172,0,0,2,82,0,0,85,391,0,13-10-2020
+Ei,0179,20201001,lhr ,dub ,1,72,30,3,0,131,2,0,129,172,0,0,0,102,2,0,103,887,0,13-10-2020
+Ei,0202,20201001,dub ,man ,1,34,24,6,2,76,2,0,74,172,0,0,2,58,2,0,64,290,0,13-10-2020
+Ei,0203,20201001,man ,dub ,1,16,17,0,1,73,1,0,72,172,0,0,1,33,2,0,32,0,0,13-10-2020
+Ei,0330,20201001,dub ,txl ,1,24,24,0,0,64,0,0,64,172,0,0,0,48,0,0,48,0,0,13-10-2020
+Ei,0331,20201001,txl ,dub ,1,0,0,0,0,70,0,0,70,172,0,0,1,0,0,0,44,0,0,13-10-2020
+Ei,0492,20201001,dub ,fao ,1,2,6,0,0,68,0,0,68,174,0,0,0,8,0,0,8,0,0,13-10-2020
+Ei,0493,20201001,fao ,dub ,1,0,0,0,0,96,0,0,96,174,0,0,0,0,0,0,37,0,0,13-10-2020
+Ei,0520,20201001,dub ,cdg ,1,14,10,0,0,53,0,0,53,172,0,0,0,24,0,0,24,0,0,13-10-2020
+Ei,0521,20201001,cdg ,dub ,1,0,0,0,0,49,4,0,45,172,0,0,0,0,4,0,24,540,651,13-10-2020
+Ei,0526,20201001,dub ,cdg ,1,17,21,0,0,67,0,0,67,172,0,0,0,38,0,0,38,0,0,13-10-2020
+Ei,0527,20201001,cdg ,dub ,1,0,0,0,0,49,1,0,48,172,0,0,0,0,1,0,22,0,0,13-10-2020
+Ei,0582,20201001,dub ,agp ,1,8,9,0,0,110,0,0,110,174,0,0,0,17,0,0,17,89,0,13-10-2020
+Ei,0583,20201001,agp ,dub ,1,0,0,0,0,56,0,0,56,174,0,0,0,0,0,0,23,500,0,13-10-2020
+Ei,0602,20201001,dub ,ams ,1,11,10,0,0,30,1,0,29,172,0,0,0,21,0,0,21,0,0,13-10-2020
+Ei,0603,20201001,ams ,dub ,1,27,6,0,0,44,1,0,43,172,0,0,0,33,1,0,32,77,0,13-10-2020
+Ei,0610,20201001,dub ,ams ,1,8,5,0,0,15,1,0,14,172,0,0,0,13,1,0,12,0,0,13-10-2020
+Ei,0611,20201001,ams ,dub ,1,32,9,0,0,50,0,0,50,172,0,0,0,41,0,0,41,0,0,13-10-2020
+Ei,0638,20201001,dub ,bru ,1,11,10,0,0,25,0,0,25,172,0,0,0,21,0,0,21,0,0,13-10-2020
+Ei,0639,20201001,bru ,dub ,1,0,0,0,0,27,0,0,27,172,0,0,0,0,0,0,22,0,0,13-10-2020
+Ei,0712,20201001,ork ,lhr ,1,35,36,0,2,91,0,0,91,172,0,0,2,71,0,0,73,0,0,13-10-2020
+Ei,0715,20201001,lhr ,ork ,1,40,26,2,0,109,2,0,107,172,0,0,0,66,2,0,66,0,0,13-10-2020
+Ei,0778,20201001,dub ,ace ,1,26,24,0,0,80,0,0,80,174,0,0,0,50,0,0,50,0,0,13-10-2020
+Ei,0779,20201001,ace ,dub ,1,0,0,0,0,57,0,0,57,174,0,0,0,0,0,0,17,0,0,13-10-2020
+Ei,0798,20201001,dub ,adb ,1,42,43,1,0,104,0,0,104,174,0,0,0,85,0,0,86,0,0,13-10-2020
+Ei,0799,20201001,adb ,dub ,1,0,0,0,0,113,0,0,113,174,0,0,0,0,0,0,94,0,0,13-10-2020
+Ei,0844,20201001,ork ,ams ,1,12,13,0,0,38,0,0,38,172,0,0,0,25,0,0,25,0,0,13-10-2020
+Ei,0845,20201001,ams ,ork ,1,34,14,0,1,59,1,0,58,172,0,0,1,48,1,0,48,0,0,13-10-2020
+Ei,0930,20201001,bhd ,lhr ,1,72,33,0,0,105,1,0,104,172,0,0,0,105,1,0,104,0,0,13-10-2020
+Ei,0931,20201001,lhr ,bhd ,1,44,18,2,0,69,4,0,65,172,0,0,0,62,4,0,60,13,0,13-10-2020
+Ei,0936,20201001,bhd ,lhr ,1,42,22,5,1,73,3,0,70,172,0,0,1,64,3,0,67,0,0,13-10-2020
+Ei,0937,20201001,lhr ,bhd ,1,70,29,0,0,108,2,0,106,172,0,0,0,99,2,0,97,0,0,13-10-2020
+Ei,3201,20201001,kir ,dub ,1,5,5,0,0,15,0,0,15,72,0,0,0,10,0,0,10,0,0,13-10-2020
+Ei,3204,20201001,dub ,kir ,1,1,1,0,0,4,0,0,4,72,0,0,0,2,0,0,2,0,0,13-10-2020
+Ei,3205,20201001,kir ,dub ,1,2,1,0,0,5,0,0,5,72,0,0,0,3,0,0,3,0,0,13-10-2020
+Ei,3208,20201001,dub ,kir ,1,4,3,0,0,11,0,0,11,72,0,0,0,7,0,0,7,0,0,13-10-2020
+Ei,3220,20201001,dub ,gla ,1,11,5,0,0,20,0,0,20,48,0,0,0,16,0,0,16,0,0,13-10-2020
+Ei,3221,20201001,gla ,dub ,1,9,9,1,2,30,0,0,30,48,0,0,2,18,0,0,21,0,0,13-10-2020
+Ei,3250,20201001,dub ,edi ,1,10,9,1,0,43,0,0,43,72,0,0,0,19,0,0,20,0,0,13-10-2020
+Ei,3251,20201001,edi ,dub ,1,8,6,0,1,29,0,0,29,72,0,0,1,14,0,0,15,0,0,13-10-2020
+Ei,3401,20201001,cfn ,dub ,1,5,5,0,0,10,0,0,10,48,0,0,0,10,0,0,10,0,0,13-10-2020
+Ei,3402,20201001,dub ,cfn ,1,1,2,0,0,6,0,0,6,48,0,0,0,3,0,0,3,0,0,13-10-2020
+Ei,3403,20201001,cfn ,dub ,1,1,3,0,0,4,0,0,4,48,0,0,0,4,0,0,4,0,0,13-10-2020
+Ei,3408,20201001,dub ,cfn ,1,7,4,0,0,11,0,0,11,48,0,0,0,11,0,0,11,0,0,13-10-2020
+Ei,3610,20201001,bhd ,man ,1,15,11,0,0,27,0,0,27,72,0,0,0,26,0,0,26,0,0,13-10-2020
+Ei,3611,20201001,man ,bhd ,1,0,0,0,0,50,0,0,50,72,0,0,0,0,0,0,44,0,0,13-10-2020
+Ei,3614,20201001,bhd ,man ,1,37,12,1,1,61,0,0,61,72,0,0,1,49,0,0,51,0,0,13-10-2020
+Ei,3615,20201001,man ,bhd ,1,22,10,0,0,34,0,0,34,72,0,0,0,32,0,0,32,0,0,13-10-2020
+Ei,3646,20201001,bhd ,bhx ,1,13,11,0,0,31,0,0,31,72,0,0,0,24,0,0,24,0,0,13-10-2020
+Ei,3647,20201001,bhx ,bhd ,1,20,6,1,0,27,0,0,27,72,0,0,0,26,0,0,27,0,0,13-10-2020
+Ei,3650,20201001,bhd ,edi ,1,9,4,0,0,13,0,0,13,72,0,0,0,13,0,0,13,0,0,13-10-2020
+Ei,3651,20201001,edi ,bhd ,1,4,2,0,0,6,0,0,6,72,0,0,0,6,0,0,6,0,0,13-10-2020
+Ei,3656,20201001,bhd ,edi ,1,8,7,0,0,16,0,0,16,72,0,0,0,15,0,0,15,0,0,13-10-2020
+Ei,3657,20201001,edi ,bhd ,1,14,6,0,0,20,0,0,20,72,0,0,0,20,0,0,20,0,0,13-10-2020
+Ei,3670,20201001,bhd ,lba ,1,12,5,0,0,22,0,0,22,72,0,0,0,17,0,0,17,0,0,13-10-2020
+Ei,3671,20201001,lba ,bhd ,1,17,10,0,2,37,0,0,37,72,0,0,2,27,0,0,31,0,0,13-10-2020
+Ei,3678,20201001,bhd ,lba ,1,21,17,0,0,39,0,0,39,72,0,0,0,38,0,0,38,0,0,13-10-2020
+Ei,3679,20201001,lba ,bhd ,1,17,9,0,0,29,0,0,29,72,0,0,0,26,0,0,26,0,0,13-10-2020
+Ei,3680,20201001,bhd ,ema ,1,28,11,1,0,42,0,0,42,72,0,0,0,39,0,0,40,0,0,13-10-2020
+Ei,3681,20201001,ema ,bhd ,1,0,0,0,0,33,0,0,33,72,0,0,1,0,0,0,33,0,0,13-10-2020
+Ei,3688,20201001,bhd ,ema ,1,17,12,0,0,35,0,0,35,72,0,0,0,29,0,0,29,0,0,13-10-2020
+Ei,3689,20201001,ema ,bhd ,1,0,0,0,0,32,0,0,32,72,0,0,0,0,0,0,28,0,0,13-10-2020
+Ei,3690,20201001,bhd ,ext ,1,12,9,1,0,26,0,0,26,72,0,0,0,21,0,0,22,0,0,13-10-2020
+Ei,3691,20201001,ext ,bhd ,1,0,0,0,0,22,0,0,22,72,0,0,0,0,0,0,15,0,0,13-10-2020
+Flight_suffix,flight_num,flight_date,brd_pt,off_pt,leg_seq_num,male_pax_flown,female_pax_flown,child_pax_flown,infant_pax_flown,pax_adult_booked,pax_c_booked_business_cls,pax_f_booked_first_cls,pax_y_booked_econ_cls,available_seats_for_sale,pad_c_flown_bus_cls,pad_f_flown_first_cls,pad_y_flown_econ_cls,pax_adult_flown,pax_c_flown,pax_f_flown,pax_y_flown,cargo_flown_wt_kg,mail_flown_wt_k,process_date
+Ei,0104,20201001,jfk ,dub ,1,52,42,4,3,115,5,0,110,317,0,0,3,94,5,0,96,7113,397,13-10-2020
+Ei,0105,20201001,dub ,jfk ,1,31,29,1,1,109,10,0,99,317,0,0,1,60,11,0,51,4677,1949,13-10-2020
+Ei,0122,20201001,ord ,dub ,1,26,15,0,0,61,3,0,58,317,0,0,0,41,2,0,39,8414,0,13-10-2020
+Ei,0123,20201001,dub ,ord ,1,15,16,2,0,40,3,0,37,317,0,0,0,31,3,0,30,13372,0,13-10-2020
+Ei,0136,20201001,bos ,dub ,1,0,0,0,0,85,4,0,81,184,0,0,0,0,4,0,63,0,0,13-10-2020
+Ei,0137,20201001,dub ,bos ,1,23,18,3,2,62,3,0,59,184,0,0,2,41,3,0,43,597,0,13-10-2020
+Ei,0154,20201001,dub ,lhr ,1,49,38,3,0,122,3,0,119,184,0,0,0,87,2,0,88,92,0,13-10-2020
+Ei,0155,20201001,lhr ,dub ,1,32,25,0,2,85,1,0,84,184,0,0,2,57,0,0,59,199,1287,13-10-2020
+Ei,0164,20201001,dub ,lhr ,1,52,31,0,0,107,2,0,105,172,0,0,0,83,2,0,81,1384,0,13-10-2020
+Ei,0165,20201001,lhr ,dub ,1,58,36,2,4,114,2,0,112,172,0,0,4,94,1,0,99,110,0,13-10-2020
+Ei,0178,20201001,dub ,lhr ,1,42,40,1,2,107,0,0,107,172,0,0,2,82,0,0,85,391,0,13-10-2020
+Ei,0179,20201001,lhr ,dub ,1,72,30,3,0,131,2,0,129,172,0,0,0,102,2,0,103,887,0,13-10-2020
+Ei,0202,20201001,dub ,man ,1,34,24,6,2,76,2,0,74,172,0,0,2,58,2,0,64,290,0,13-10-2020
+Ei,0203,20201001,man ,dub ,1,16,17,0,1,73,1,0,72,172,0,0,1,33,2,0,32,0,0,13-10-2020
+Ei,0330,20201001,dub ,txl ,1,24,24,0,0,64,0,0,64,172,0,0,0,48,0,0,48,0,0,13-10-2020
+Ei,0331,20201001,txl ,dub ,1,0,0,0,0,70,0,0,70,172,0,0,1,0,0,0,44,0,0,13-10-2020
+Ei,0492,20201001,dub ,fao ,1,2,6,0,0,68,0,0,68,174,0,0,0,8,0,0,8,0,0,13-10-2020
+Ei,0493,20201001,fao ,dub ,1,0,0,0,0,96,0,0,96,174,0,0,0,0,0,0,37,0,0,13-10-2020
+Ei,0520,20201001,dub ,cdg ,1,14,10,0,0,53,0,0,53,172,0,0,0,24,0,0,24,0,0,13-10-2020
+Ei,0521,20201001,cdg ,dub ,1,0,0,0,0,49,4,0,45,172,0,0,0,0,4,0,24,540,651,13-10-2020
+Ei,0526,20201001,dub ,cdg ,1,17,21,0,0,67,0,0,67,172,0,0,0,38,0,0,38,0,0,13-10-2020
+Ei,0527,20201001,cdg ,dub ,1,0,0,0,0,49,1,0,48,172,0,0,0,0,1,0,22,0,0,13-10-2020
+Ei,0582,20201001,dub ,agp ,1,8,9,0,0,110,0,0,110,174,0,0,0,17,0,0,17,89,0,13-10-2020
+Ei,0583,20201001,agp ,dub ,1,0,0,0,0,56,0,0,56,174,0,0,0,0,0,0,23,500,0,13-10-2020
+Ei,0602,20201001,dub ,ams ,1,11,10,0,0,30,1,0,29,172,0,0,0,21,0,0,21,0,0,13-10-2020
+Ei,0603,20201001,ams ,dub ,1,27,6,0,0,44,1,0,43,172,0,0,0,33,1,0,32,77,0,13-10-2020
+Ei,0610,20201001,dub ,ams ,1,8,5,0,0,15,1,0,14,172,0,0,0,13,1,0,12,0,0,13-10-2020
+Ei,0611,20201001,ams ,dub ,1,32,9,0,0,50,0,0,50,172,0,0,0,41,0,0,41,0,0,13-10-2020
+Ei,0638,20201001,dub ,bru ,1,11,10,0,0,25,0,0,25,172,0,0,0,21,0,0,21,0,0,13-10-2020
+Ei,0639,20201001,bru ,dub ,1,0,0,0,0,27,0,0,27,172,0,0,0,0,0,0,22,0,0,13-10-2020
+Ei,0712,20201001,ork ,lhr ,1,35,36,0,2,91,0,0,91,172,0,0,2,71,0,0,73,0,0,13-10-2020
+Ei,0715,20201001,lhr ,ork ,1,40,26,2,0,109,2,0,107,172,0,0,0,66,2,0,66,0,0,13-10-2020
+Ei,0778,20201001,dub ,ace ,1,26,24,0,0,80,0,0,80,174,0,0,0,50,0,0,50,0,0,13-10-2020
+Ei,0779,20201001,ace ,dub ,1,0,0,0,0,57,0,0,57,174,0,0,0,0,0,0,17,0,0,13-10-2020
+Ei,0798,20201001,dub ,adb ,1,42,43,1,0,104,0,0,104,174,0,0,0,85,0,0,86,0,0,13-10-2020
+Ei,0799,20201001,adb ,dub ,1,0,0,0,0,113,0,0,113,174,0,0,0,0,0,0,94,0,0,13-10-2020
+Ei,0844,20201001,ork ,ams ,1,12,13,0,0,38,0,0,38,172,0,0,0,25,0,0,25,0,0,13-10-2020
+Ei,0845,20201001,ams ,ork ,1,34,14,0,1,59,1,0,58,172,0,0,1,48,1,0,48,0,0,13-10-2020
+Ei,0930,20201001,bhd ,lhr ,1,72,33,0,0,105,1,0,104,172,0,0,0,105,1,0,104,0,0,13-10-2020
+Ei,0931,20201001,lhr ,bhd ,1,44,18,2,0,69,4,0,65,172,0,0,0,62,4,0,60,13,0,13-10-2020
+Ei,0936,20201001,bhd ,lhr ,1,42,22,5,1,73,3,0,70,172,0,0,1,64,3,0,67,0,0,13-10-2020
+Ei,0937,20201001,lhr ,bhd ,1,70,29,0,0,108,2,0,106,172,0,0,0,99,2,0,97,0,0,13-10-2020
+Ei,3201,20201001,kir ,dub ,1,5,5,0,0,15,0,0,15,72,0,0,0,10,0,0,10,0,0,13-10-2020
+Ei,3204,20201001,dub ,kir ,1,1,1,0,0,4,0,0,4,72,0,0,0,2,0,0,2,0,0,13-10-2020
+Ei,3205,20201001,kir ,dub ,1,2,1,0,0,5,0,0,5,72,0,0,0,3,0,0,3,0,0,13-10-2020
+Ei,3208,20201001,dub ,kir ,1,4,3,0,0,11,0,0,11,72,0,0,0,7,0,0,7,0,0,13-10-2020
+Ei,3220,20201001,dub ,gla ,1,11,5,0,0,20,0,0,20,48,0,0,0,16,0,0,16,0,0,13-10-2020
+Ei,3221,20201001,gla ,dub ,1,9,9,1,2,30,0,0,30,48,0,0,2,18,0,0,21,0,0,13-10-2020
+Ei,3250,20201001,dub ,edi ,1,10,9,1,0,43,0,0,43,72,0,0,0,19,0,0,20,0,0,13-10-2020
+Ei,3251,20201001,edi ,dub ,1,8,6,0,1,29,0,0,29,72,0,0,1,14,0,0,15,0,0,13-10-2020
+Ei,3401,20201001,cfn ,dub ,1,5,5,0,0,10,0,0,10,48,0,0,0,10,0,0,10,0,0,13-10-2020
+Ei,3402,20201001,dub ,cfn ,1,1,2,0,0,6,0,0,6,48,0,0,0,3,0,0,3,0,0,13-10-2020
+Ei,3403,20201001,cfn ,dub ,1,1,3,0,0,4,0,0,4,48,0,0,0,4,0,0,4,0,0,13-10-2020
+Ei,3408,20201001,dub ,cfn ,1,7,4,0,0,11,0,0,11,48,0,0,0,11,0,0,11,0,0,13-10-2020
+Ei,3610,20201001,bhd ,man ,1,15,11,0,0,27,0,0,27,72,0,0,0,26,0,0,26,0,0,13-10-2020
+Ei,3611,20201001,man ,bhd ,1,0,0,0,0,50,0,0,50,72,0,0,0,0,0,0,44,0,0,13-10-2020
+Ei,3614,20201001,bhd ,man ,1,37,12,1,1,61,0,0,61,72,0,0,1,49,0,0,51,0,0,13-10-2020
+Ei,3615,20201001,man ,bhd ,1,22,10,0,0,34,0,0,34,72,0,0,0,32,0,0,32,0,0,13-10-2020
+Ei,3646,20201001,bhd ,bhx ,1,13,11,0,0,31,0,0,31,72,0,0,0,24,0,0,24,0,0,13-10-2020
+Ei,3647,20201001,bhx ,bhd ,1,20,6,1,0,27,0,0,27,72,0,0,0,26,0,0,27,0,0,13-10-2020
+Ei,3650,20201001,bhd ,edi ,1,9,4,0,0,13,0,0,13,72,0,0,0,13,0,0,13,0,0,13-10-2020
+Ei,3651,20201001,edi ,bhd ,1,4,2,0,0,6,0,0,6,72,0,0,0,6,0,0,6,0,0,13-10-2020
+Ei,3656,20201001,bhd ,edi ,1,8,7,0,0,16,0,0,16,72,0,0,0,15,0,0,15,0,0,13-10-2020
+Ei,3657,20201001,edi ,bhd ,1,14,6,0,0,20,0,0,20,72,0,0,0,20,0,0,20,0,0,13-10-2020
+Ei,3670,20201001,bhd ,lba ,1,12,5,0,0,22,0,0,22,72,0,0,0,17,0,0,17,0,0,13-10-2020
+Ei,3671,20201001,lba ,bhd ,1,17,10,0,2,37,0,0,37,72,0,0,2,27,0,0,31,0,0,13-10-2020
+Ei,3678,20201001,bhd ,lba ,1,21,17,0,0,39,0,0,39,72,0,0,0,38,0,0,38,0,0,13-10-2020
+Ei,3679,20201001,lba ,bhd ,1,17,9,0,0,29,0,0,29,72,0,0,0,26,0,0,26,0,0,13-10-2020
+Ei,3680,20201001,bhd ,ema ,1,28,11,1,0,42,0,0,42,72,0,0,0,39,0,0,40,0,0,13-10-2020
+Ei,3681,20201001,ema ,bhd ,1,0,0,0,0,33,0,0,33,72,0,0,1,0,0,0,33,0,0,13-10-2020
+Ei,3688,20201001,bhd ,ema ,1,17,12,0,0,35,0,0,35,72,0,0,0,29,0,0,29,0,0,13-10-2020
+Ei,3689,20201001,ema ,bhd ,1,0,0,0,0,32,0,0,32,72,0,0,0,0,0,0,28,0,0,13-10-2020
+Ei,3690,20201001,bhd ,ext ,1,12,9,1,0,26,0,0,26,72,0,0,0,21,0,0,22,0,0,13-10-2020
+Ei,3691,20201001,ext ,bhd ,1,0,0,0,0,22,0,0,22,72,0,0,0,0,0,0,15,0,0,13-10-2020
+
+News -------------------------
+Bla bla bla
+Moscow, 27/02/2021 18.39
+------------------------------
+
+News -------------------------
+Some bla bla
+Lviv, 27/02/2021 18.39
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 2021-04-04, 36 day(s) left
+------------------------------
+
+Recipe -----------------------
+Croissants
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Bla bla bla
+Moscow, 27/02/2021 18.40
+------------------------------
+
+News -------------------------
+Some bla bla
+Lviv, 27/02/2021 18.40
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 2021-04-04, 36 day(s) left
+------------------------------
+
+Recipe -----------------------
+Croissants
+0 Kcal
+Fitness tip: 0 calories, really? Is it water? Take 2l of this daily)
+------------------------------
