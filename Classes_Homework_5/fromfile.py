@@ -53,10 +53,9 @@ class WriteFromFile:
         """Open and file(s), catch errors, return file path and text"""
         try:
             with fileinput.input(files=source) as fp:
-                strategy = self.choose_strategy()
                 text = []
                 for line in fp:
-                    text.append(self.normalize(line, strategy).strip())
+                    text.append(line.strip())
                 return source, '\n'.join(text)
         except UnicodeDecodeError:
             print(cnf.get_values("ERRORS", "cannot_read")+"\n")
@@ -94,10 +93,10 @@ class WriteFromFile:
                 remove(proper_source)
             print(cnf.get_values("MESSAGES", "delete_success") % (proper_source))
 
-    def file_full_flow(self):
-        raw_source = self.get_raw_source()
+    def file_full_flow(self, raw_source):
         proper_source, text = self.read_source(raw_source)
-        self.write(text, proper_source)
+        normalized_text = self.normalize(text, self.choose_strategy())
+        self.write(normalized_text, proper_source)
         self.remove(proper_source)
 
 
@@ -105,4 +104,5 @@ if __name__ == "__main__":
     default_source = cnf.get_values("PATHS", "source_file")
     default_target = cnf.get_values("PATHS", "target_file")
     wff = WriteFromFile(default_source, default_target)
-    wff.file_full_flow()
+    raw_source = wff.get_raw_source()
+    wff.file_full_flow(raw_source)

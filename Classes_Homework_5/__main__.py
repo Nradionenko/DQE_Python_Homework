@@ -27,7 +27,14 @@ def manual_input():
         p.goodbye()
 
 
-def select_input():
+def select_source():
+    decision = inputMenu(prompt=cnf.get_values("INPUTS", "choose_source")+"\n",
+                         choices=[cnf.get_values("LABELS", "def_file"), cnf.get_values("LABELS", "my_file")],
+                         numbered=True)
+    return decision
+
+
+def select_flow():
     """Ask user if he wants to input section manually or write from file"""
     choice1, choice2, choice3 = cnf.get_values("LABELS", "manual"), cnf.get_values("LABELS", "from_file"), cnf.get_values("LABELS", "from_json")
     flow = inputMenu(prompt=cnf.get_values("INPUTS", "input_format")+"\n"
@@ -36,14 +43,20 @@ def select_input():
     if flow == choice1:
         manual_input()
     elif flow == choice2:
-        wff.file_full_flow()
+        if select_source() == cnf.get_values("LABELS", "def_file"):
+            wff.file_full_flow(wff.def_source)
+        else:
+            wff.file_full_flow(input(cnf.get_values("INPUTS", "filepath")+"\n"))
     elif flow == choice3:
-        fj.json_full_flow()
+        if select_source() == cnf.get_values("LABELS", "def_file"):
+            fj.json_full_flow(fj.def_source)
+        else:
+            fj.json_full_flow(input(cnf.get_values("INPUTS", "filepath")+"\n"))
 
 
 def main():
     """End-to-end flow: from input selection to writing new section to news file + writing counts to csvs."""
-    select_input()
+    select_flow()
     cnt.write_csv()
 
 

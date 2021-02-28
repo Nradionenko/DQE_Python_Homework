@@ -2,26 +2,27 @@
 "News":
 [
 {
-"city": "Moscow",
-"text": "Bla bla bla"
+"city": "Dublin",
+"text": "Ryanair renews flights from June"
 },
 {
-"city": "Lviv",
-"text": "Some bla bla"
+"city": "Berlin",
+"text": "A lot of snow"
+},
+{
+"city": "Paris",
+"text": "Tourism on the rise"
 }
 ],
 "Ad":
 [
 {
-"text": "Something for sale",
-"date": "04/04/2021"
-}
-],
-"Recipe":
-[
+"text": "House for rent",
+"date": "05/04/2021"
+},
 {
-"text": "Croissants",
-"calories": 0
+"text": "Free beer on fridays",
+"date": "06/06/2021"
 }
 ]
 }

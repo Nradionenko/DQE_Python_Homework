@@ -8,7 +8,6 @@ UPDATE: Running main.py you can select whether you want to input manually, from 
 
 Homework6: Modules. Run fromfile.py + pass file(s) in cmd OR main.py and select "Write from file" on the first step (in this case default source is used)
 The following logic is implemented:
-- NOTE: no parsing nor any calculations (like number of days till expiry etc) is applied to source file. Text is just taken as is whatever text is passed
 - user can pass path to source file(s) (to read from) in cmd as an argument, i.e. python fromfile.py C:/Users/my_source_file.txt
 - if no file path is passed, default path is used, which is path to 'source_text.txt', located in the /Classes_Homework_5/files. File name is configured in exec_utils/configs.ini
 - file path is then verified: in any exceptions caught, user is asked to provide valid file path manually. The same checks are performed against his input.
@@ -25,7 +24,6 @@ Homework7: CSV. Run 'counts.py' module OR main.py (in the latter case you'll hav
 - Both lists are sorted descending.
 
 Homework8: JSON. Run fromjson.py + pass json path in cmd OR main.py and select "Write from json" on the first step:
-- Jsonschema needs to be installed to run this module: https://pypi.org/project/jsonschema/
 - user can pass path to json file in cmd when running module (only 1 file expected), if no path  - default path is used (configured in configs.ini). Default json is in /Classes_Homework_5/files
 - json is validated against schema.json (see in /Classes_Homework_5/files)
 - if json is not valid or an file errors occur, user is asked to provide path to another json (until user provides proper file)
