@@ -1,0 +1,2 @@
+jsonschema==3.2.0
+PyInputPlus==0.2.12

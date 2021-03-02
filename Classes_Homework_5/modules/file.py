@@ -1,12 +1,13 @@
-from os.path import dirname, join
+from os.path import dirname, join, normcase
 from exec_utils.configloader import Config
 
 cnf = Config()
 
+
 class Files:
     def get_path(self, file_name):
         """Generate path to /files directory. 'files' folder name is configurable"""
-        parent_folder = dirname(dirname(__file__).replace('/', '\\'))  # parent packege path
+        parent_folder = normcase(dirname(dirname(__file__))) # parent package path
         new_folder = cnf.get_values("PATHS", "files_folder")
         file_path = join(parent_folder, new_folder, file_name)
         return file_path
@@ -23,4 +24,3 @@ class Files:
             if len(data) > 0:
                 target_file.write("\n\n")
             target_file.write(text)
-

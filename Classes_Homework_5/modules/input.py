@@ -1,4 +1,5 @@
 import re
+import sys
 
 import pyinputplus as pyip
 
@@ -52,6 +53,14 @@ class TextInput:
             except Exception as error_message:
                 print(error_message)
                 continue
+
+    def ask_for_multiline(self):
+        """Allow user to provide multiline text"""
+        proper_text = False
+        while not proper_text:
+            print("Provide text. You can provide multilines divided by newlines.\nWhen you finish:\n1) Hit ENTER; 2) Then hit CTRL+D")
+            proper_text = sys.stdin.readlines()
+        return ''.join(proper_text)
 
     def raise_if_too_long(self, user_text):
         """Check input size vs max size and raise exception"""

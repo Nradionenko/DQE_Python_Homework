@@ -30,9 +30,9 @@ class Combine:
         fitness_tip1 = cnf.get_values("MESSAGES", "fitness1")
         fitness_tip2 = cnf.get_values("MESSAGES", "fitness2")
         fitness_tip3 = cnf.get_values("MESSAGES", "fitness3")
-        if user_num == int(cnf.get_values("RESTRICTIONS","cal_min")):
+        if int(user_num) == int(cnf.get_values("RESTRICTIONS","cal_min")):
             summary = fitness_tip1
-        elif user_num < int(cnf.get_values("RESTRICTIONS","cal_max")):
+        elif int(user_num) < int(cnf.get_values("RESTRICTIONS","cal_max")):
             summary = fitness_tip2
         else:
             summary = fitness_tip3

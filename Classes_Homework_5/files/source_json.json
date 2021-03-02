@@ -2,27 +2,27 @@
 "News":
 [
 {
-"city": "Dublin",
-"text": "Ryanair renews flights from June"
+"sectionCity": "Dublin",
+"sectionText": "Ryanair renews flights from June"
 },
 {
-"city": "Berlin",
-"text": "A lot of snow"
+"sectionCity": "Berlin",
+"sectionText": "A lot of snow"
 },
 {
-"city": "Paris",
-"text": "Tourism on the rise"
+"sectionCity": "Paris",
+"sectionText": "Tourism on the rise"
 }
 ],
 "Ad":
 [
 {
-"text": "House for rent",
-"date": "05/04/2021"
+"sectionText": "House for rent",
+"sectionDate": "05/04/2021"
 },
 {
-"text": "Free beer on fridays",
-"date": "06/06/2021"
+"sectionText": "Free beer on fridays",
+"sectionDate": "06/06/2021"
 }
 ]
 }

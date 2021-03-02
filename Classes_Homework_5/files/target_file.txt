@@ -1,137 +1,245 @@
 News -------------------------
-Car has been stolen in the downtown
-London, 28/02/2021 15.45
+Something great happened!
+So many tourists this year!
+Kyiv, 01/03/2021 23.56
+------------------------------
+
+News -------------------------
+Too much snow,
+Too much mess.
+Ternopil, 01/03/2021 23.56
 ------------------------------
 
 Ad ---------------------------
-Car for sale, London
-Valid until: 2021-04-04, 35 day(s) left
+Something for sale
+Valid until: 04/04/2021, 34 day(s) left
+------------------------------
+
+Ad ---------------------------
+House for rent
+Valid until: 05/05/2021, 65 day(s) left
 ------------------------------
 
 Recipe -----------------------
-Mint tea
-0 Kcal
-Fitness tip: 0 calories, really? Is it water? Take 2l of this daily)
+Thinly slice the spring onions, reserving a handful of the sliced green parts for garnish.
+Peel and chop the garlic. Heat the oil in a large saucepan over a medium heat and cook the spring onions and garlic for a few minutes.
+Add the tomatoes, curry powder and ground ginger and cook for 3-4 minutes.
+If the pan gets dry add a splash of water and make sure the spices don't burn.
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
 ------------------------------
 
 News -------------------------
-Unexpected harvest of oranges this year
-Madrid, 28/02/2021 18.04
+Something great happened!
+So many tourists this year!
+Kyiv, 01/03/2021 23.57
+------------------------------
+
+News -------------------------
+Too much snow,
+Too much mess.
+Ternopil, 01/03/2021 23.57
 ------------------------------
 
 Ad ---------------------------
-Oranges for sale
-Valid until: 03/03/2021, 3 day(s) left
-------------------------------
-
-News -------------------------
-Ryanair renews flights from June
-Dublin, 28/02/2021 18.16
-------------------------------
-
-News -------------------------
-A lot of snow
-Berlin, 28/02/2021 18.16
-------------------------------
-
-News -------------------------
-Tourism on the rise
-Paris, 28/02/2021 18.16
+Something for sale
+Valid until: 04/04/2021, 34 day(s) left
 ------------------------------
 
 Ad ---------------------------
 House for rent
-Valid until: 20/05/2021, 81 day(s) left
+Valid until: 05/05/2021, 65 day(s) left
 ------------------------------
 
-Ad ---------------------------
-Free beer on fridays
-Valid until: 06/06/2021, 98 day(s) left
-------------------------------
-
-News -------------------------
-Ryanair renews flights from June
-Dublin, 28/02/2021 18.21
-------------------------------
-
-News -------------------------
-A lot of snow
-Berlin, 28/02/2021 18.21
+Recipe -----------------------
+Thinly slice the spring onions, reserving a handful of the sliced green parts for garnish.
+Peel and chop the garlic. Heat the oil in a large saucepan over a medium heat and cook the spring onions and garlic for a few minutes.
+Add the tomatoes, curry powder and ground ginger and cook for 3-4 minutes.
+If the pan gets dry add a splash of water and make sure the spices don't burn.
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
 ------------------------------
 
 News -------------------------
-Tourism on the rise
-Paris, 28/02/2021 18.21
+Something great happened!
+So many tourists this year!
+Kyiv, 01/03/2021 23.58
+------------------------------
+
+News -------------------------
+Too much snow,
+Too much mess.
+Ternopil, 01/03/2021 23.58
 ------------------------------
 
 Ad ---------------------------
-House for rent
-Valid until: 20/05/2021, 81 day(s) left
-------------------------------
-
-Ad ---------------------------
-Free beer on fridays
-Valid until: 06/06/2021, 98 day(s) left
+Something for sale
+Valid until: 04/04/2021, 34 day(s) left
 ------------------------------
 
 Ad ---------------------------
 Car for sale
-Valid until: 05/05/2021, 66 day(s) left
+Valid until: 05/05/2021, 65 day(s) left
+------------------------------
+
+Recipe -----------------------
+Thinly slice the spring onions, reserving a handful of the sliced green parts for garnish.
+Peel and chop the garlic. Heat the oil in a large saucepan over a medium heat and cook the spring onions and garlic for a few minutes.
+Add the tomatoes, curry powder and ground ginger and cook for 3-4 minutes.
+If the pan gets dry add a splash of water and make sure the spices don't burn.
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Something great happened!
+So many tourists this year!
+Kyiv, 02/03/2021 14.55
+------------------------------
+
+News -------------------------
+Too much snow,
+Too much mess.
+Ternopil, 02/03/2021 14.55
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 04/04/2021, 33 day(s) left
+------------------------------
+
+Ad ---------------------------
+Car for sale
+Valid until: 05/05/2021, 64 day(s) left
+------------------------------
+
+Recipe -----------------------
+Thinly slice the spring onions, reserving a handful of the sliced green parts for garnish.
+Peel and chop the garlic. Heat the oil in a large saucepan over a medium heat and cook the spring onions and garlic for a few minutes.
+Add the tomatoes, curry powder and ground ginger and cook for 3-4 minutes.
+If the pan gets dry add a splash of water and make sure the spices don't burn.
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
 ------------------------------
 
 News -------------------------
 Ryanair renews flights from June
-Dublin, 28/02/2021 18.24
+Dublin, 02/03/2021 14.55
 ------------------------------
 
 News -------------------------
 A lot of snow
-Berlin, 28/02/2021 18.24
+Berlin, 02/03/2021 14.55
 ------------------------------
 
 News -------------------------
 Tourism on the rise
-Paris, 28/02/2021 18.24
+Paris, 02/03/2021 14.55
 ------------------------------
 
 Ad ---------------------------
 House for rent
-Valid until: 05/01/2021, -54 day(s) left
+Valid until: 05/04/2021, 34 day(s) left
 ------------------------------
 
 Ad ---------------------------
 Free beer on fridays
-Valid until: 06/06/2021, 98 day(s) left
+Valid until: 06/06/2021, 96 day(s) left
+------------------------------
+
+News -------------------------
+The French government says older people with pre-existing conditions can now get astrazeneca's Covid-19 vaccine, revising its stance on the issue.
+
+"People affected by co-morbidities can be vaccinated with astrazeneca, including those aged between 65 and 74," the health minister said.
+
+Last month France approved use of the vaccine for under-65s only, citing lack of data for older people.
+Paris, 02/03/2021 15.03
+------------------------------
+
+Ad ---------------------------
+Vaccines for sale
+Valid until: 22/04/2021, 51 day(s) left
+------------------------------
+
+Ad ---------------------------
+New menue in restaurant
+Valid until: 06/05/2021, 65 day(s) left
 ------------------------------
 
 Recipe -----------------------
-Croissants
-7000 kcal
+Melt bacon grease in the same skillet over medium-high heat. Add diced potatoes and cook, stirring occasionally, 8 to 10 minutes. Add onion and serrano pepper and continue cooking and stirring until potatoes are fork-tender, onion is translucent, and serrano pepper is soft, 2 to 6 minutes. Add eggs and chorizo; stir until cooked and completely incorporated into potato mixture, about 5 minutes. Season with salt and pepper.
+300 Kcal
+Fitness tip: nice, light healthy food!
+------------------------------
+
+Ad ---------------------------
+Something
+Valid until: 19/05/2022, 443 day(s) left
+------------------------------
+
+Ad ---------------------------
+Some ad
+Valid until: 07/05/2021, 66 day(s) left
+------------------------------
+
+News -------------------------
+Something great happened!
+So many tourists this year!
+Kyiv, 02/03/2021 16.42
+------------------------------
+
+News -------------------------
+Too much snow,
+Too much mess.
+Ternopil, 02/03/2021 16.42
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 04/04/2021, 33 day(s) left
+------------------------------
+
+Ad ---------------------------
+Car for sale
+Valid until: 05/05/2021, 64 day(s) left
+------------------------------
+
+Recipe -----------------------
+Thinly slice the spring onions, reserving a handful of the sliced green parts for garnish.
+Peel and chop the garlic. Heat the oil in a large saucepan over a medium heat and cook the spring onions and garlic for a few minutes.
+Add the tomatoes, curry powder and ground ginger and cook for 3-4 minutes.
+If the pan gets dry add a splash of water and make sure the spices don't burn.
+800 Kcal
 Fitness tip: oh, that's a lot of calories! Don't forget to work out!
 ------------------------------
 
-
 News -------------------------
-Ryanair renews flights from june
-Dublin, 28/02/2021 18.34
+Something great happened!
+So many tourists this year!
+Kyiv, 02/03/2021 16.42
 ------------------------------
 
 News -------------------------
-A lot of snow
-Berlin, 28/02/2021 18.34
-------------------------------
-
-News -------------------------
-Tourism on the rise
-Paris, 28/02/2021 18.34
+Too much snow,
+Too much mess.
+Ternopil, 02/03/2021 16.42
 ------------------------------
 
 Ad ---------------------------
-House for rent
-Valid until: 05/04/2021, 36 day(s) left
+Something for sale
+Valid until: 04/04/2021, 33 day(s) left
 ------------------------------
 
 Ad ---------------------------
-Free beer on fridays
-Valid until: 06/06/2021, 98 day(s) left
+Car for sale
+Valid until: 05/05/2021, 64 day(s) left
+------------------------------
+
+Recipe -----------------------
+Thinly slice the spring onions, reserving a handful of the sliced green parts for garnish.
+Peel and chop the garlic. Heat the oil in a large saucepan over a medium heat and cook the spring onions and garlic for a few minutes.
+Add the tomatoes, curry powder and ground ginger and cook for 3-4 minutes.
+If the pan gets dry add a splash of water and make sure the spices don't burn.
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
 ------------------------------

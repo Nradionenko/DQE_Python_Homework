@@ -9,24 +9,24 @@
         {
             "News": [
                 {
-                    "city": "Kyiv",
-                    "text": "Something important happened"
+                    "sectionCity": "Kyiv",
+                    "sectionText": "Something important happened"
                 },
                 {
-                    "city": "Lviv",
-                    "text": "Some bla bla"
+                    "sectionCity": "Lviv",
+                    "sectionText": "Some bla bla"
                 }
             ],
             "Ad": [
                 {
-                    "text": "Something for sale",
-                    "date": "04/04/2021"
+                    "sectionText": "Something for sale",
+                    "sectionDate": "04/04/2021"
                 }
             ],
             "Recipe": [
                 {
-                    "text": "Croissants",
-                    "calories": 800
+                    "sectionText": "Croissants",
+                    "sectionCalories": 800
                 }
             ]
         }
@@ -50,29 +50,29 @@
                         "default": {},
                         "examples": [
                             {
-                                "city": "Moscow",
-                                "text": "Bla bla bla"
+                                "sectionCity": "Moscow",
+                                "sectionText": "Bla bla bla"
                             }
                         ],
                         "required": [
-                            "city",
-                            "text"
+                            "sectionCity",
+                            "sectionText"
                         ],
                         "properties": {
-                            "city": {
-                                "$id": "#/properties/News/items/anyOf/0/properties/city",
+                            "sectionCity": {
+                                "$id": "#/properties/News/items/anyOf/0/properties/sectionCity",
                                 "type": "string",
-                                "title": "The city schema",
+                                "title": "The sectionCity schema",
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": "",
                                 "examples": [
                                     "Moscow"
                                 ]
                             },
-                            "text": {
-                                "$id": "#/properties/News/items/anyOf/0/properties/text",
+                            "sectionText": {
+                                "$id": "#/properties/News/items/anyOf/0/properties/sectionText",
                                 "type": "string",
-                                "title": "The text schema",
+                                "title": "The sectionText schema",
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": "",
                                 "examples": [
@@ -103,29 +103,29 @@
                         "default": {},
                         "examples": [
                             {
-                                "text": "Something for sale",
-                                "date": "04/04/2021"
+                                "sectionText": "Something for sale",
+                                "sectionDate": "04/04/2021"
                             }
                         ],
                         "required": [
-                            "text",
-                            "date"
+                            "sectionText",
+                            "sectionDate"
                         ],
                         "properties": {
-                            "text": {
-                                "$id": "#/properties/Ad/items/anyOf/0/properties/text",
+                            "sectionText": {
+                                "$id": "#/properties/Ad/items/anyOf/0/properties/sectionText",
                                 "type": "string",
-                                "title": "The text schema",
+                                "title": "The sectionText schema",
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": "",
                                 "examples": [
                                     "Something for sale"
                                 ]
                             },
-                            "date": {
-                                "$id": "#/properties/Ad/items/anyOf/0/properties/date",
+                            "sectionDate": {
+                                "$id": "#/properties/Ad/items/anyOf/0/properties/sectionDate",
                                 "type": "string",
-                                "title": "The date schema",
+                                "title": "The sectionDate schema",
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": "",
                                 "examples": [
@@ -156,29 +156,29 @@
                         "default": {},
                         "examples": [
                             {
-                                "text": "Croissants",
-                                "calories": 800
+                                "sectionText": "Croissants",
+                                "sectionCalories": 800
                             }
                         ],
                         "required": [
-                            "text",
-                            "calories"
+                            "sectionText",
+                            "sectionCalories"
                         ],
                         "properties": {
-                            "text": {
-                                "$id": "#/properties/Recipe/items/anyOf/0/properties/text",
+                            "sectionText": {
+                                "$id": "#/properties/Recipe/items/anyOf/0/properties/sectionText",
                                 "type": "string",
-                                "title": "The text schema",
+                                "title": "The sectionText schema",
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": "",
                                 "examples": [
                                     "Croissants"
                                 ]
                             },
-                            "calories": {
-                                "$id": "#/properties/Recipe/items/anyOf/0/properties/calories",
+                            "sectionCalories": {
+                                "$id": "#/properties/Recipe/items/anyOf/0/properties/sectionCalories",
                                 "type": "integer",
-                                "title": "The calories schema",
+                                "title": "The sectionCalories schema",
                                 "description": "An explanation about the purpose of this instance.",
                                 "default": 0,
                                 "examples": [

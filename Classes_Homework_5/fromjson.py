@@ -38,29 +38,29 @@ class FromJson(WriteFromFile):  # inherit methods from WriteFromFile in fromfile
         return args.path
 
     def get_schema(self):
-        """Get expected schema to validate json. Schema file name is in configs, expected path = root package folder"""
+        """Get expected schema to validate json. Schema file name is in configs, expected path = root package/../files folder"""
         schema_path = f.get_path(cnf.get_values("PATHS", "json_schema"))
         with open(schema_path, "r") as s:
             return load(s)
 
     def process_json(self, json):
-        """Extract sections values from json and combine them into pre-formatted text, get text ready to be written"""
+        """Extract sections values from json and combine them into pre-formatted text"""
         final_text = ''
         for key in json.keys():  # json keys = arrays names, in our case - News, Ad or Recipe
             com = Combine(key, decor, decor_length)
-            for d in json[key]:  # each section in json has list of dictionaries with section properties (i.e. News has city adn text etc)
-                if key == label1:  # label1 = News, label2 = ad, label3 = Recipe. Configured in configs.ini
+            for d in json[key]:  # each section in json has list of dictionaries with section properties (i.e. News has city and text etc)
+                if key == label1:  # label1 = News, label2 = Ad, label3 = Recipe. Configured in configs.ini
                     final_text += com.get_news(d[city], d[txt])+'\n\n'
                 elif key == label2:
-                    expiry_date = dte.str_to_date(d[date], cnf.get_values("PATTERNS", "date_format"))
-                    di.raise_if_past(expiry_date)
+                    expiry_date = dte.str_to_date(d[date], cnf.get_values("PATTERNS", "date_format"))  # format string date from json to datetime.date
+                    di.raise_if_past(expiry_date)  # check if date is not in the past
                     final_text += com.get_ad(d[txt], expiry_date)+'\n\n'
                 elif key == label3:
                     final_text += com.get_recipe(d[txt], d[cal])+'\n\n'
         return final_text.rstrip()
 
     def verify_source(self, source):
-        """Validate source json against schema"""
+        """Verify if source is valid + validate source json against schema"""
         schema = self.get_schema()
         try:
             with open(source, "r", encoding="utf-8") as file:

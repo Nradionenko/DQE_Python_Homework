@@ -31,7 +31,7 @@ class Execute:
         com = Combine(selection, decor, decor_length)
         if selection == label1:
             city = t.ask_for_text(cnf.get_values("INPUTS", "city_msg"))
-            news_text = t.ask_for_text(cnf.get_values("INPUTS", "news_msg"))
+            news_text = t.ask_for_multiline().rstrip()
             final_text = com.get_news(city, news_text)
         elif selection == label2:
             ad_text = t.ask_for_text(cnf.get_values("INPUTS", "ad_msg"))
