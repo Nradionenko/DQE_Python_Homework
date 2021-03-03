@@ -89,6 +89,11 @@ class WriteFromFile:
                 final_text += com.get_recipe(rec_text, rec_calories)+'\n\n'
         return final_text.rstrip()
 
+    def raise_if_empty(self, my_str):
+        """Verify the string is not empty"""
+        if not my_str:
+            raise OSError(cnf.get_values("ERRORS", "empty"))
+
     def verify_source(self, source):
         """Open and try to parse file(s), catch errors, return file path and text"""
         try:
@@ -97,6 +102,7 @@ class WriteFromFile:
                 for line in fp:
                     file_text.append(line.strip())
             parsed_text = self.parse_file('\n'.join(file_text))
+            self.raise_if_empty(parsed_text)
             return source, parsed_text
         except UnicodeDecodeError:
             print(cnf.get_values("ERRORS", "cannot_read")+"\n")

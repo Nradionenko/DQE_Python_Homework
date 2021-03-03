@@ -50,22 +50,14 @@ class TextInput:
                 self.raise_if_too_long(user_input_text)
                 proper_text = True
                 return user_input_text.strip()
-            except Exception as error_message:
+            except ValueError as error_message:
                 print(error_message)
                 continue
-
-    def ask_for_multiline(self):
-        """Allow user to provide multiline text"""
-        proper_text = False
-        while not proper_text:
-            print("Provide text. You can provide multilines divided by newlines.\nWhen you finish:\n1) Hit ENTER; 2) Then hit CTRL+D")
-            proper_text = sys.stdin.readlines()
-        return ''.join(proper_text)
 
     def raise_if_too_long(self, user_text):
         """Check input size vs max size and raise exception"""
         if len(user_text) > int(self.max_size):
-            raise Exception (self.error_text)
+            raise ValueError (self.error_text)
 
 
 class DateInput:
@@ -88,7 +80,7 @@ class DateInput:
                 self.raise_if_past(user_input_date)
                 proper_date = True
                 return user_input_date
-            except Exception as error_message:
+            except ValueError as error_message:
                 print(error_message)
                 continue
 
@@ -106,7 +98,7 @@ class DateInput:
     def raise_if_past(self, user_date):
         """Compare input date to pre-defined date. In our case - to current date"""
         if user_date < self.compared_date.date():
-            raise Exception (self.error_msg)
+            raise ValueError (self.error_msg)
 
 
 class IntInput:
