@@ -24,5 +24,12 @@
 "sectionText": "Free beer on fridays",
 "sectionDate": "06/06/2021"
 }
+],
+"Recipe":
+[
+{
+"sectionText": "Apple pie",
+"sectionCalories": "800"
+}
 ]
 }

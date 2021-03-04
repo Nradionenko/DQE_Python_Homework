@@ -30,10 +30,10 @@ city, txt, date, cal = cnf.get_values("PROPERTIES", "city"), \
 class FromJson(WriteFromFile):  # inherit methods from WriteFromFile in fromfile.py.
     def parse(self):
         """Get path to json from command line, take from configs if not provided"""
-        parser = argparse.ArgumentParser(description="Process source json file.")
+        parser = argparse.ArgumentParser(description="Process source file.")
         parser.add_argument("path", type=str, nargs="?",
                             default=self.def_source,
-                            help="full path to json file.")
+                            help="full path to file.")
         args = parser.parse_args()
         return args.path
 
@@ -69,9 +69,9 @@ class FromJson(WriteFromFile):  # inherit methods from WriteFromFile in fromfile
                 text = self.process_json(my_json)
                 return text, source
         except SchemaError as e:
-            print("There is an error in the schema")
+            print(cnf.get_values("ERRORS", "schema_err"))
             return None, None
-        except (OSError, ValidationError, JSONDecodeError, KeyError, AttributeError, ValueError, Exception) as e:
+        except (OSError, ValidationError, JSONDecodeError, KeyError, AttributeError, ValueError) as e:
             print(e)
             return None, None
 

@@ -5,6 +5,7 @@ from modules.input import Proceed
 from modules.run import Execute
 from fromfile import WriteFromFile
 from fromjson import FromJson
+from fromxml import FromXML
 from counts import Counts
 
 cnf = Config()
@@ -12,6 +13,7 @@ p = Proceed(cnf.get_values("INPUTS", "proceed_msg"), cnf.get_values("MESSAGES", 
 e = Execute()
 wff = WriteFromFile(cnf.get_values("PATHS", "source_file"), cnf.get_values("PATHS", "target_file"))
 fj = FromJson(cnf.get_values("PATHS", "json_source"), cnf.get_values("PATHS", "target_file"))
+fx = FromXML(cnf.get_values("PATHS", "xml_source"), cnf.get_values("PATHS", "target_file"))
 cnt = Counts(cnf.get_values("PATHS", "target_file"), cnf.get_values("PATHS", "csv_words"), cnf.get_values("PATHS", "csv_letters"))
 
 
@@ -36,9 +38,12 @@ def select_source():
 
 def select_flow():
     """Ask user if he wants to input section manually or write from file"""
-    choice1, choice2, choice3 = cnf.get_values("LABELS", "manual"), cnf.get_values("LABELS", "from_file"), cnf.get_values("LABELS", "from_json")
+    choice1, choice2, choice3, choice4 = cnf.get_values("LABELS", "manual"), \
+                                cnf.get_values("LABELS", "from_file"), \
+                                cnf.get_values("LABELS", "from_json"), \
+                                cnf.get_values("LABELS", "from_xml")
     flow = inputMenu(prompt=cnf.get_values("INPUTS", "input_format")+"\n"
-                     , choices=[choice1, choice2, choice3]
+                     , choices=[choice1, choice2, choice3, choice4]
                      , numbered=True)
     if flow == choice1:
         manual_input()
@@ -52,6 +57,11 @@ def select_flow():
             fj.json_full_flow(fj.def_source)
         else:
             fj.json_full_flow(input(cnf.get_values("INPUTS", "filepath")+"\n"))
+    elif flow == choice4:
+        if select_source() == cnf.get_values("LABELS", "def_file"):
+            fx.xml_full_flow(fx.def_source)
+        else:
+            fx.xml_full_flow(input(cnf.get_values("INPUTS", "filepath")+"\n"))
 
 
 def main():

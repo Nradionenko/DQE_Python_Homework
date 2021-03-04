@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<data>
+    <sectionLabel name="News">
+        <sectionCity>123</sectionCity>
+        <sectionText>Something happened,
+		line2 of news,
+		line3 of news</sectionText>
+    </sectionLabel>
+    <sectionLabel name="Ad">
+        <sectionDate>05/05/2021</sectionDate>
+        <sectionText>Some text</sectionText>
+    </sectionLabel>
+    <sectionLabel name="Recipe">
+        <sectionText>Chocolate ice-cream</sectionText>
+        <sectionCalories>300</sectionCalories>
+    </sectionLabel>
+</data>

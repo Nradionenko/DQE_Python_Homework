@@ -243,3 +243,228 @@ If the pan gets dry add a splash of water and make sure the spices don't burn.
 800 Kcal
 Fitness tip: oh, that's a lot of calories! Don't forget to work out!
 ------------------------------
+
+
+
+News -------------------------
+Something great happened!
+So many tourists this year!
+Kyiv, 03/03/2021 20.41
+------------------------------
+
+News -------------------------
+Too much snow,
+Too much mess.
+Ternopil, 03/03/2021 20.41
+------------------------------
+
+Ad ---------------------------
+Something for sale
+Valid until: 04/04/2021, 32 day(s) left
+------------------------------
+
+Ad ---------------------------
+Car for sale
+Valid until: 05/05/2021, 63 day(s) left
+------------------------------
+
+Recipe -----------------------
+Thinly slice the spring onions, reserving a handful of the sliced green parts for garnish.
+Peel and chop the garlic. Heat the oil in a large saucepan over a medium heat and cook the spring onions and garlic for a few minutes.
+Add the tomatoes, curry powder and ground ginger and cook for 3-4 minutes.
+If the pan gets dry add a splash of water and make sure the spices don't burn.
+800 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+Tirana, 04/03/2021 12.24
+------------------------------
+
+Ad ---------------------------
+Something for rent
+Valid until: 05/05/2021, 62 day(s) left
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+600 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Something happened 2
+City2, 04/03/2021 12.24
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+Tirana, 04/03/2021 13.08
+------------------------------
+
+Ad ---------------------------
+Something for rent
+Valid until: 05/05/2021, 62 day(s) left
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+600 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+Tirana, 04/03/2021 13.22
+------------------------------
+
+Ad ---------------------------
+Something for rent
+Valid until: 05/05/2021, 62 day(s) left
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+600 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Something happened 2
+City2, 04/03/2021 13.22
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+Tirana, 04/03/2021 19.19
+------------------------------
+
+Ad ---------------------------
+Something for rent
+Valid until: 05/05/2021, 62 day(s) left
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+600 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Something happened 2
+City2, 04/03/2021 19.19
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+Tirana, 04/03/2021 19.28
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+600 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Something happened 2
+City2, 04/03/2021 19.28
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+Tirana, 04/03/2021 19.30
+------------------------------
+
+Ad ---------------------------
+Something
+Valid until: 05/05/2021, 62 day(s) left
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+-100 Kcal
+Fitness tip: nice, light healthy food!
+------------------------------
+
+News -------------------------
+Something happened 2
+City2, 04/03/2021 19.30
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+123, 04/03/2021 19.53
+------------------------------
+
+Ad ---------------------------
+Some text
+Valid until: 05/05/2021, 62 day(s) left
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+300 Kcal
+Fitness tip: nice, light healthy food!
+------------------------------
+
+News -------------------------
+Something happened 2
+City2, 04/03/2021 19.53
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+123, 04/03/2021 19.54
+------------------------------
+
+Ad ---------------------------
+Some text
+Valid until: 05/05/2021, 62 day(s) left
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+300 Kcal
+Fitness tip: nice, light healthy food!
+------------------------------
+
+News -------------------------
+Something happened 2
+City2, 04/03/2021 19.54
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+123, 04/03/2021 20.41
+------------------------------
+
+Ad ---------------------------
+Some text
+Valid until: 05/05/2021, 62 day(s) left
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+300 Kcal
+Fitness tip: nice, light healthy food!
+------------------------------

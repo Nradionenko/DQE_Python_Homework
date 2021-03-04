@@ -26,3 +26,6 @@ Homework8: JSON. Run fromjson.py + pass json path in cmd OR main.py and select "
 - if json is not valid or any file errors occur, user is asked to provide path to another json (until user provides proper file)
 - json is parsed, values normalized, data formatted and then written to target file
 - source file is removed (unless default)
+
+Homework9: XML. Run fromxml.py + pass xml path in cmd OR main.py and select "Write from xml" on the first step
+Key methods inherited from FromJson, basic logic is the same
