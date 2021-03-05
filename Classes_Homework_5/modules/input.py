@@ -1,9 +1,9 @@
 import re
-import sys
 
 import pyinputplus as pyip
 
 from exec_utils.configloader import Config
+from modules.exceptions import PastDate
 
 cnf = Config()
 
@@ -98,7 +98,7 @@ class DateInput:
     def raise_if_past(self, user_date):
         """Compare input date to pre-defined date. In our case - to current date"""
         if user_date < self.compared_date.date():
-            raise ValueError (self.error_msg)
+            raise PastDate(user_date)
 
 
 class IntInput:

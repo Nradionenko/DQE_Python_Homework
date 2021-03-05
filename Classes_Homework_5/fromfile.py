@@ -10,6 +10,7 @@ from modules.file import Files
 from modules.combine import Combine
 from modules.dates import Dates
 from modules.input import DateInput
+from modules.exceptions import NoSectionsError, NoValue, PastDate
 from exec_utils.configloader import Config
 
 cnf = Config()
@@ -67,32 +68,39 @@ class WriteFromFile:
             value = my_str[my_str.find(start)+len(start):my_str.find(end)]  # find value between property name and next property name
         return value.strip()
 
+    def check_value(self, label, my_str, start):
+        value = self.get_value(my_str, start)
+        if value:
+            return value
+        else:
+            raise NoValue (label, start)
+
     def parse_file(self, file_text):
         sections = self.get_sections(file_text)  # split text into sections (by Section keyword)
         final_text = ''
         for section in sections:
             com = Combine(section.split()[0], decor, decor_length)
             if section.split()[0] == label1:
-                news_city = self.get_value(section, city+':')
-                news_text = self.get_value(section, text+':')
+                news_city = self.check_value(label1, section, city+':')
+                news_text = self.check_value(label1, section, text+':')
                 final_text += com.get_news(news_city, news_text)+'\n\n'
             elif section.split()[0] == label2:
-                ad_text = self.get_value(section, text+':')
+                ad_text = self.check_value(label2, section, text+':')
                 # convert date passed as string to datetime.date
-                ad_date = d.str_to_date(self.get_value(section, date+':'), cnf.get_values("PATTERNS", "date_format"))
+                ad_date = d.str_to_date(self.check_value(label2, section, date+':'), cnf.get_values("PATTERNS", "date_format"))
                 # check if date is not in the past
                 di.raise_if_past(ad_date)
                 final_text += com.get_ad(ad_text, ad_date)+'\n\n'
             elif section.split()[0] == label3:
-                rec_text = self.get_value(section, text+':')
-                rec_calories = self.get_value(section, calories+':')
+                rec_text = self.check_value(label3, section, text+':')
+                rec_calories = self.check_value(label3, section, calories+':')
                 final_text += com.get_recipe(rec_text, rec_calories)+'\n\n'
         return final_text.rstrip()
 
     def raise_if_empty(self, my_str):
         """Verify the string is not empty"""
         if not my_str:
-            raise OSError(cnf.get_values("ERRORS", "empty"))
+            raise NoSectionsError(section)
 
     def verify_source(self, source):
         """Open and try to parse file(s), catch errors, return file path and text"""
@@ -107,7 +115,7 @@ class WriteFromFile:
         except UnicodeDecodeError:
             print(cnf.get_values("ERRORS", "cannot_read")+"\n")
             return None, None
-        except (OSError, ValueError) as err:
+        except (OSError, ValueError, NoSectionsError, NoValue, PastDate) as err:
             print(err)
             return None, None
 
@@ -145,12 +153,8 @@ class WriteFromFile:
 
     def write(self, formatted_text, source):
         """Write normalized text to target file. Print info message."""
-        try:
-            f.append_file(formatted_text, self.target)
-            print(cnf.get_values("MESSAGES", "write_success") % (source, f.get_path(self.target)))
-        except Exception as e:
-            print("Couldn't write to target file.")
-            print(e)
+        f.append_file(formatted_text, self.target)
+        print(cnf.get_values("MESSAGES", "write_success") % (source, f.get_path(self.target)))
 
     def remove(self, proper_source):
         """Remove and print info message"""
@@ -175,26 +179,3 @@ if __name__ == "__main__":
     wff = WriteFromFile(default_source, default_target)
     raw_source = wff.get_raw_source()
     wff.file_full_flow(raw_source)
-    # source, text = wff.verify_source(raw_source)
-    # print(text)
-    # print(wff.get_sections(text))
-
-# with open(r'C:\Users\Nadiia_Radionenko\PycharmProjects\DQE_Python_Course\Classes_Homework_5\files\source_text.txt', "r") as f:
-#     reader = f.read()
-#     # print(reader)
-#
-# sections = wff.get_sections(text)
-# # print(sections)
-# properties = list(map(lambda x: x+':', [city, text, date, calories]))
-# print([city, text, date, calories])
-# for i in sections:
-#     # print(i)
-#     # print(wff.get_properties(i))
-#     if i.split()[0] == 'Recipe':
-#         # print(i)
-#         properties = list(map(lambda x: x+':', [city, text, date, calories]))
-#         print(properties)
-        # sorted_prop = [i for i in my_str.split() if i in properties]
-        # print(wff.get_properties(i))
-        # print(wff.get_value(i, calories+':'))
-    # print('---')

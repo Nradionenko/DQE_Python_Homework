@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as ET
-from xml.parsers.expat import ExpatError
 
 from modules.combine import Combine
 from modules.dates import Dates
@@ -7,6 +6,7 @@ from modules.file import Files
 from modules.input import DateInput
 from exec_utils.configloader import Config
 from fromjson import FromJson
+from modules.exceptions import NoSectionsError, PastDate, NoValue
 
 # instantiate classes
 cnf = Config()
@@ -39,12 +39,22 @@ class FromXML(FromJson):  # inherit methods from FromJson in fromjson.py.
         """Split xml by keyword into sections, in our case "sectionLable"""
         doc = self.get_xml(file_path)
         sections = doc.findall('./'+label)  # find all elements with sectionLabel tag
-        return sections
+        if sections:
+            return sections
+        else:
+            raise NoSectionsError(label)
 
-    def get_element(self, my_section, my_tag):
+    def get_element(self, my_section, my_label, my_tag):
         """Get element value by tag name, i.e. London by 'sectionCity'"""
-        element = my_section.find('./'+my_tag).text
-        return element
+        try:
+            element = my_section.find('./'+my_tag).text
+            if element.strip():
+                return element.strip()
+            else:
+                raise NoValue(my_label, my_tag)
+        except AttributeError:
+            print(cnf.get_values("ERRORS", "no_element") % (my_tag, my_label)+"\n")
+            return None
 
     def get_attr(self, my_section):
         """Get section name, in our case - News, Ad or Recipe"""
@@ -56,15 +66,18 @@ class FromXML(FromJson):  # inherit methods from FromJson in fromjson.py.
         section_label = self.get_attr(my_section)
         com = Combine(section_label, decor, decor_length)  # instantiate Combine class which puts together and decorates sections based on city/text/date etc attributes
         if section_label == label1:  # label1 = "News"
-            news_text, news_city = self.get_element(my_section, txt), self.get_element(my_section, city)
+            news_text, news_city = self.get_element(my_section, section_label, txt), \
+                                   self.get_element(my_section, section_label, city)
             return com.get_news(news_city, news_text)+'\n\n'
         elif section_label == label2:  # label2 = "Ad"
-            ad_text, ad_date  = self.get_element(my_section, txt), self.get_element(my_section, date)
+            ad_text = self.get_element(my_section, section_label, txt)
+            ad_date = self.get_element(my_section, section_label, date)
             formatted_date = dte.str_to_date(ad_date, cnf.get_values("PATTERNS", "date_format"))  # format to datetime.date
             di.raise_if_past(formatted_date)
             return com.get_ad(ad_text, formatted_date)+'\n\n'
         elif section_label == label3:  # label3 = "Recipe"
-            rec_text, rec_cal = self.get_element(my_section, txt), self.get_element(my_section, cal)
+            rec_text, rec_cal = self.get_element(my_section, section_label, txt), \
+                                self.get_element(my_section, section_label, cal)
             return com.get_recipe(rec_text, rec_cal)+'\n\n'
         else:
             pass
@@ -77,11 +90,17 @@ class FromXML(FromJson):  # inherit methods from FromJson in fromjson.py.
             self.raise_if_empty(temp_l)  # if list is empty, raise error
             final_text = ''.join(temp_l).rstrip()  # join list of formatted sections back into text
             return final_text, my_path
-        except (OSError, ExpatError, ValueError, ET.ParseError) as e:
+        except (OSError, ValueError, ET.ParseError, NoSectionsError, PastDate, NoValue) as e:
             print(e)
             return None, None
-        except (IndexError, AttributeError, TypeError):
+        except (AttributeError):
             print(cnf.get_values("ERRORS", "cannot_parse"))
+            return None, None
+        except KeyError:
+            print(cnf.get_values("ERRORS", "no_attr")+"\n")
+            return None, None
+        except TypeError:
+            pass
             return None, None
 
     def xml_full_flow(self, raw_source):

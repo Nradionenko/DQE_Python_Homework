@@ -6,6 +6,7 @@ from modules.combine import Combine
 from modules.dates import Dates
 from modules.file import Files
 from modules.input import DateInput
+from modules.exceptions import PastDate, NoValue
 from exec_utils.configloader import Config
 from fromfile import WriteFromFile
 
@@ -43,6 +44,12 @@ class FromJson(WriteFromFile):  # inherit methods from WriteFromFile in fromfile
         with open(schema_path, "r") as s:
             return load(s)
 
+    def get_value(self, my_section, my_property):
+        if str(my_section[my_property]).strip():
+            return my_section[my_property]
+        else:
+            raise NoValue(my_section, my_property)
+
     def process_json(self, json):
         """Extract sections values from json and combine them into pre-formatted text"""
         final_text = ''
@@ -50,13 +57,17 @@ class FromJson(WriteFromFile):  # inherit methods from WriteFromFile in fromfile
             com = Combine(key, decor, decor_length)
             for d in json[key]:  # each section in json has list of dictionaries with section properties (i.e. News has city and text etc)
                 if key == label1:  # label1 = News, label2 = Ad, label3 = Recipe. Configured in configs.ini
-                    final_text += com.get_news(d[city], d[txt])+'\n\n'
+                    news_city, news_text = self.get_value(d, city), self.get_value(d, txt)
+                    final_text += com.get_news(news_city, news_text)+'\n\n'
                 elif key == label2:
-                    expiry_date = dte.str_to_date(d[date], cnf.get_values("PATTERNS", "date_format"))  # format string date from json to datetime.date
+                    ad_text = self.get_value(d, txt)
+                    ad_date = self.get_value(d, date)
+                    expiry_date = dte.str_to_date(ad_date, cnf.get_values("PATTERNS", "date_format"))  # format string date from json to datetime.date
                     di.raise_if_past(expiry_date)  # check if date is not in the past
-                    final_text += com.get_ad(d[txt], expiry_date)+'\n\n'
+                    final_text += com.get_ad(ad_text, expiry_date)+'\n\n'
                 elif key == label3:
-                    final_text += com.get_recipe(d[txt], d[cal])+'\n\n'
+                    r_text, r_cal = self.get_value(d, txt), self.get_value(d, cal)
+                    final_text += com.get_recipe(r_text, r_cal)+'\n\n'
         return final_text.rstrip()
 
     def verify_source(self, source):
@@ -68,10 +79,10 @@ class FromJson(WriteFromFile):  # inherit methods from WriteFromFile in fromfile
                 validate(my_json, schema)
                 text = self.process_json(my_json)
                 return text, source
-        except SchemaError as e:
+        except SchemaError:
             print(cnf.get_values("ERRORS", "schema_err"))
             return None, None
-        except (OSError, ValidationError, JSONDecodeError, KeyError, AttributeError, ValueError) as e:
+        except (OSError, ValidationError, JSONDecodeError, AttributeError, KeyError, ValueError, PastDate, NoValue) as e:
             print(e)
             return None, None
 

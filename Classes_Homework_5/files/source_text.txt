@@ -1,5 +1,5 @@
 sectionLabel: News
-sectionCity: Kyiv
+sectionCity: Lviv
 sectionText: Something great happened!
 So many tourists this year!
 
@@ -9,7 +9,7 @@ too much mess.
 sectionCity: Ternopil
 
 sectionLabel: Ad
-sectionDate: 04/04/2021
+sectionDate:  02/02/2022
 sectionText: Something for sale
 
 sectionLabel: Ad

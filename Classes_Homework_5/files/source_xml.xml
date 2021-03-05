@@ -1,17 +1,22 @@
 <?xml version="1.0"?>
 <data>
     <sectionLabel name="News">
-        <sectionCity>123</sectionCity>
+        <sectionCity>Lviv</sectionCity>
         <sectionText>Something happened,
 		line2 of news,
 		line3 of news</sectionText>
     </sectionLabel>
     <sectionLabel name="Ad">
-        <sectionDate>05/05/2021</sectionDate>
-        <sectionText>Some text</sectionText>
+        <sectionDate>04/04/2021</sectionDate>
+        <sectionText>Something for rent</sectionText>
+        <testSection>Some test</testSection>>
     </sectionLabel>
     <sectionLabel name="Recipe">
         <sectionText>Chocolate ice-cream</sectionText>
-        <sectionCalories>300</sectionCalories>
+        <sectionCalories>100</sectionCalories>
     </sectionLabel>
+	<sectionLabel name="News">
+        <sectionCity>Lviv</sectionCity>
+        <sectionText>Something happened 2</sectionText>
+	</sectionLabel>
 </data>

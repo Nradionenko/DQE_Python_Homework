@@ -10,14 +10,14 @@
 "sectionText": "A lot of snow"
 },
 {
-"sectionCity": "Paris",
+"sectionCity": "Lviv",
 "sectionText": "Tourism on the rise"
 }
 ],
 "Ad":
 [
 {
-"sectionText": "House for rent",
+"sectionText": "Something for sale",
 "sectionDate": "05/04/2021"
 },
 {
@@ -29,7 +29,7 @@
 [
 {
 "sectionText": "Apple pie",
-"sectionCalories": "800"
+"sectionCalories": 800
 }
 ]
 }

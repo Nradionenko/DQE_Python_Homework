@@ -468,3 +468,45 @@ Chocolate ice-cream
 300 Kcal
 Fitness tip: nice, light healthy food!
 ------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+123, 04/03/2021 21.53
+------------------------------
+
+Ad ---------------------------
+Some text
+Valid until: 05/05/2021, 62 day(s) left
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+300 kcal
+Fitness tip: nice, light healthy food!
+------------------------------
+
+News -------------------------
+Something happened,
+		Line2 of news,
+		Line3 of news
+Tirana, 05/03/2021 12.29
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+600 Kcal
+Fitness tip: oh, that's a lot of calories! Don't forget to work out!
+------------------------------
+
+News -------------------------
+Something happened 2
+Lviv, 05/03/2021 12.29
+------------------------------
+
+Recipe -----------------------
+Chocolate ice-cream
+100 Kcal
+Fitness tip: nice, light healthy food!
+------------------------------
