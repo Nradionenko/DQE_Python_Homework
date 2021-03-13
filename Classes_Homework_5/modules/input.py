@@ -80,7 +80,7 @@ class DateInput:
                 self.raise_if_past(user_input_date)
                 proper_date = True
                 return user_input_date
-            except ValueError as error_message:
+            except (ValueError, PastDate) as error_message:
                 print(error_message)
                 continue
 

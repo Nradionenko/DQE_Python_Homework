@@ -1,12 +1,15 @@
+import sqlite3 as sql
+
 from pyinputplus import inputMenu
 
 from exec_utils.configloader import Config
+from counts import Counts
 from modules.input import Proceed
 from modules.run import Execute
+from modules.exceptions import Duplicate
 from fromfile import WriteFromFile
 from fromjson import FromJson
 from fromxml import FromXML
-from counts import Counts
 
 cnf = Config()
 p = Proceed(cnf.get_values("INPUTS", "proceed_msg"), cnf.get_values("MESSAGES", "goodbye"))
@@ -23,7 +26,12 @@ def manual_input():
     Both messages are configurable, see in configs.ini"""
     decision = "yes"
     while decision == "yes":
-        e.manual_flow()
+        try:
+            e.manual_flow()
+        except sql.DatabaseError as err:
+            print(err)
+        except Duplicate as err:
+            print(err)
         decision = p.next_steps()
     else:
         p.goodbye()
@@ -54,14 +62,14 @@ def select_flow():
             wff.file_full_flow(input(cnf.get_values("INPUTS", "filepath")+"\n"))
     elif flow == choice3:
         if select_source() == cnf.get_values("LABELS", "def_file"):
-            fj.json_full_flow(fj.def_source)
+            fj.file_full_flow(fj.def_source)
         else:
-            fj.json_full_flow(input(cnf.get_values("INPUTS", "filepath")+"\n"))
+            fj.file_full_flow(input(cnf.get_values("INPUTS", "filepath")+"\n"))
     elif flow == choice4:
         if select_source() == cnf.get_values("LABELS", "def_file"):
-            fx.xml_full_flow(fx.def_source)
+            fx.file_full_flow(fx.def_source)
         else:
-            fx.xml_full_flow(input(cnf.get_values("INPUTS", "filepath")+"\n"))
+            fx.file_full_flow(input(cnf.get_values("INPUTS", "filepath")+"\n"))
 
 
 def main():

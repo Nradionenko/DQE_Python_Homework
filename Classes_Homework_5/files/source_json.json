@@ -2,34 +2,34 @@
 "News":
 [
 {
-"sectionCity": "Dublin",
-"sectionText": "Ryanair renews flights from June"
+"sectionCity": "rome",
+"sectionText": "Ryanair renews flights FROM June"
 },
 {
-"sectionCity": "Berlin",
-"sectionText": "A lot of snow"
+"sectionCity": "dublin",
+"sectionText": "A lot OF RAIN"
 },
 {
-"sectionCity": "Lviv",
-"sectionText": "Tourism on the rise"
+"sectionCity": "lONDON",
+"sectionText": "Tourism ON the RIse"
 }
 ],
 "Ad":
 [
 {
-"sectionText": "Something for sale",
-"sectionDate": "05/04/2021"
+"sectionText": "kittens for sale",
+"sectionDate": "23/05/2022"
 },
 {
-"sectionText": "Free beer on fridays",
-"sectionDate": "06/06/2021"
+"sectionText": "free cookies on fridays",
+"sectionDate": "15/01/2022"
 }
 ],
 "Recipe":
 [
 {
-"sectionText": "Apple pie",
-"sectionCalories": 800
+"sectionText": "tomato soup",
+"sectionCalories": 0
 }
 ]
 }

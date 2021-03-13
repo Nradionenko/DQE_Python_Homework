@@ -1,22 +1,19 @@
 <?xml version="1.0"?>
 <data>
     <sectionLabel name="News">
-        <sectionCity>Lviv</sectionCity>
-        <sectionText>Something happened,
-		line2 of news,
-		line3 of news</sectionText>
+        <sectionCity>Lublin</sectionCity>
+        <sectionText>Premiere in Opera House</sectionText>
     </sectionLabel>
     <sectionLabel name="Ad">
-        <sectionDate>04/04/2021</sectionDate>
-        <sectionText>Something for rent</sectionText>
-        <testSection>Some test</testSection>>
+        <sectionDate>29/04/2023</sectionDate>
+        <sectionText>tent FOR rent</sectionText>
     </sectionLabel>
     <sectionLabel name="Recipe">
-        <sectionText>Chocolate ice-cream</sectionText>
-        <sectionCalories>100</sectionCalories>
+        <sectionText>vanilla ICE-cream</sectionText>
+        <sectionCalories>160</sectionCalories>
     </sectionLabel>
 	<sectionLabel name="News">
-        <sectionCity>Lviv</sectionCity>
-        <sectionText>Something happened 2</sectionText>
+        <sectionCity>KrakOW</sectionCity>
+        <sectionText>New MAYOR elected</sectionText>
 	</sectionLabel>
 </data>

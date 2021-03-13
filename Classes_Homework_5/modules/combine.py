@@ -22,48 +22,27 @@ class Combine:
             return res
         return wrapper
 
-    def get_fitness_message(self, user_num):
-        """Generates app message for random section (recipes) based on values
-        provided (based on calories of the recipe).
-        Min, max values as well as messages are configurable.
-        """
-        fitness_tip1 = cnf.get_values("MESSAGES", "fitness1")
-        fitness_tip2 = cnf.get_values("MESSAGES", "fitness2")
-        fitness_tip3 = cnf.get_values("MESSAGES", "fitness3")
-        if int(user_num) == int(cnf.get_values("RESTRICTIONS","cal_min")):
-            summary = fitness_tip1
-        elif int(user_num) < int(cnf.get_values("RESTRICTIONS","cal_max")):
-            summary = fitness_tip2
-        else:
-            summary = fitness_tip3
-        return summary
-
     @decorate_section
-    def get_news(self, city, news_text):
+    def get_news(self, city, news_text, news_date):
         """Collect input data for news section, format date and put all attributes together"""
-        date_format = cnf.get_values("PATTERNS", "date_time_text")
-        news_date = d.format_date(d.get_current_date(), date_format)
         news = news_text + '\n' + city + ', ' + news_date
         return news
 
     @decorate_section
-    def get_ad(self, ad_text, expiry_date):
+    def get_ad(self, ad_text, expiry_date, formatted):
         """Collect input data for ad section.
         Format date, calculate days to expiry date, get messages from configs and put all attributes together.
         """
-        date_format = cnf.get_values("PATTERNS", "date_format")
-        formatted = d.format_date(expiry_date, date_format)
         delta = d.days_delta(expiry_date)
         ad_summary = cnf.get_values("MESSAGES", "ad_summary")
         ad = ad_text + '\n' + ad_summary % (formatted, str(delta))
         return ad
 
     @decorate_section
-    def get_recipe(self, recipe_text, recipe_calories):
+    def get_recipe(self, recipe_text, recipe_calories, fitness_tip):
         """Collect input data for recipe section.
         Apply logic based on input value, get messages from configs and put all attributes together.
         """
-        fitness_message = self.get_fitness_message(recipe_calories)
         calories_measure = cnf.get_values("MESSAGES", "calories_measure")
-        recipe = recipe_text+'\n'+str(recipe_calories)+' '+calories_measure+'\n'+fitness_message
+        recipe = recipe_text+'\n'+str(recipe_calories)+' '+calories_measure+'\n'+fitness_tip
         return recipe

@@ -1,25 +1,25 @@
 sectionLabel: News
-sectionCity: Lviv
-sectionText: Something great happened!
-So many tourists this year!
+sectionCity: boston
+sectionText: New restaurant opened
 
 sectionLabel: News
-sectionText: Too much snow,
-too much mess.
-sectionCity: Ternopil
+sectionText: Prices went up
+sectionCity: milan
 
 sectionLabel: Ad
-sectionDate:  02/02/2022
-sectionText: Something for sale
+sectionDate: 25/05/2021
+sectionText: Wedding dress for sale
 
 sectionLabel: Ad
-sectionText: Car for sale
-sectionDate: 05/05/2021
+sectionText: Hall for rent
+sectionDate: 25/05/2023
 
 sectionLabel: Recipe
-sectionCalories: 800
-sectionText: Thinly slice the spring onions, reserving a handful of the sliced green parts for garnish.
-Peel and chop the garlic. Heat the oil in a large saucepan over a medium heat and cook the spring onions and garlic for a few minutes.
-Add the tomatoes, curry powder and ground ginger and cook for 3-4 minutes.
-If the pan gets dry add a splash of water and make sure the spices don't burn.
+sectionCalories: 250
+sectionText: Thinly slice the spring onions,
+reserving a handful of the sliced green parts for garnish.
+Peel and chop the garlic. Heat the oil in a large saucepan
+over a medium heat and cook the spring onions and garlic
+for a few minutes.
+
 

@@ -26,3 +26,22 @@ class NoValue(Exception):
         self.element = element
         self.message = cnf.get_values("ERRORS", "no_value") % (self.element, self.section)+"\n"
         super().__init__(self.message)
+
+
+class InvalidNumber(Exception):
+    """Raised when non-integer value is provided for calories section"""
+    def __init__(self, section_label, my_value):
+        self.sec = section_label
+        self.val = my_value
+        self.message = cnf.get_values("ERRORS", "wrong_num").format(s =self.sec, e=self.val)+"\n"
+        super().__init__(self.message)
+
+
+class Duplicate(Exception):
+    """Raised when unique constraint is violated"""
+    def __init__(self, section_label, value1, value2):
+        self.table = section_label.lower()
+        self.v1 = value1
+        self.v2 = value2
+        self.message = cnf.get_values("ERRORS", "duplicate").format(v1=self.v1, v2 =self.v2, t=self.table)+"\n"
+        super().__init__(self.message)

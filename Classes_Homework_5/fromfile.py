@@ -1,24 +1,35 @@
-import sys
 import fileinput
-import re
 from os import remove
+import re
+import sqlite3 as sql
+import sys
 
 import pyinputplus as pyip
 
-import modules.Functions_Strings_Homework4 as s
-from modules.file import Files
+from counts import Counts
+from exec_utils.configloader import Config
 from modules.combine import Combine
 from modules.dates import Dates
+from modules.dbconnect import DBconnection
+from modules.exceptions import NoSectionsError, NoValue, PastDate, Duplicate, InvalidNumber
+import modules.Functions_Strings_Homework4 as s
+from modules.file import Files
 from modules.input import DateInput
-from modules.exceptions import NoSectionsError, NoValue, PastDate
-from exec_utils.configloader import Config
+from modules.logging import Log
+from modules.run import Execute
+
 
 cnf = Config()
 f = Files()
+cnt = Counts(cnf.get_values("PATHS", "target_file"), cnf.get_values("PATHS", "csv_words"), cnf.get_values("PATHS", "csv_letters"))
 d = Dates()
+e = Execute()
 di = DateInput(cnf.get_values("ERRORS", "past_date"),
                cnf.get_values("PATTERNS", "date_format"),
                d.get_current_date())
+db = DBconnection(cnf.get_values("PATHS", "db_name"))
+lg = Log(cnf.get_values("PATHS", "log_file"))
+
 decor, decor_length = cnf.get_values("RESTRICTIONS", "n"), \
                       cnf.get_values("RESTRICTIONS", "count_n")
 # property names (the same as in JSON)
@@ -73,29 +84,81 @@ class WriteFromFile:
         if value:
             return value
         else:
-            raise NoValue (label, start)
+            raise NoValue(label, start)
 
-    def parse_file(self, file_text):
-        sections = self.get_sections(file_text)  # split text into sections (by Section keyword)
+    def news_values(self, section):
+        """Extract values for News section"""
+        n_city = self.check_value(label1, section, city+':')
+        n_txt = self.check_value(label1, section, text+':')
+        n_date = d.format_date(d.get_current_date(), cnf.get_values("PATTERNS", "date_time_text"))
+        return n_city, n_txt, n_date
+
+    def ad_values(self, section):
+        """Extract values for Private ad section"""
+        a_txt = self.check_value(label2, section, text+':')
+        formatted = self.check_value(label2, section, date+':')
+        a_date = d.str_to_date(formatted, cnf.get_values("PATTERNS", "date_format"))
+        return a_txt, a_date, formatted
+
+    def recipe_values(self, section):
+        """Extract values for Recipe section"""
+        r_txt = self.check_value(label3, section, text+':')
+        r_cal = self.check_value(label3, section, calories+':')
+        fit_tip = e.get_fitness_message(r_cal)
+        return r_txt, r_cal, fit_tip
+
+    def parse_file(self, sections):
+        """Prepare article sections for file. Return section name + attributes for each section to be late used for db"""
         final_text = ''
+        values = []
         for section in sections:
+            db.create_table(section.split()[0])
             com = Combine(section.split()[0], decor, decor_length)
             if section.split()[0] == label1:
-                news_city = self.check_value(label1, section, city+':')
-                news_text = self.check_value(label1, section, text+':')
-                final_text += com.get_news(news_city, news_text)+'\n\n'
+                n_city, n_txt, n_date = self.news_values(section)
+                final_text += com.get_news(n_city, n_txt, n_date)+'\n\n'
+                values.append([section.split()[0], n_city, n_txt, n_date])
             elif section.split()[0] == label2:
-                ad_text = self.check_value(label2, section, text+':')
-                # convert date passed as string to datetime.date
-                ad_date = d.str_to_date(self.check_value(label2, section, date+':'), cnf.get_values("PATTERNS", "date_format"))
+                a_txt, a_date, formatted = self.ad_values(section)
+                final_text += com.get_ad(a_txt, a_date, formatted)+'\n\n'
                 # check if date is not in the past
-                di.raise_if_past(ad_date)
-                final_text += com.get_ad(ad_text, ad_date)+'\n\n'
+                di.raise_if_past(a_date)
+                values.append([section.split()[0], a_txt, formatted])
             elif section.split()[0] == label3:
-                rec_text = self.check_value(label3, section, text+':')
-                rec_calories = self.check_value(label3, section, calories+':')
-                final_text += com.get_recipe(rec_text, rec_calories)+'\n\n'
-        return final_text.rstrip()
+                r_txt, r_cal, fit_tip = self.recipe_values(section)
+                final_text += com.get_recipe(r_txt, r_cal, fit_tip)+'\n\n'
+                values.append([section.split()[0], r_txt, r_cal, fit_tip])
+        return final_text.rstrip(), values
+
+    def write_to_db(self, section):
+        """
+        Creates tables, inserts values, checks for duplicates, writes logs
+
+        section = list of values for each section in the following order: section label (News etc), section attributes
+
+        """
+        db.create_table(section[0])  # first element in section list is section name, like News/Ad/Recipe
+        if section[0] == label1:
+            try:
+                db.go(cnf.get_values("SQL", "insert_news"), (section[1], section[2], section[3]))
+            except sql.IntegrityError:
+                raise Duplicate(section[0], section[1], section[2])
+            except KeyError as err:
+                print(err)
+        elif section[0] == label2:  # Private ad
+            try:
+                db.go(cnf.get_values("SQL", "insert_ad"), (section[1], section[2]))
+            except sql.IntegrityError:
+                raise Duplicate(section[0], section[1], section[2])
+            except KeyError as err:
+                print(err)
+        elif section[0] == label3:  # Recipe
+            try:
+                db.go(cnf.get_values("SQL", "insert_recipe"), (section[1], section[2], section[3]))
+            except sql.IntegrityError:
+                raise Duplicate(section[0], section[1], section[2])
+            except KeyError as err:
+                print(err)
 
     def raise_if_empty(self, my_str):
         """Verify the string is not empty"""
@@ -103,31 +166,33 @@ class WriteFromFile:
             raise NoSectionsError(section)
 
     def verify_source(self, source):
-        """Open and try to parse file(s), catch errors, return file path and text"""
+        """Open and try to parse and normalize file(s), catch errors, return file path and parsed normalized text"""
         try:
             with fileinput.input(files=source) as fp:
                 file_text = []
                 for line in fp:
                     file_text.append(line.strip())
-            parsed_text = self.parse_file('\n'.join(file_text))
+            sections = self.get_sections('\n'.join(file_text))
+            parsed_text, values = self.parse_file(sections)
             self.raise_if_empty(parsed_text)
-            return source, parsed_text
+            normalized = self.normalize(parsed_text, self.choose_strategy())
+            return source, normalized, values
         except UnicodeDecodeError:
             print(cnf.get_values("ERRORS", "cannot_read")+"\n")
-            return None, None
-        except (OSError, ValueError, NoSectionsError, NoValue, PastDate) as err:
+            return None, None, None
+        except (OSError, NoSectionsError, NoValue, PastDate, InvalidNumber) as err:
             print(err)
-            return None, None
+            return None, None, None
 
     def read_source(self, raw_source):
         """If source file returns no errors, return file path and text, else - ask user to input path to source file"""
-        proper_source, result = self.verify_source(raw_source)  # check path passed by user/default path first
+        proper_source, final_text, db_values = self.verify_source(raw_source)  # check path passed by user/default path first
         inp_request = cnf.get_values("INPUTS", "filepath")
         while not proper_source:  # if any errors occur with initial source, ask user to input another path as long as it doesn't meet the requirements
             inp_path = input(inp_request+"\n")
-            proper_source, result = self.verify_source(inp_path)
+            proper_source, final_text, db_values = self.verify_source(inp_path)
         else:
-            return proper_source, result
+            return proper_source, final_text, db_values
 
     def choose_strategy(self):
         """Choose strategy for normalization to handle possible proper names (like London, Government etc):
@@ -154,23 +219,30 @@ class WriteFromFile:
     def write(self, formatted_text, source):
         """Write normalized text to target file. Print info message."""
         f.append_file(formatted_text, self.target)
-        print(cnf.get_values("MESSAGES", "write_success") % (source, f.get_path(self.target)))
+        lg.write_log(cnf.get_values("MESSAGES", "file_write").format(txt=formatted_text, src=source))
 
     def remove(self, proper_source):
         """Remove and print info message"""
         if proper_source != self.def_source:  # don't delete default source file
-            if type(proper_source) is list:
+            if isinstance(proper_source, list):
                 for file in proper_source:
                     remove(file)
             else:
                 remove(proper_source)
-            print(cnf.get_values("MESSAGES", "delete_success") % (proper_source))
+            lg.write_log(cnf.get_values("MESSAGES", "delete_success") % proper_source)
 
     def file_full_flow(self, raw_source):
-        proper_source, parsed_text = self.read_source(raw_source)
-        normalized_text = self.normalize(parsed_text, self.choose_strategy())
+        proper_source, normalized_text, db_values = self.read_source(raw_source)
         self.write(normalized_text, proper_source)
         self.remove(proper_source)
+        for section in db_values:
+            try:
+                self.write_to_db(section)
+                lg.write_log(cnf.get_values("MESSAGES", "db_write").format
+                             (s=section[0], t=section[0].lower(), v1=section[1], v2=section[2], src=proper_source))
+            except (sql.DatabaseError, Duplicate, KeyError) as err:
+                print(err)
+        db.curs.close()
 
 
 if __name__ == "__main__":
@@ -179,3 +251,4 @@ if __name__ == "__main__":
     wff = WriteFromFile(default_source, default_target)
     raw_source = wff.get_raw_source()
     wff.file_full_flow(raw_source)
+    cnt.write_csv()
