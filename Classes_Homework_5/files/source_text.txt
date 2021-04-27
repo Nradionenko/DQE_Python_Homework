@@ -1,0 +1,25 @@
+sectionLabel: News
+sectionCity: boston
+sectionText: New restaurant opened
+
+sectionLabel: News
+sectionText: Prices went up
+sectionCity: milan
+
+sectionLabel: Ad
+sectionDate: 25/05/2021
+sectionText: Wedding dress for sale
+
+sectionLabel: Ad
+sectionText: Hall for rent
+sectionDate: 25/05/2023
+
+sectionLabel: Recipe
+sectionCalories: 250
+sectionText: Thinly slice the spring onions,
+reserving a handful of the sliced green parts for garnish.
+Peel and chop the garlic. Heat the oil in a large saucepan
+over a medium heat and cook the spring onions and garlic
+for a few minutes.
+
+

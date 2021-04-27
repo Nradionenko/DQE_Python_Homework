@@ -1,0 +1,197 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "News": [
+                {
+                    "sectionCity": "Kyiv",
+                    "sectionText": "Something important happened"
+                },
+                {
+                    "sectionCity": "Lviv",
+                    "sectionText": "Some bla bla"
+                }
+            ],
+            "Ad": [
+                {
+                    "sectionText": "Something for sale",
+                    "sectionDate": "04/04/2021"
+                }
+            ],
+            "Recipe": [
+                {
+                    "sectionText": "Croissants",
+                    "sectionCalories": 800
+                }
+            ]
+        }
+    ],
+    "properties": {
+        "News": {
+            "$id": "#/properties/News",
+            "type": "array",
+            "title": "The News schema",
+            "description": "News section, one item = one news",
+            "additionalItems": false,
+            "minItems": 1,
+            "items": {
+                "$id": "#/properties/News/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/News/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "sectionCity": "Moscow",
+                                "sectionText": "Bla bla bla"
+                            }
+                        ],
+                        "required": [
+                            "sectionCity",
+                            "sectionText"
+                        ],
+                        "properties": {
+                            "sectionCity": {
+                                "$id": "#/properties/News/items/anyOf/0/properties/sectionCity",
+                                "type": "string",
+                                "title": "The sectionCity schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Moscow"
+                                ]
+                            },
+                            "sectionText": {
+                                "$id": "#/properties/News/items/anyOf/0/properties/sectionText",
+                                "type": "string",
+                                "title": "The sectionText schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Bla bla bla"
+                                ]
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        },
+        "Ad": {
+            "$id": "#/properties/Ad",
+            "type": "array",
+            "title": "The Ad schema",
+            "description": "An explanation about the purpose of this instance.",
+            "minItems": 1,
+            "additionalItems": false,
+            "items": {
+                "$id": "#/properties/Ad/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/Ad/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "sectionText": "Something for sale",
+                                "sectionDate": "04/04/2021"
+                            }
+                        ],
+                        "required": [
+                            "sectionText",
+                            "sectionDate"
+                        ],
+                        "properties": {
+                            "sectionText": {
+                                "$id": "#/properties/Ad/items/anyOf/0/properties/sectionText",
+                                "type": "string",
+                                "title": "The sectionText schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Something for sale"
+                                ]
+                            },
+                            "sectionDate": {
+                                "$id": "#/properties/Ad/items/anyOf/0/properties/sectionDate",
+                                "type": "string",
+                                "title": "The sectionDate schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "04/04/2021"
+                                ]
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        },
+        "Recipe": {
+            "$id": "#/properties/Recipe",
+            "type": "array",
+            "title": "The Recipe schema",
+            "description": "An explanation about the purpose of this instance.",
+            "minItems": 1,
+            "additionalItems": false,
+            "items": {
+                "$id": "#/properties/Recipe/items",
+                "anyOf": [
+                    {
+                        "$id": "#/properties/Recipe/items/anyOf/0",
+                        "type": "object",
+                        "title": "The first anyOf schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": {},
+                        "examples": [
+                            {
+                                "sectionText": "Croissants",
+                                "sectionCalories": 800
+                            }
+                        ],
+                        "required": [
+                            "sectionText",
+                            "sectionCalories"
+                        ],
+                        "properties": {
+                            "sectionText": {
+                                "$id": "#/properties/Recipe/items/anyOf/0/properties/sectionText",
+                                "type": "string",
+                                "title": "The sectionText schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Croissants"
+                                ]
+                            },
+                            "sectionCalories": {
+                                "$id": "#/properties/Recipe/items/anyOf/0/properties/sectionCalories",
+                                "type": "integer",
+                                "title": "The sectionCalories schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    800
+                                ]
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                ]
+            }
+        }
+    },
+    "additionalProperties": false,
+    "minProperties": 1
+}

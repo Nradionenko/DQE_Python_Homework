@@ -1,0 +1,35 @@
+{
+"News":
+[
+{
+"sectionCity": "rome",
+"sectionText": "Ryanair renews flights FROM June"
+},
+{
+"sectionCity": "dublin",
+"sectionText": "A lot OF RAIN"
+},
+{
+"sectionCity": "lONDON",
+"sectionText": "Tourism ON the RIse"
+}
+],
+"Ad":
+[
+{
+"sectionText": "kittens for sale",
+"sectionDate": "23/05/2022"
+},
+{
+"sectionText": "free cookies on fridays",
+"sectionDate": "15/01/2022"
+}
+],
+"Recipe":
+[
+{
+"sectionText": "tomato soup",
+"sectionCalories": 0
+}
+]
+}
